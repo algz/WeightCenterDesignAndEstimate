@@ -80,8 +80,8 @@ namespace WeightCenterDesignAndEstimateSoft.Task.CoreEnvelopeAssessment
                 }
                 else
                 {
-                    string pointName = this.weightedGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
-                    CorePointExt cpe=this.assessCoreDatas.Find(item => item.pointName == pointName);
+                    string pointID = this.weightedGridView.Rows[e.RowIndex].Cells[0].Tag.ToString();
+                    CorePointExt cpe = this.assessCoreDatas.Find(item => item.pointName == pointID);
                     //this.assessSum -= (cpe.weightedValue - Convert.ToDouble(e.FormattedValue));
                     cpe.weightedValue = Convert.ToDouble(e.FormattedValue);
                     
@@ -101,12 +101,13 @@ namespace WeightCenterDesignAndEstimateSoft.Task.CoreEnvelopeAssessment
                 int i=this.weightedGridView.Rows.Add();
                 this.weightedGridView.Rows[i].Cells[0].Value = cpe.pointName;
                 this.weightedGridView.Rows[i].Cells[1].Value = cpe.weightedValue;
+                this.weightedGridView.Rows[i].Tag = cpe.id;
             }
             else
             {
                 foreach(DataGridViewRow row in  this.weightedGridView.Rows)
                 {
-                    if (row.Cells[0].Value.ToString() == e.Item.Name)
+                    if (row.Tag.ToString() == e.Item.Tag.ToString())
                     {
                         //this.assessSum -= cpe.weightedValue;
                         cpe.isAssess = false;
@@ -150,6 +151,7 @@ namespace WeightCenterDesignAndEstimateSoft.Task.CoreEnvelopeAssessment
                     int i=this.weightedGridView.Rows.Add();
                     this.weightedGridView.Rows[i].Cells[0].Value = cpe.pointName;
                     this.weightedGridView.Rows[i].Cells[1].Value = cpe.weightedValue;
+                    this.weightedGridView.Rows[i].Tag = cpe.id;
                 }
             }
             //this.assessSum=_assessSum;
