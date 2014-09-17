@@ -80,8 +80,8 @@ namespace WeightCenterDesignAndEstimateSoft.Task.CoreEnvelopeAssessment
                 }
                 else
                 {
-                    string pointID = this.weightedGridView.Rows[e.RowIndex].Cells[0].Tag.ToString();
-                    CorePointExt cpe = this.assessCoreDatas.Find(item => item.pointName == pointID);
+                    string pointID = this.weightedGridView.Rows[e.RowIndex].Tag.ToString();
+                    CorePointExt cpe = this.assessCoreDatas.Find(item => item.id.Equals(pointID));
                     //this.assessSum -= (cpe.weightedValue - Convert.ToDouble(e.FormattedValue));
                     cpe.weightedValue = Convert.ToDouble(e.FormattedValue);
                     
@@ -124,7 +124,7 @@ namespace WeightCenterDesignAndEstimateSoft.Task.CoreEnvelopeAssessment
 
         private void btnWeightedRest_Click(object sender, EventArgs e)
         {
-            this.weightedGridView.Rows.Clear();
+            //this.weightedGridView.Rows.Clear();
             double _assessSum = 0;
             //权重值检验
             foreach (CorePointExt cpe in this.assessCoreDatas)
@@ -143,16 +143,21 @@ namespace WeightCenterDesignAndEstimateSoft.Task.CoreEnvelopeAssessment
             //_assessSum = 0;
             foreach (CorePointExt cpe in this.assessCoreDatas)
             {
-                if (cpe.isAssess)
+                for (int i = 0; i < this.weightedGridView.Rows.Count; i++)
                 {
-                    
-                    cpe.weightedValue = cpe.weightedValue / _assessSum;
+                    DataGridViewRow row = this.weightedGridView.Rows[i];
+                    if (cpe.isAssess && cpe.id.Equals(row.Tag.ToString()))
+                    {
 
-                    int i=this.weightedGridView.Rows.Add();
-                    this.weightedGridView.Rows[i].Cells[0].Value = cpe.pointName;
-                    this.weightedGridView.Rows[i].Cells[1].Value = cpe.weightedValue;
-                    this.weightedGridView.Rows[i].Tag = cpe.id;
+                        cpe.weightedValue = cpe.weightedValue / _assessSum;
+
+                        //int i=this.weightedGridView.Rows.Add();
+                        //this.weightedGridView.Rows[i].Cells[0].Value = cpe.pointName;
+                        row.Cells[1].Value = cpe.weightedValue;
+                        break;
+                    }
                 }
+
             }
             //this.assessSum=_assessSum;
         }

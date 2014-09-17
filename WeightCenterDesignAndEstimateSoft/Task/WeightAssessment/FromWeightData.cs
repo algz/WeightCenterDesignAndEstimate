@@ -194,5 +194,10 @@ namespace WeightCenterDesignAndEstimateSoft.Task.WeightAssessment
         
         #endregion
 
+        private void weightResultTree_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            btnConfirm_Click(sender, e);
+        }
+
     }
 }

@@ -99,6 +99,8 @@ namespace WeightCenterDesignAndEstimateSoft.Task.CoreEnvelopeAssessment
             //重心包线评估
             if (!evaluationCoreMethod01(car))
             {
+
+                this.saveCoreGridView(this.coreAssessResult.assessCoreDataList, "1");
                 return;
             };
 
@@ -352,6 +354,7 @@ namespace WeightCenterDesignAndEstimateSoft.Task.CoreEnvelopeAssessment
                         MessageBox.Show("待评估重心点" + cp.pointName + "的重量坐标位于基准评估重心范围外,自动剔除并平衡权重");
                         cp.isAssess = false;
                         cp.weightedValue = 0.0;
+                        cp.assessValue = 0;
                         continue;
                     }
                     else
@@ -376,6 +379,7 @@ namespace WeightCenterDesignAndEstimateSoft.Task.CoreEnvelopeAssessment
                             MessageBox.Show("待评估重心点" + cp.pointName + "的横坐标位于基准评估重心范围外,自动剔除并平衡权重");
                             cp.isAssess = false;
                             cp.weightedValue = 0.0;
+                            cp.assessValue = 0;
                             continue;
                         }
                         else if (cp.pointXValue > fMaxX && cp.pointXValue > fMinX)
@@ -383,6 +387,7 @@ namespace WeightCenterDesignAndEstimateSoft.Task.CoreEnvelopeAssessment
                             MessageBox.Show("待评估重心点" + cp.pointName + "的横坐标位于基准评估重心范围外,自动剔除并平衡权重");
                             cp.isAssess = false;
                             cp.weightedValue = 0.0;
+                            cp.assessValue = 0;
                             continue;
                         }
                         // 判断是否为定顶点

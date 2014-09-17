@@ -53,6 +53,7 @@
             this.treeCoreEnvelope.Name = "treeCoreEnvelope";
             this.treeCoreEnvelope.Size = new System.Drawing.Size(358, 261);
             this.treeCoreEnvelope.TabIndex = 0;
+            this.treeCoreEnvelope.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeCoreEnvelope_NodeMouseDoubleClick);
             // 
             // refreshDB
             // 

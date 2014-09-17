@@ -92,10 +92,10 @@ namespace WeightCenterDesignAndEstimateSoft.Task
             this.weightAssessResult.rationalityInflationTotal = 0;
             foreach (WeightAssessParameter wap in this.weightAssessResult.weightAssessParamList)
             {
-                wap.advancedInflation = this.AssessWeightArithmetic(wap.datumWeight, wap.assessWeight, wap.maxValue, wap.minValue, wap.weightedValue, 2);
-                this.weightAssessResult.advancedInflationTotal += wap.advancedInflation;
-                wap.rationalityInflation = this.AssessWeightArithmetic(wap.datumWeight, wap.assessWeight, wap.maxValue, wap.minValue, wap.weightedValue, 1);
-                this.weightAssessResult.rationalityInflationTotal += wap.rationalityInflation;
+                wap.advancedInflation = this.AssessWeightArithmetic(wap.datumWeight, wap.assessWeight, wap.maxValue, wap.minValue, 2);
+                this.weightAssessResult.advancedInflationTotal += wap.advancedInflation * wap.weightedValue;
+                wap.rationalityInflation = this.AssessWeightArithmetic(wap.datumWeight, wap.assessWeight, wap.maxValue, wap.minValue, 1);
+                this.weightAssessResult.rationalityInflationTotal += wap.rationalityInflation * wap.weightedValue;
             }
 
             //int i=0;
@@ -226,7 +226,10 @@ namespace WeightCenterDesignAndEstimateSoft.Task
 
                 //if (i==1||(i==2&&InspectWeightName(weightSortData.lstWeightData))||MessageBox.Show("评估重量分类名称与基准重量分类名称不匹配,确认是否继续加载评估重量,不匹配值以0代替？", "确认", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 //{
-                this.saveWeightDataGridView(weightSortData, i);
+                if (weightSortData != null)
+                {
+                    this.saveWeightDataGridView(weightSortData, i);
+                }
                 //}
             }
         }
@@ -311,6 +314,11 @@ namespace WeightCenterDesignAndEstimateSoft.Task
                         return;
                     }
                 }
+            }
+
+            if (wsd == null)
+            {
+                return;
             }
 
             if (!InspectWeightName(wsd.lstWeightData))
@@ -503,16 +511,16 @@ namespace WeightCenterDesignAndEstimateSoft.Task
         /// <param name="weighted">权值</param>
         /// <param name="kind">调用算法：1:合理指标;2:先进指标</param>
         /// <returns></returns>
-        private double AssessWeightArithmetic(double datumWeight, double assessWeight, double max, double min, double weighted, int kind)
+        private double AssessWeightArithmetic(double datumWeight, double assessWeight, double max, double min, int kind)
         {
             double ratio = assessWeight / datumWeight;
             if (kind == 1)
             {
-                return ((min - ratio) * (ratio - max) / (Math.Pow((max - min), 2)/4)) * weighted;
+                return ((min - ratio) * (ratio - max) / (Math.Pow((max - min), 2)/4));
             }
             else
             {
-                return ((min - ratio) / min) * weighted;
+                return ((min - ratio) / min);
             }
 
         }

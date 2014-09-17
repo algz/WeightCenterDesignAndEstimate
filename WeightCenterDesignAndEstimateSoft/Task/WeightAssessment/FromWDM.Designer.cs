@@ -57,6 +57,7 @@
             this.WDMTree.Name = "WDMTree";
             this.WDMTree.Size = new System.Drawing.Size(309, 180);
             this.WDMTree.TabIndex = 0;
+            this.WDMTree.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.WDMTree_NodeMouseDoubleClick);
             // 
             // groupBox2
             // 
@@ -131,7 +132,7 @@
             this.btnCancle.UseVisualStyleBackColor = true;
             this.btnCancle.Click += new System.EventHandler(this.btnCancle_Click);
             // 
-            // FromWDM
+            // FromWDMCore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -143,7 +144,7 @@
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FromWDM";
+            this.Name = "FromWDMCore";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "评估重量数据  WDM系统数据";

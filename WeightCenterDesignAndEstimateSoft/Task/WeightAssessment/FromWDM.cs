@@ -96,5 +96,10 @@ namespace WeightCenterDesignAndEstimateSoft.Task.WeightAssessment.AssessmentWeig
 
             this.Close();
         }
+
+        private void WDMTree_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            btnConfirm_Click(sender, e);
+        }
     }
 }
