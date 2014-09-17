@@ -1,0 +1,559 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C7665CA9-F430-41AA-8EEF-8B11866BF709}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WeightCenterDesignAndEstimateSoft</RootNamespace>
+    <AssemblyName>WES</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Windows.Forms.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="SyswareComLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Ref\SyswareComLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="ZedGraph, Version=5.1.5.30030, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Ref\ZedGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="ZstExpression, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Ref\ZstExpression.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonUtil.cs" />
+    <Compile Include="CoreDesignProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoreDesignProject.Designer.cs">
+      <DependentUpon>CoreDesignProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutForm.designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pub_SyswareCom.cs" />
+    <Compile Include="ReusltIssueDBForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReusltIssueDBForm.Designer.cs">
+      <DependentUpon>ReusltIssueDBForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\DBServerSettingFormcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\DBServerSettingFormcs.Designer.cs">
+      <DependentUpon>DBServerSettingFormcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task\CoreEnvelopeAssessment\CoreEnvelopeAssessConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task\CoreEnvelopeAssessment\CoreEnvelopeAssessConfigForm.Designer.cs">
+      <DependentUpon>CoreEnvelopeAssessConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task\CoreEnvelopeAssessment\CoreEnvelopeAssessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task\CoreEnvelopeAssessment\CoreEnvelopeAssessForm.Designer.cs">
+      <DependentUpon>CoreEnvelopeAssessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task\CoreEnvelopeAssessment\FromCoreData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task\CoreEnvelopeAssessment\FromCoreData.Designer.cs">
+      <DependentUpon>FromCoreData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task\DiscreteSetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task\DiscreteSetForm.designer.cs">
+      <DependentUpon>DiscreteSetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task\GridViewModifyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task\GridViewModifyForm.designer.cs">
+      <DependentUpon>GridViewModifyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task\SelectCoreCutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task\SelectCoreCutForm.Designer.cs">
+      <DependentUpon>SelectCoreCutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task\SelectWeightDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task\SelectWeightDataForm.designer.cs">
+      <DependentUpon>SelectWeightDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task\WeightAssessment\FromWDM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task\WeightAssessment\FromWDM.Designer.cs">
+      <DependentUpon>FromWDM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task\WeightAssessment\FromWeightData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task\WeightAssessment\FromWeightData.Designer.cs">
+      <DependentUpon>FromWeightData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task\WeightAssessment\WeightAssessmentConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task\WeightAssessment\WeightAssessmentConfigForm.Designer.cs">
+      <DependentUpon>WeightAssessmentConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task\WeightAssessment\WeightAssessmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task\WeightAssessment\WeightAssessmentForm.Designer.cs">
+      <DependentUpon>WeightAssessmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\BasicDBSetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool\BasicDBSetForm.Designer.cs">
+      <DependentUpon>BasicDBSetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\CoreEnvelopeDesignManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool\CoreEnvelopeDesignManageForm.Designer.cs">
+      <DependentUpon>CoreEnvelopeDesignManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\OutputCenterofGravityEnvelopeMethodFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\OutputCenterofGravityEnvelopeMethodFrm.designer.cs">
+      <DependentUpon>OutputCenterofGravityEnvelopeMethodFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\OutputWeightClassficationFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\OutputWeightClassficationFrm.designer.cs">
+      <DependentUpon>OutputWeightClassficationFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\OutputWeightMethodFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\OutputWeightMethodFrm.designer.cs">
+      <DependentUpon>OutputWeightMethodFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CoreDesignProject.resx">
+      <DependentUpon>CoreDesignProject.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReusltIssueDBForm.resx">
+      <DependentUpon>ReusltIssueDBForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\DBServerSettingFormcs.resx">
+      <DependentUpon>DBServerSettingFormcs.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task\CoreEnvelopeAssessment\CoreEnvelopeAssessConfigForm.resx">
+      <DependentUpon>CoreEnvelopeAssessConfigForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task\CoreEnvelopeAssessment\CoreEnvelopeAssessForm.resx">
+      <DependentUpon>CoreEnvelopeAssessForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task\CoreEnvelopeAssessment\FromCoreData.resx">
+      <DependentUpon>FromCoreData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task\DiscreteSetForm.resx">
+      <DependentUpon>DiscreteSetForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task\GridViewModifyForm.resx">
+      <DependentUpon>GridViewModifyForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task\SelectCoreCutForm.resx">
+      <DependentUpon>SelectCoreCutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task\SelectWeightDataForm.resx">
+      <DependentUpon>SelectWeightDataForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task\WeightAssessment\FromWDM.resx">
+      <DependentUpon>FromWDM.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task\WeightAssessment\FromWeightData.resx">
+      <DependentUpon>FromWeightData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task\WeightAssessment\WeightAssessmentConfigForm.resx">
+      <DependentUpon>WeightAssessmentConfigForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task\WeightAssessment\WeightAssessmentForm.resx">
+      <DependentUpon>WeightAssessmentForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool\BasicDBSetForm.resx">
+      <DependentUpon>BasicDBSetForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool\CoreEnvelopeDesignManageForm.resx">
+      <DependentUpon>CoreEnvelopeDesignManageForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\OutputCenterofGravityEnvelopeMethodFrm.resx">
+      <DependentUpon>OutputCenterofGravityEnvelopeMethodFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\OutputWeightClassficationFrm.resx">
+      <DependentUpon>OutputWeightClassficationFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\OutputWeightMethodFrm.resx">
+      <DependentUpon>OutputWeightMethodFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task\CoreEnvelopeCutForm.resx">
+      <DependentUpon>CoreEnvelopeCutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task\CoreEnvelopeDesignForm.resx">
+      <DependentUpon>CoreEnvelopeDesignForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task\WeightAdjustmentForm.resx">
+      <DependentUpon>WeightAdjustmentForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task\WeightEstimateForm.resx">
+      <DependentUpon>WeightEstimateForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool\ComputeCorrectionFactorFrm.resx">
+      <DependentUpon>ComputeCorrectionFactorFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool\CoreEnvelopeArithmeticOperForm.resx">
+      <DependentUpon>CoreEnvelopeArithmeticOperForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool\CoreEnvelopeAtithmeticManageForm.resx">
+      <DependentUpon>CoreEnvelopeAtithmeticManageForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool\CoreEnvelopeForm.resx">
+      <DependentUpon>CoreEnvelopeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool\DBManageForm.resx">
+      <DependentUpon>DBManageForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool\ImportWeightDataListForm.resx">
+      <DependentUpon>ImportWeightDataListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool\ParameterManageForm.resx">
+      <DependentUpon>ParameterManageForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool\TemplateSetForm.resx">
+      <DependentUpon>TemplateSetForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool\TempWeightParaSet.resx">
+      <DependentUpon>TempWeightParaSet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool\WeightArithmeticManageForm.resx">
+      <DependentUpon>WeightArithmeticManageForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool\WeightArithmeticOperForm.resx">
+      <DependentUpon>WeightArithmeticOperForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool\WeightDataMangeForm.resx">
+      <DependentUpon>WeightDataMangeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool\WeightDesignDataForm.resx">
+      <DependentUpon>WeightDesignDataForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool\WeightSortEditForm.resx">
+      <DependentUpon>WeightSortEditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool\WeightSortManageForm.resx">
+      <DependentUpon>WeightSortManageForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Task\CoreEnvelopeCutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task\CoreEnvelopeCutForm.Designer.cs">
+      <DependentUpon>CoreEnvelopeCutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task\CoreEnvelopeDesignForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task\CoreEnvelopeDesignForm.Designer.cs">
+      <DependentUpon>CoreEnvelopeDesignForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task\WeightAdjustmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task\WeightAdjustmentForm.Designer.cs">
+      <DependentUpon>WeightAdjustmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task\WeightEstimateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task\WeightEstimateForm.Designer.cs">
+      <DependentUpon>WeightEstimateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\ComputeCorrectionFactorFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool\ComputeCorrectionFactorFrm.designer.cs">
+      <DependentUpon>ComputeCorrectionFactorFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\CoreEnvelopeArithmeticOperForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool\CoreEnvelopeArithmeticOperForm.Designer.cs">
+      <DependentUpon>CoreEnvelopeArithmeticOperForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\CoreEnvelopeAtithmeticManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool\CoreEnvelopeAtithmeticManageForm.Designer.cs">
+      <DependentUpon>CoreEnvelopeAtithmeticManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\CoreEnvelopeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool\CoreEnvelopeForm.Designer.cs">
+      <DependentUpon>CoreEnvelopeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\DBManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool\DBManageForm.Designer.cs">
+      <DependentUpon>DBManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\ImportWeightDataListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool\ImportWeightDataListForm.Designer.cs">
+      <DependentUpon>ImportWeightDataListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\ParameterManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool\ParameterManageForm.Designer.cs">
+      <DependentUpon>ParameterManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\TemplateSetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool\TemplateSetForm.Designer.cs">
+      <DependentUpon>TemplateSetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\TempWeightParaSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool\TempWeightParaSet.designer.cs">
+      <DependentUpon>TempWeightParaSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\WeightArithmeticManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool\WeightArithmeticManageForm.Designer.cs">
+      <DependentUpon>WeightArithmeticManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\WeightArithmeticOperForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool\WeightArithmeticOperForm.Designer.cs">
+      <DependentUpon>WeightArithmeticOperForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\WeightDataMangeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool\WeightDataMangeForm.Designer.cs">
+      <DependentUpon>WeightDataMangeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\WeightDesignDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool\WeightDesignDataForm.Designer.cs">
+      <DependentUpon>WeightDesignDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\WeightSortEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool\WeightSortEditForm.Designer.cs">
+      <DependentUpon>WeightSortEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\WeightSortManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool\WeightSortManageForm.Designer.cs">
+      <DependentUpon>WeightSortManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WDMIntegrationModule.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{FF416D49-47D4-4AEE-ABF1-9F7D70600959}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{81686E35-D3AE-47AD-8B51-A6C5AB636710}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XCommon\XCommon.csproj">
+      <Project>{E6D16640-E5D4-4462-896C-E035326C6D9A}</Project>
+      <Name>XCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
