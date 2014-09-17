@@ -57,6 +57,7 @@
             this.WDMTree.Name = "WDMTree";
             this.WDMTree.Size = new System.Drawing.Size(309, 180);
             this.WDMTree.TabIndex = 0;
+            this.WDMTree.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.WDMTree_NodeMouseDoubleClick);
             // 
             // groupBox2
             // 

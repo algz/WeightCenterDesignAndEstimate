@@ -43,6 +43,7 @@
             this.weightResultTree.Name = "weightResultTree";
             this.weightResultTree.Size = new System.Drawing.Size(348, 267);
             this.weightResultTree.TabIndex = 1;
+            this.weightResultTree.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.weightResultTree_NodeMouseDoubleClick);
             // 
             // btnConfirm
             // 

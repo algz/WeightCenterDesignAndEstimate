@@ -99,6 +99,7 @@
             // wdmOpenFile
             // 
             this.wdmOpenFile.Filter = "WDM文件|*.wdm";
+            this.wdmOpenFile.RestoreDirectory = true;
             // 
             // WDMSettingForm
             // 

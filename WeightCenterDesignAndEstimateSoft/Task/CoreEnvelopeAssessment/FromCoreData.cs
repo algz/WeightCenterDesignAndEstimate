@@ -193,5 +193,10 @@ namespace WeightCenterDesignAndEstimateSoft.Task.CoreEnvelopeAssessment
             }
         }
 
+        private void treeCoreEnvelope_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            btnConfirm_Click(sender, e);
+        }
+
     }
 }
