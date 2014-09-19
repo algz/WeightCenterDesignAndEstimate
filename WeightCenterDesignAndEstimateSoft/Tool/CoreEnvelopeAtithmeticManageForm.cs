@@ -26,12 +26,12 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
 
             treeViewArithmeticList.ImageList = imageListTreeView;
 
-            if (!System.IO.Directory.Exists("CenterofGravityEnvelopeMethod"))
-            {
-                MessageBox.Show("不存在 CenterofGravityEnvelopeMethod 目录！");
-                Close();
-                return;
-            }
+            //if (!System.IO.Directory.Exists("CenterofGravityEnvelopeMethod"))
+            //{
+            //    MessageBox.Show("不存在 CenterofGravityEnvelopeMethod 目录！");
+            //    Close();
+            //    return;
+            //}
 
             Dictionary<string, string> waItems = GetArithmeticItems();
 
@@ -73,13 +73,22 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
             System.IO.Directory.SetCurrentDirectory(System.AppDomain.CurrentDomain.BaseDirectory);
 
             string dirname = "CenterofGravityEnvelopeMethod";
-            string[] files = System.IO.Directory.GetFiles(dirname, "*.MCEM");
-            for (int i = 0; i < files.Length; ++i)
+
+            if (System.IO.Directory.Exists(dirname))
             {
-                string strname = files[i];
-                strname = strname.Substring(strname.LastIndexOf('\\') + 1);
-                strname = strname.Substring(0, strname.Length - 5);
-                waDict.Add(strname, files[i]);
+                string[] files = System.IO.Directory.GetFiles(dirname, "*.MCEM");
+
+                for (int i = 0; i < files.Length; ++i)
+                {
+                    string strname = files[i];
+                    strname = strname.Substring(strname.LastIndexOf('\\') + 1);
+                    strname = strname.Substring(0, strname.Length - 5);
+                    waDict.Add(strname, files[i]);
+                }
+            }
+            else
+            {
+                System.IO.Directory.CreateDirectory(dirname);
             }
 
             return waDict;

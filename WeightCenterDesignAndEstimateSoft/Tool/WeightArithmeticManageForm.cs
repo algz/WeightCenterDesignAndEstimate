@@ -60,12 +60,12 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
         {
             treeViewArithmeticList.ImageList = imageListTreeView;
 
-            if (!System.IO.Directory.Exists("weightCategory"))
-            {
-                MessageBox.Show("不存在 weightCategory 目录！");
-                Close();
-                return;
-            }
+            //if (!System.IO.Directory.Exists("weightCategory"))
+            //{
+            //    MessageBox.Show("不存在 weightCategory 目录！");
+            //    Close();
+            //    return;
+            //}
 
             List<Dictionary<string, string>> waItems = GetArithmeticItems();
 
