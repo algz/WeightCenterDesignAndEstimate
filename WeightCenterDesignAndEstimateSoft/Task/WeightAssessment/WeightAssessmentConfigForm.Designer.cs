@@ -104,7 +104,7 @@
             // ImportMinMenuItem
             // 
             this.ImportMinMenuItem.Name = "ImportMinMenuItem";
-            this.ImportMinMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ImportMinMenuItem.Size = new System.Drawing.Size(151, 22);
             this.ImportMinMenuItem.Tag = "1";
             this.ImportMinMenuItem.Text = "导入最小值(&I)";
             this.ImportMinMenuItem.Click += new System.EventHandler(this.ImportMinMenuItem_Click);
@@ -112,7 +112,7 @@
             // ExportMinMenuItem
             // 
             this.ExportMinMenuItem.Name = "ExportMinMenuItem";
-            this.ExportMinMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ExportMinMenuItem.Size = new System.Drawing.Size(151, 22);
             this.ExportMinMenuItem.Tag = "1";
             this.ExportMinMenuItem.Text = "导出最小值(&E)";
             this.ExportMinMenuItem.Click += new System.EventHandler(this.ExportMinMenuItem_Click);
@@ -129,7 +129,7 @@
             // ImportMaxMenuItem
             // 
             this.ImportMaxMenuItem.Name = "ImportMaxMenuItem";
-            this.ImportMaxMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ImportMaxMenuItem.Size = new System.Drawing.Size(151, 22);
             this.ImportMaxMenuItem.Tag = "2";
             this.ImportMaxMenuItem.Text = "导入最大值(I)";
             this.ImportMaxMenuItem.Click += new System.EventHandler(this.ImportMinMenuItem_Click);
@@ -137,7 +137,7 @@
             // ExportMaxMenuItem
             // 
             this.ExportMaxMenuItem.Name = "ExportMaxMenuItem";
-            this.ExportMaxMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ExportMaxMenuItem.Size = new System.Drawing.Size(151, 22);
             this.ExportMaxMenuItem.Tag = "2";
             this.ExportMaxMenuItem.Text = "导出最大值(&E)";
             this.ExportMaxMenuItem.Click += new System.EventHandler(this.ExportMinMenuItem_Click);
@@ -213,6 +213,7 @@
             this.ConfigurationGridView.Size = new System.Drawing.Size(314, 453);
             this.ConfigurationGridView.TabIndex = 0;
             this.ConfigurationGridView.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.ConfigurationGridView_CellValidating);
+            this.ConfigurationGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ConfigurationGridView_KeyDown);
             // 
             // Column1
             // 

@@ -5062,8 +5062,12 @@ namespace WeightCenterDesignAndEstimateSoft
             if (selNode.Level == 2 && selNode.Parent.Text == "重心包线剪裁结果列表")
             {
                 CoreEnvelopeCutResultData coreCut = GetCoreEnvelopeCutResult();
-                // added 2014 9 11
-                coreCut.lstCutEnvelopeCore.Add(coreCut.lstCutEnvelopeCore[0]);
+
+                if (coreCut.lstCutEnvelopeCore.Count > 0)
+                {
+                    // added 2014 9 11
+                    coreCut.lstCutEnvelopeCore.Add(coreCut.lstCutEnvelopeCore[0]);
+                }
 
                 CoreEnvelopeCutForm form = new CoreEnvelopeCutForm(this, coreCut);
                 form.ShowDialog();

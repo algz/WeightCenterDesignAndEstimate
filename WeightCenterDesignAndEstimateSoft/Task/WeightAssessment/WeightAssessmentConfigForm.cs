@@ -318,5 +318,14 @@ namespace WeightCenterDesignAndEstimateSoft.Task.WeightAssessment
         }
 
         #endregion
+
+        private void ConfigurationGridView_KeyDown(object sender, KeyEventArgs e)
+        {
+            //判断Ctrl+V 粘帖到单元格
+            if (Control.ModifierKeys == Keys.Control && e.KeyCode == Keys.V)
+            {
+                this.ConfigurationGridView.CurrentCell.Value = Clipboard.GetText();
+            }
+        }
     }
 }

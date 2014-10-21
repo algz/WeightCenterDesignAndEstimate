@@ -27,6 +27,8 @@ namespace WeightCenterDesignAndEstimateSoft.Task
         private ZedGraph.LineItem zedBasicCoreEnvelopeLine = null;
         private ZedGraph.LineItem zedCutCoreEnvelopeLine = null;
         private ZedGraph.CurveList zedDiscreteCurve = new ZedGraph.CurveList();
+        private ZedGraph.LineItem zedLeftEnvelopeLine = null;
+        private ZedGraph.LineItem zedRightEnvelopeLine = null;
 
         //曲线设置
         private string[] zedTitle = new string[] { "原始重心包线", "不可用离散重心点", "可用离散重心点", "剪裁重心包线" };
@@ -442,7 +444,7 @@ namespace WeightCenterDesignAndEstimateSoft.Task
 
         private ZedGraph.LineItem AddCurveToZedGraph(ZedGraph.ZedGraphControl zed, string title, List<CorePointData> ptlst, Color clr, ZedGraph.SymbolType symType, bool bclosed)
         {
-            if (ptlst.Count == 0)
+            if (ptlst == null || ptlst.Count == 0)
             {
                 return null;
             }
@@ -1051,6 +1053,7 @@ namespace WeightCenterDesignAndEstimateSoft.Task
                         ResetFuelList();
                     }
                 }
+                剪裁方式ToolStripMenuItem.Enabled = false;
             }
         }
 
@@ -1210,7 +1213,7 @@ namespace WeightCenterDesignAndEstimateSoft.Task
                         }
                     }
                 }
-
+                剪裁方式ToolStripMenuItem.Enabled = false;
                 XCommon.XLog.Write("成功从文件导入\"" + dialog.FileName + "\"数据！");
             }
 
@@ -1517,6 +1520,22 @@ namespace WeightCenterDesignAndEstimateSoft.Task
                 {
                     return false;
                 }
+
+                if (zedLeftEnvelopeLine != null)
+                {
+                    zedGraphControlCoreEnvelope.GraphPane.CurveList.Remove(zedLeftEnvelopeLine);
+                }
+                if (zedRightEnvelopeLine != null)
+                {
+                    zedGraphControlCoreEnvelope.GraphPane.CurveList.Remove(zedRightEnvelopeLine);
+                }
+
+                zedLeftEnvelopeLine = AddCurveToZedGraph(zedGraphControlCoreEnvelope, "边界线", lstLeftEnvelope, Color.Purple, ZedGraph.SymbolType.None, false);
+                zedLeftEnvelopeLine.Line.Width = 2;
+                zedRightEnvelopeLine = AddCurveToZedGraph(zedGraphControlCoreEnvelope, "", lstRightEnvelope, Color.Purple, ZedGraph.SymbolType.None, false);
+                zedRightEnvelopeLine.Line.Width = 2;
+
+                zedGraphControlCoreEnvelope.Refresh();
             }
             data.lstCoreEvaluation.Clear();
 
@@ -1554,6 +1573,7 @@ namespace WeightCenterDesignAndEstimateSoft.Task
                     }
                 }
             }
+
             zedGraphControlCoreEnvelope.Refresh();
         }
 
@@ -1657,7 +1677,7 @@ namespace WeightCenterDesignAndEstimateSoft.Task
         private void 剪裁方式ToolStripMenuItem_SelectedIndexChanged(object sender, EventArgs e)
         {
             nSelIndex = 剪裁方式ToolStripMenuItem.SelectedIndex;
-
+            
             从文件导入燃油数据ToolStripMenuItem.Enabled = (nSelIndex == 0);
             从文件导入评估数据ToolStripMenuItem.Enabled = (nSelIndex != 0);
         }
@@ -1932,8 +1952,11 @@ namespace WeightCenterDesignAndEstimateSoft.Task
                 coreForm.ShowDialog();
             }
 
-            // added 2014 9 11
-            data.lstCutEnvelopeCore.RemoveAt(data.lstCutEnvelopeCore.Count - 1);
+            if (data.lstCutEnvelopeCore.Count > 0)
+            {
+                // added 2014 9 11
+                data.lstCutEnvelopeCore.RemoveAt(data.lstCutEnvelopeCore.Count - 1);
+            }
 
             if (!bEditProject)
             {

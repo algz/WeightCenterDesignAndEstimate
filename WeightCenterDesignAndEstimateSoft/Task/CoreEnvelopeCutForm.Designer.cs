@@ -213,6 +213,7 @@
             // 
             // 剪裁方式ToolStripMenuItem
             // 
+            this.剪裁方式ToolStripMenuItem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.剪裁方式ToolStripMenuItem.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
             this.剪裁方式ToolStripMenuItem.Items.AddRange(new object[] {
             "燃油特性剪裁",
@@ -220,7 +221,6 @@
             "飞行载荷剪裁"});
             this.剪裁方式ToolStripMenuItem.Name = "剪裁方式ToolStripMenuItem";
             this.剪裁方式ToolStripMenuItem.Size = new System.Drawing.Size(152, 25);
-            this.剪裁方式ToolStripMenuItem.Text = "剪裁方式";
             this.剪裁方式ToolStripMenuItem.SelectedIndexChanged += new System.EventHandler(this.剪裁方式ToolStripMenuItem_SelectedIndexChanged);
             // 
             // toolStripMenuItem4
