@@ -1232,6 +1232,11 @@ namespace WeightCenterDesignAndEstimateSoft
                 string[] files = Directory.GetFiles(dirPath, "*.wdm");
                 filePath = files.Count()!=0?files[0]:"wdm.wdm";
             }
+            if (!File.Exists(filePath))
+            {
+                MessageBox.Show("WDM文件不存在!");
+                return "";
+            }
             return filePath;
         }
     }

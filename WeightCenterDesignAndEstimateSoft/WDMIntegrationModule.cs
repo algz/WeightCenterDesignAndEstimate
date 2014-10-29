@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Runtime.InteropServices;
+using System.IO;
 
 namespace WeightCenterDesignAndEstimateSoft
 {
@@ -183,6 +184,11 @@ namespace WeightCenterDesignAndEstimateSoft
         /// <returns></returns>
         public static Air[] getAircs(string fileName)
         {
+            if (!File.Exists(fileName))
+            {
+                return null;
+            }
+
             int c = GetAircCount(fileName);
             Air[] airs = new Air[c];
 

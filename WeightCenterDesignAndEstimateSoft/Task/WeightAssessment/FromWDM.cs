@@ -24,6 +24,7 @@ namespace WeightCenterDesignAndEstimateSoft.Task.WeightAssessment.AssessmentWeig
             this.wdmFile = CommonUtil.getWDMDBFilePath();
             if (wdmFile == "")
             {
+                this.Close();
                 return;
             }
             this.airs = WDMIntegrationModule.getAircs(wdmFile);
