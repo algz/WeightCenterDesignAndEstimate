@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using Microsoft.Win32;
 using System.Xml;
+using System.IO;
 
 namespace WeightCenterDesignAndEstimateSoft.Setting
 {
@@ -26,7 +27,7 @@ namespace WeightCenterDesignAndEstimateSoft.Setting
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if (this.wdmDBtxt.Text == "")
+            if (this.wdmDBtxt.Text == ""||!File.Exists(this.wdmDBtxt.Text))
             {
                 MessageBox.Show("请输入WDM数据库文件");
                 return;
@@ -42,6 +43,7 @@ namespace WeightCenterDesignAndEstimateSoft.Setting
 
         private void WDMSettingForm_Load(object sender, EventArgs e)
         {
+            
             string fileName = CommonUtil.getWDMDBFilePath();
             if (fileName != null && !fileName.Equals(""))
             {

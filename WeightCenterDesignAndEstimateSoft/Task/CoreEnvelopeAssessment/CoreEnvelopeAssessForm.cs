@@ -449,7 +449,11 @@ namespace WeightCenterDesignAndEstimateSoft.Task.CoreEnvelopeAssessment
 
         private void ImportCoreWDMMenuItem_Click(object sender, EventArgs e)
         {
-            new FromWDMCore().ShowDialog(this);
+            if (CommonUtil.getWDMDBFilePath() != "")
+            {
+                new FromWDMCore().ShowDialog(this);
+            }
+            
         }
 
     }

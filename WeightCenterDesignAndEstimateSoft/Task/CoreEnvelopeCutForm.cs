@@ -114,6 +114,11 @@ namespace WeightCenterDesignAndEstimateSoft.Task
                 data.lstCoreEvaluation.AddRange(olddata.lstCoreEvaluation);
             }
 
+            if (data.lstCutEnvelopeCore.Count > 0)
+            {
+                data.lstCutEnvelopeCore.Add(data.lstCutEnvelopeCore[0]);
+            }
+
             discreteset.nCircularPtCount = _coreCut.nDiscreteCircularPtCount;
             discreteset.nRadialPtCount = _coreCut.nDiscreteRadialPtCount;
             discreteset.fRadialFirstLen = _coreCut.fDiscreteRadialFirstLen;

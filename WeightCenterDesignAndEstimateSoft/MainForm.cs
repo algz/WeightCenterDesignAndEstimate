@@ -913,45 +913,63 @@ namespace WeightCenterDesignAndEstimateSoft
             fToolStripMenuItemTool.Enabled = true;
         }
 
-        private void SetPageControls(bool IsEnable, string strType)
-        {
-            //重量设计
-            if (strType == "weightDesign" || strType == "all")
-            {
-                btnExportWeightToFile.Enabled = IsEnable;
-                btnExportWeightToHJ.Enabled = IsEnable;
-                btnExportWeightToDB.Enabled = IsEnable;
-                gridDesignResult.ReadOnly = !IsEnable;
-                btnWeightDesignPubilishToTde.Enabled = IsEnable;
-            }
-            //重心包线设计
-            if (strType == "coreEnvelope" || strType == "all")
-            {
-                btnExportCoreDesignWeightToDataFile.Enabled = IsEnable;
-                btnExportCoreDesignWeightToJC.Enabled = IsEnable;
-                btnExportCoreDesignWeightToDB.Enabled = IsEnable;
-                gridCoreEnvelopeDesign.ReadOnly = !IsEnable;
-                btnCoreEnvelopeDesignPublishToTde.Enabled = IsEnable;
-            }
-            //重心包线剪裁
-            if (strType == "coreEnvelopeCut" || strType == "all")
-            {
-                btnExportCutWeightToDataFile.Enabled = IsEnable;
-                btnExportCutWeightToZC.Enabled = IsEnable;
-                btnExportCutWeightToDB.Enabled = IsEnable;
-                gridViewCoreEnvelopeCutReuslt.ReadOnly = !IsEnable;
-                btnCoreEnvelopeCutPublishToTde.Enabled = IsEnable;
-            }
-            //重量调整
-            if (strType == "weightAdjust" || strType == "all")
-            {
-                btnExportAdjustmentWeightToDataFile.Enabled = IsEnable;
-                btnExportAdjustmentWeightToZC.Enabled = IsEnable;
-                btnExportAdjustmentWeightToDB.Enabled = IsEnable;
-                gridViewAdjustment.ReadOnly = !IsEnable;
-                btnWeightAdjustPublishToTde.Enabled = IsEnable;
-            }
-        }
+        //private void SetPageControls(bool IsEnable, string strType)
+        //{
+        //    //重量设计
+        //    if (strType == "weightDesign" || strType == "all")
+        //    {
+        //        btnExportWeightToFile.Enabled = IsEnable;
+        //        //btnExportWeightToHJ.Enabled = IsEnable;
+        //        btnExportWeightToDB.Enabled = IsEnable;
+        //        gridDesignResult.ReadOnly = !IsEnable;
+        //        btnWeightDesignPubilishToTde.Enabled = IsEnable;
+        //    }
+        //    //重心包线设计
+        //    if (strType == "coreEnvelope" || strType == "all")
+        //    {
+        //        btnExportCoreDesignWeightToDataFile.Enabled = IsEnable;
+        //        btnCoreEnvelopeDesignPublishToTde.Enabled = IsEnable;
+        //        btnExportCoreDesignWeightToDB.Enabled = IsEnable;
+        //        gridCoreEnvelopeDesign.ReadOnly = !IsEnable;
+        //        btnCoreEnvelopeDesignPublishToTde.Enabled = IsEnable;
+        //    }
+        //    //重心包线剪裁
+        //    if (strType == "coreEnvelopeCut" || strType == "all")
+        //    {
+        //        btnExportCutWeightToDataFile.Enabled = IsEnable;
+        //        //btnExportCutWeightToZC.Enabled = IsEnable;
+        //        btnExportCutWeightToDB.Enabled = IsEnable;
+        //        gridViewCoreEnvelopeCutReuslt.ReadOnly = !IsEnable;
+        //        btnCoreEnvelopeCutPublishToTde.Enabled = IsEnable;
+        //    }
+        //    //重量调整
+        //    if (strType == "weightAdjust" || strType == "all")
+        //    {
+        //        btnExportAdjustmentWeightToDataFile.Enabled = IsEnable;
+        //        //btnExportAdjustmentWeightToZC.Enabled = IsEnable;
+        //        btnExportAdjustmentWeightToDB.Enabled = IsEnable;
+        //        gridViewAdjustment.ReadOnly = !IsEnable;
+        //        btnWeightAdjustPublishToTde.Enabled = IsEnable;
+        //    }
+        //    //重量评估
+        //    if (strType == "weightAdjust" || strType == "all")
+        //    {
+        //        btnExportAdjustmentWeightToDataFile.Enabled = IsEnable;
+        //        //btnExportAdjustmentWeightToZC.Enabled = IsEnable;
+        //        btnExportAdjustmentWeightToDB.Enabled = IsEnable;
+        //        gridViewAdjustment.ReadOnly = !IsEnable;
+        //        btnWeightAdjustPublishToTde.Enabled = IsEnable;
+        //    }
+        //    //重心包线评估
+        //    if (strType == "weightAdjust" || strType == "all")
+        //    {
+        //        btnExportAdjustmentWeightToDataFile.Enabled = IsEnable;
+        //        //btnExportAdjustmentWeightToZC.Enabled = IsEnable;
+        //        btnExportAdjustmentWeightToDB.Enabled = IsEnable;
+        //        gridViewAdjustment.ReadOnly = !IsEnable;
+        //        btnWeightAdjustPublishToTde.Enabled = IsEnable;
+        //    }
+        //}
 
         /// <summary>
         /// 绘制饼图
@@ -2881,8 +2899,8 @@ namespace WeightCenterDesignAndEstimateSoft
 
             if (table.Columns.Count > 0)
             {
-                double dXValue = 0;
-                double dYValue = 0;
+                //double dXValue = 0;
+                //double dYValue = 0;
 
                 List<CorePointData> lstCorePoint = new List<CorePointData>();
                 if (strType == "basic")
@@ -2895,36 +2913,41 @@ namespace WeightCenterDesignAndEstimateSoft
                 }
 
                 DataRow dr = table.NewRow();
-                if (gridViewCoreEnvelopeCutReuslt.ColumnCount >= 2 && gridViewCoreEnvelopeCutReuslt.Rows[0].Cells[1].Value == null)
+                for (int i = 0; lstCorePoint != null && i < lstCorePoint.Count; i++)
                 {
-                    for (int i = 0; i < lstCorePoint.Count; i++)
-                    {
-                        string strColumnName = "column" + (i + 1).ToString();
-                        dr[strColumnName] = Math.Round(lstCorePoint[i].pointXValue, digit).ToString() + "," + Math.Round(lstCorePoint[i].pointYValue, digit).ToString();
-                    }
+                    string strColumnName = "column" + (i + 1).ToString();
+                    dr[strColumnName] = Math.Round(lstCorePoint[i].pointXValue, digit).ToString() + "," + Math.Round(lstCorePoint[i].pointYValue, digit).ToString();
                 }
-                else
-                {
-                    if (gridViewCoreEnvelopeCutReuslt.ColumnCount - 1 == lstCorePoint.Count)
-                    {
-                        for (int i = 1; i < gridViewCoreEnvelopeCutReuslt.ColumnCount; i++)
-                        {
-                            dXValue = Math.Round(Convert.ToDouble(gridViewCoreEnvelopeCutReuslt.Rows[0].Cells[i].Value.ToString()), digit);
-                            dYValue = Math.Round(Convert.ToDouble(gridViewCoreEnvelopeCutReuslt.Rows[1].Cells[i].Value.ToString()), digit);
+                //if (gridViewCoreEnvelopeCutReuslt.ColumnCount >= 2 && gridViewCoreEnvelopeCutReuslt.Rows[0].Cells[1].Value == null)
+                //{
+                //    for (int i = 0; i < lstCorePoint.Count; i++)
+                //    {
+                //        string strColumnName = "column" + (i + 1).ToString();
+                //        dr[strColumnName] = Math.Round(lstCorePoint[i].pointXValue, digit).ToString() + "," + Math.Round(lstCorePoint[i].pointYValue, digit).ToString();
+                //    }
+                //}
+                //else
+                //{
+                //    if (gridViewCoreEnvelopeCutReuslt.ColumnCount - 1 == lstCorePoint.Count)//?
+                //    {
+                //        for (int i = 1; i < gridViewCoreEnvelopeCutReuslt.ColumnCount; i++)
+                //        {
+                //            dXValue = Math.Round(Convert.ToDouble(gridViewCoreEnvelopeCutReuslt.Rows[0].Cells[i].Value.ToString()), digit);
+                //            dYValue = Math.Round(Convert.ToDouble(gridViewCoreEnvelopeCutReuslt.Rows[1].Cells[i].Value.ToString()), digit);
 
-                            string strColumnName = "column" + i.ToString();
-                            dr[strColumnName] = dXValue.ToString() + "," + dYValue.ToString();
-                        }
-                    }
-                    else
-                    {
-                        for (int i = 0; i < lstCorePoint.Count; i++)
-                        {
-                            string strColumnName = "column" + (i + 1).ToString();
-                            dr[strColumnName] = Math.Round(lstCorePoint[i].pointXValue, digit).ToString() + "," + Math.Round(lstCorePoint[i].pointYValue, digit).ToString();
-                        }
-                    }
-                }
+                //            string strColumnName = "column" + i.ToString();
+                //            dr[strColumnName] = dXValue.ToString() + "," + dYValue.ToString();
+                //        }
+                //    }
+                //    else
+                //    {
+                //        for (int i = 0; i < lstCorePoint.Count; i++)
+                //        {
+                //            string strColumnName = "column" + (i + 1).ToString();
+                //            dr[strColumnName] = Math.Round(lstCorePoint[i].pointXValue, digit).ToString() + "," + Math.Round(lstCorePoint[i].pointYValue, digit).ToString();
+                //        }
+                //    }
+                //}
 
                 table.Rows.Add(dr);
             }
@@ -2961,11 +2984,11 @@ namespace WeightCenterDesignAndEstimateSoft
 
                 if (strType == "basic")
                 {
-                    gridViewCoreEnvelopeCutReuslt.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    //gridViewCoreEnvelopeCutReuslt.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 }
                 if (strType == "cut")
                 {
-                    gridViewCoreEnvelopeCutReuslt.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+                    //gridViewCoreEnvelopeCutReuslt.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
                 }
 
                 //第一列
@@ -3101,7 +3124,6 @@ namespace WeightCenterDesignAndEstimateSoft
         {
             DataTable tableBasic = GetTableCoreEnvelopeCutData(cutData, "basic");
             DataTable tableCut = GetTableCoreEnvelopeCutData(cutData, "cut");
-
             GraphPane myPane = zedGraphControlCore.GraphPane;
 
             //清除原来的图形
@@ -5063,11 +5085,11 @@ namespace WeightCenterDesignAndEstimateSoft
             {
                 CoreEnvelopeCutResultData coreCut = GetCoreEnvelopeCutResult();
 
-                if (coreCut.lstCutEnvelopeCore.Count > 0)
-                {
-                    // added 2014 9 11
-                    coreCut.lstCutEnvelopeCore.Add(coreCut.lstCutEnvelopeCore[0]);
-                }
+                //if (coreCut.lstCutEnvelopeCore.Count > 0)
+                //{
+                //    // added 2014 9 11
+                //    coreCut.lstCutEnvelopeCore.Add(coreCut.lstCutEnvelopeCore[0]);
+                //}
 
                 CoreEnvelopeCutForm form = new CoreEnvelopeCutForm(this, coreCut);
                 form.ShowDialog();
@@ -5802,6 +5824,14 @@ namespace WeightCenterDesignAndEstimateSoft
         private void tabControlCoreEnvelopeCut_SelectedIndexChanged(object sender, EventArgs e)
         {
             string strType = GetCoreEnvelopeCutType();
+            if (strType == "basic")
+            {
+                gruCoreEnvelopeCutReuslt.Text = "基础重心包线结果";
+            }
+            else
+            {
+                gruCoreEnvelopeCutReuslt.Text = "剪裁重心包线结果";
+            }
 
             //绑定GridView
             CoreEnvelopeCutResultData cutData = GetCoreEnvelopeCutResult();

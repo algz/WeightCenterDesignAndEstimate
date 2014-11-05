@@ -29,47 +29,47 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.文件FToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemNew = new System.Windows.Forms.ToolStripMenuItem();
@@ -97,6 +97,7 @@
             this.设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemDBServerSetting = new System.Windows.Forms.ToolStripMenuItem();
             this.BasicDBSetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.wDMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -124,12 +125,11 @@
             this.contextMenuStripSaveImge = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItemSaveImgeToFile = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnWeightDesignPubilishToTde = new System.Windows.Forms.Button();
             this.gruResultData = new System.Windows.Forms.GroupBox();
             this.gridDesignResult = new System.Windows.Forms.DataGridView();
             this.btnExportWeightToDB = new System.Windows.Forms.Button();
-            this.btnExportWeightToHJ = new System.Windows.Forms.Button();
             this.btnExportWeightToFile = new System.Windows.Forms.Button();
+            this.btnWeightDesignPubilishToTde = new System.Windows.Forms.Button();
             this.tabPageAdjustment = new System.Windows.Forms.TabPage();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -157,11 +157,10 @@
             this.toolStripMenuItemAdjustCompareImage = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemDisplayData = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnWeightAdjustPublishToTde = new System.Windows.Forms.Button();
             this.gruAdjustmentGrid = new System.Windows.Forms.GroupBox();
             this.gridViewAdjustment = new System.Windows.Forms.DataGridView();
             this.btnExportAdjustmentWeightToDB = new System.Windows.Forms.Button();
-            this.btnExportAdjustmentWeightToZC = new System.Windows.Forms.Button();
+            this.btnWeightAdjustPublishToTde = new System.Windows.Forms.Button();
             this.btnExportAdjustmentWeightToDataFile = new System.Windows.Forms.Button();
             this.tabPageEnvelopeDesign = new System.Windows.Forms.TabPage();
             this.splitContainer9 = new System.Windows.Forms.SplitContainer();
@@ -178,11 +177,10 @@
             this.gruCoreEnvelopePic = new System.Windows.Forms.GroupBox();
             this.zedGraphControlCore = new ZedGraph.ZedGraphControl();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnCoreEnvelopeDesignPublishToTde = new System.Windows.Forms.Button();
             this.btnExportCoreDesignWeightToDB = new System.Windows.Forms.Button();
             this.gruCoreEnvelopeDesign = new System.Windows.Forms.GroupBox();
             this.gridCoreEnvelopeDesign = new System.Windows.Forms.DataGridView();
-            this.btnExportCoreDesignWeightToJC = new System.Windows.Forms.Button();
+            this.btnCoreEnvelopeDesignPublishToTde = new System.Windows.Forms.Button();
             this.btnExportCoreDesignWeightToDataFile = new System.Windows.Forms.Button();
             this.tabPageEnvelopeCut = new System.Windows.Forms.TabPage();
             this.splitContainer12 = new System.Windows.Forms.SplitContainer();
@@ -207,10 +205,9 @@
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.zedGraphControlCoreCompare = new ZedGraph.ZedGraphControl();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnCoreEnvelopeCutPublishToTde = new System.Windows.Forms.Button();
             this.gruCoreEnvelopeCutReuslt = new System.Windows.Forms.GroupBox();
             this.gridViewCoreEnvelopeCutReuslt = new System.Windows.Forms.DataGridView();
-            this.btnExportCutWeightToZC = new System.Windows.Forms.Button();
+            this.btnCoreEnvelopeCutPublishToTde = new System.Windows.Forms.Button();
             this.btnExportCutWeightToDB = new System.Windows.Forms.Button();
             this.btnExportCutWeightToDataFile = new System.Windows.Forms.Button();
             this.tabPageWeightAssessment = new System.Windows.Forms.TabPage();
@@ -312,7 +309,6 @@
             this.contextMenuStripDeleteResult = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItemDeleteWeightDesignData = new System.Windows.Forms.ToolStripMenuItem();
             this.button2 = new System.Windows.Forms.Button();
-            this.wDMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -688,6 +684,13 @@
             this.BasicDBSetToolStripMenuItem.Text = "基础数据库读取数据设置(&B)";
             this.BasicDBSetToolStripMenuItem.Click += new System.EventHandler(this.BasicDBSetToolStripMenuItem_Click);
             // 
+            // wDMToolStripMenuItem
+            // 
+            this.wDMToolStripMenuItem.Name = "wDMToolStripMenuItem";
+            this.wDMToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.wDMToolStripMenuItem.Text = "WDM系统登录设置";
+            this.wDMToolStripMenuItem.Click += new System.EventHandler(this.wDMToolStripMenuItem_Click);
+            // 
             // toolStripMenuItemHelp
             // 
             this.toolStripMenuItemHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -969,24 +972,24 @@
             // 
             // chartWeightDesign
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartWeightDesign.ChartAreas.Add(chartArea1);
+            chartArea7.Name = "ChartArea1";
+            this.chartWeightDesign.ChartAreas.Add(chartArea7);
             this.chartWeightDesign.ContextMenuStrip = this.contextMenuStripSaveImge;
             this.chartWeightDesign.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            this.chartWeightDesign.Legends.Add(legend1);
+            legend7.IsTextAutoFit = false;
+            legend7.Name = "Legend1";
+            this.chartWeightDesign.Legends.Add(legend7);
             this.chartWeightDesign.Location = new System.Drawing.Point(3, 17);
             this.chartWeightDesign.Name = "chartWeightDesign";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartWeightDesign.Series.Add(series1);
+            series7.ChartArea = "ChartArea1";
+            series7.Legend = "Legend1";
+            series7.Name = "Series1";
+            this.chartWeightDesign.Series.Add(series7);
             this.chartWeightDesign.Size = new System.Drawing.Size(516, 369);
             this.chartWeightDesign.TabIndex = 0;
             this.chartWeightDesign.Text = "chart1";
-            title1.Name = "Title1";
-            this.chartWeightDesign.Titles.Add(title1);
+            title3.Name = "Title1";
+            this.chartWeightDesign.Titles.Add(title3);
             this.chartWeightDesign.MouseDown += new System.Windows.Forms.MouseEventHandler(this.chartWeightDesign_MouseDown);
             this.chartWeightDesign.MouseMove += new System.Windows.Forms.MouseEventHandler(this.chartWeightDesign_MouseMove);
             // 
@@ -1008,14 +1011,13 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 169F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 169F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 154F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 184F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 161F));
-            this.tableLayoutPanel1.Controls.Add(this.btnWeightDesignPubilishToTde, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.gruResultData, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnExportWeightToDB, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnExportWeightToHJ, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnExportWeightToFile, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnWeightDesignPubilishToTde, 2, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -1024,17 +1026,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(809, 128);
             this.tableLayoutPanel1.TabIndex = 5;
-            // 
-            // btnWeightDesignPubilishToTde
-            // 
-            this.btnWeightDesignPubilishToTde.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnWeightDesignPubilishToTde.Location = new System.Drawing.Point(195, 95);
-            this.btnWeightDesignPubilishToTde.Name = "btnWeightDesignPubilishToTde";
-            this.btnWeightDesignPubilishToTde.Size = new System.Drawing.Size(112, 22);
-            this.btnWeightDesignPubilishToTde.TabIndex = 5;
-            this.btnWeightDesignPubilishToTde.Text = "发布至TDE/IDE(&P)";
-            this.btnWeightDesignPubilishToTde.UseVisualStyleBackColor = true;
-            this.btnWeightDesignPubilishToTde.Click += new System.EventHandler(this.btnWeightDesignPubilishToTde_Click);
             // 
             // gruResultData
             // 
@@ -1053,35 +1044,35 @@
             this.gridDesignResult.AllowUserToAddRows = false;
             this.gridDesignResult.BackgroundColor = System.Drawing.Color.White;
             this.gridDesignResult.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridDesignResult.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridDesignResult.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.gridDesignResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridDesignResult.ContextMenuStrip = this.contextMenuStripWeightDesign;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridDesignResult.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridDesignResult.DefaultCellStyle = dataGridViewCellStyle23;
             this.gridDesignResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridDesignResult.Location = new System.Drawing.Point(3, 17);
             this.gridDesignResult.Name = "gridDesignResult";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridDesignResult.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridDesignResult.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.gridDesignResult.RowTemplate.Height = 23;
             this.gridDesignResult.Size = new System.Drawing.Size(797, 59);
             this.gridDesignResult.TabIndex = 0;
@@ -1099,27 +1090,27 @@
             this.btnExportWeightToDB.UseVisualStyleBackColor = true;
             this.btnExportWeightToDB.Click += new System.EventHandler(this.btnExportWeightToDB_Click);
             // 
-            // btnExportWeightToHJ
-            // 
-            this.btnExportWeightToHJ.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnExportWeightToHJ.Enabled = false;
-            this.btnExportWeightToHJ.Location = new System.Drawing.Point(482, 95);
-            this.btnExportWeightToHJ.Name = "btnExportWeightToHJ";
-            this.btnExportWeightToHJ.Size = new System.Drawing.Size(163, 22);
-            this.btnExportWeightToHJ.TabIndex = 2;
-            this.btnExportWeightToHJ.Text = "导出重量数据至支撑环境(&E)";
-            this.btnExportWeightToHJ.UseVisualStyleBackColor = true;
-            // 
             // btnExportWeightToFile
             // 
             this.btnExportWeightToFile.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnExportWeightToFile.Location = new System.Drawing.Point(313, 95);
             this.btnExportWeightToFile.Name = "btnExportWeightToFile";
-            this.btnExportWeightToFile.Size = new System.Drawing.Size(163, 22);
+            this.btnExportWeightToFile.Size = new System.Drawing.Size(148, 22);
             this.btnExportWeightToFile.TabIndex = 4;
             this.btnExportWeightToFile.Text = "导出重量数据至数据文件(&O)";
             this.btnExportWeightToFile.UseVisualStyleBackColor = true;
             this.btnExportWeightToFile.Click += new System.EventHandler(this.btnExportWeightToFile_Click);
+            // 
+            // btnWeightDesignPubilishToTde
+            // 
+            this.btnWeightDesignPubilishToTde.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnWeightDesignPubilishToTde.Location = new System.Drawing.Point(470, 95);
+            this.btnWeightDesignPubilishToTde.Name = "btnWeightDesignPubilishToTde";
+            this.btnWeightDesignPubilishToTde.Size = new System.Drawing.Size(175, 22);
+            this.btnWeightDesignPubilishToTde.TabIndex = 5;
+            this.btnWeightDesignPubilishToTde.Text = "导出重量数据至支撑环境(&E)";
+            this.btnWeightDesignPubilishToTde.UseVisualStyleBackColor = true;
+            this.btnWeightDesignPubilishToTde.Click += new System.EventHandler(this.btnWeightDesignPubilishToTde_Click);
             // 
             // tabPageAdjustment
             // 
@@ -1338,23 +1329,23 @@
             // 
             // chartWeightAdjust
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartWeightAdjust.ChartAreas.Add(chartArea2);
+            chartArea1.Name = "ChartArea1";
+            this.chartWeightAdjust.ChartAreas.Add(chartArea1);
             this.chartWeightAdjust.ContextMenuStrip = this.contextMenuStripAdjustImage;
             this.chartWeightAdjust.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.chartWeightAdjust.Legends.Add(legend2);
+            legend1.Name = "Legend1";
+            this.chartWeightAdjust.Legends.Add(legend1);
             this.chartWeightAdjust.Location = new System.Drawing.Point(3, 3);
             this.chartWeightAdjust.Name = "chartWeightAdjust";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartWeightAdjust.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartWeightAdjust.Series.Add(series1);
             this.chartWeightAdjust.Size = new System.Drawing.Size(533, 311);
             this.chartWeightAdjust.TabIndex = 0;
             this.chartWeightAdjust.Text = "chart1";
-            title2.Name = "Title1";
-            this.chartWeightAdjust.Titles.Add(title2);
+            title1.Name = "Title1";
+            this.chartWeightAdjust.Titles.Add(title1);
             this.chartWeightAdjust.MouseDown += new System.Windows.Forms.MouseEventHandler(this.chartWeightAdjust_MouseDown);
             this.chartWeightAdjust.MouseMove += new System.Windows.Forms.MouseEventHandler(this.chartWeightAdjust_MouseMove);
             // 
@@ -1385,23 +1376,23 @@
             // 
             // chartAdjustment
             // 
-            chartArea3.AxisX.Interval = 1D;
-            chartArea3.AxisX.IntervalOffset = 1D;
-            chartArea3.Name = "ChartArea1";
-            this.chartAdjustment.ChartAreas.Add(chartArea3);
+            chartArea2.AxisX.Interval = 1D;
+            chartArea2.AxisX.IntervalOffset = 1D;
+            chartArea2.Name = "ChartArea1";
+            this.chartAdjustment.ChartAreas.Add(chartArea2);
             this.chartAdjustment.ContextMenuStrip = this.contextMenuStripAdjustCompareImage;
             this.chartAdjustment.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.chartAdjustment.Legends.Add(legend3);
+            legend2.Name = "Legend1";
+            this.chartAdjustment.Legends.Add(legend2);
             this.chartAdjustment.Location = new System.Drawing.Point(3, 3);
             this.chartAdjustment.Name = "chartAdjustment";
-            series3.ChartArea = "ChartArea1";
-            series3.CustomProperties = "PixelPointWidth=30, LabelStyle=Left";
-            series3.IsValueShownAsLabel = true;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
-            this.chartAdjustment.Series.Add(series3);
+            series2.ChartArea = "ChartArea1";
+            series2.CustomProperties = "PixelPointWidth=30, LabelStyle=Left";
+            series2.IsValueShownAsLabel = true;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            this.chartAdjustment.Series.Add(series2);
             this.chartAdjustment.Size = new System.Drawing.Size(533, 311);
             this.chartAdjustment.TabIndex = 0;
             this.chartAdjustment.Text = "chart1";
@@ -1436,10 +1427,9 @@
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 170F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 175F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 160F));
-            this.tableLayoutPanel9.Controls.Add(this.btnWeightAdjustPublishToTde, 0, 1);
             this.tableLayoutPanel9.Controls.Add(this.gruAdjustmentGrid, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.btnExportAdjustmentWeightToDB, 3, 1);
-            this.tableLayoutPanel9.Controls.Add(this.btnExportAdjustmentWeightToZC, 2, 1);
+            this.tableLayoutPanel9.Controls.Add(this.btnWeightAdjustPublishToTde, 2, 1);
             this.tableLayoutPanel9.Controls.Add(this.btnExportAdjustmentWeightToDataFile, 1, 1);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(0, 0);
@@ -1449,17 +1439,6 @@
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.72727F));
             this.tableLayoutPanel9.Size = new System.Drawing.Size(809, 154);
             this.tableLayoutPanel9.TabIndex = 0;
-            // 
-            // btnWeightAdjustPublishToTde
-            // 
-            this.btnWeightAdjustPublishToTde.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnWeightAdjustPublishToTde.Location = new System.Drawing.Point(191, 125);
-            this.btnWeightAdjustPublishToTde.Name = "btnWeightAdjustPublishToTde";
-            this.btnWeightAdjustPublishToTde.Size = new System.Drawing.Size(110, 22);
-            this.btnWeightAdjustPublishToTde.TabIndex = 6;
-            this.btnWeightAdjustPublishToTde.Text = "发布至TDE/IDE(&P)";
-            this.btnWeightAdjustPublishToTde.UseVisualStyleBackColor = true;
-            this.btnWeightAdjustPublishToTde.Click += new System.EventHandler(this.btnWeightAdjustPublishToTde_Click);
             // 
             // gruAdjustmentGrid
             // 
@@ -1478,34 +1457,34 @@
             this.gridViewAdjustment.AllowUserToAddRows = false;
             this.gridViewAdjustment.BackgroundColor = System.Drawing.Color.White;
             this.gridViewAdjustment.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridViewAdjustment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridViewAdjustment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridViewAdjustment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridViewAdjustment.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridViewAdjustment.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridViewAdjustment.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridViewAdjustment.Location = new System.Drawing.Point(3, 17);
             this.gridViewAdjustment.Name = "gridViewAdjustment";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridViewAdjustment.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridViewAdjustment.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridViewAdjustment.RowTemplate.Height = 23;
             this.gridViewAdjustment.Size = new System.Drawing.Size(797, 93);
             this.gridViewAdjustment.TabIndex = 0;
@@ -1523,16 +1502,17 @@
             this.btnExportAdjustmentWeightToDB.UseVisualStyleBackColor = true;
             this.btnExportAdjustmentWeightToDB.Click += new System.EventHandler(this.btnExportAdjustmentWeightToDB_Click);
             // 
-            // btnExportAdjustmentWeightToZC
+            // btnWeightAdjustPublishToTde
             // 
-            this.btnExportAdjustmentWeightToZC.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnExportAdjustmentWeightToZC.Enabled = false;
-            this.btnExportAdjustmentWeightToZC.Location = new System.Drawing.Point(477, 125);
-            this.btnExportAdjustmentWeightToZC.Name = "btnExportAdjustmentWeightToZC";
-            this.btnExportAdjustmentWeightToZC.Size = new System.Drawing.Size(169, 22);
-            this.btnExportAdjustmentWeightToZC.TabIndex = 2;
-            this.btnExportAdjustmentWeightToZC.Text = "导出重量数据至支撑环境(&E)";
-            this.btnExportAdjustmentWeightToZC.UseVisualStyleBackColor = true;
+            this.btnWeightAdjustPublishToTde.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnWeightAdjustPublishToTde.Enabled = false;
+            this.btnWeightAdjustPublishToTde.Location = new System.Drawing.Point(477, 125);
+            this.btnWeightAdjustPublishToTde.Name = "btnWeightAdjustPublishToTde";
+            this.btnWeightAdjustPublishToTde.Size = new System.Drawing.Size(169, 22);
+            this.btnWeightAdjustPublishToTde.TabIndex = 2;
+            this.btnWeightAdjustPublishToTde.Text = "导出重量数据至支撑环境(&E)";
+            this.btnWeightAdjustPublishToTde.UseVisualStyleBackColor = true;
+            this.btnWeightAdjustPublishToTde.Click += new System.EventHandler(this.btnWeightAdjustPublishToTde_Click);
             // 
             // btnExportAdjustmentWeightToDataFile
             // 
@@ -1719,10 +1699,9 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 193F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 201F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 188F));
-            this.tableLayoutPanel2.Controls.Add(this.btnCoreEnvelopeDesignPublishToTde, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.btnExportCoreDesignWeightToDB, 3, 1);
             this.tableLayoutPanel2.Controls.Add(this.gruCoreEnvelopeDesign, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnExportCoreDesignWeightToJC, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.btnCoreEnvelopeDesignPublishToTde, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.btnExportCoreDesignWeightToDataFile, 1, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
@@ -1732,17 +1711,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.64789F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(809, 134);
             this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // btnCoreEnvelopeDesignPublishToTde
-            // 
-            this.btnCoreEnvelopeDesignPublishToTde.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnCoreEnvelopeDesignPublishToTde.Location = new System.Drawing.Point(111, 106);
-            this.btnCoreEnvelopeDesignPublishToTde.Name = "btnCoreEnvelopeDesignPublishToTde";
-            this.btnCoreEnvelopeDesignPublishToTde.Size = new System.Drawing.Size(113, 22);
-            this.btnCoreEnvelopeDesignPublishToTde.TabIndex = 7;
-            this.btnCoreEnvelopeDesignPublishToTde.Text = "发布至TDE/IDE(&P)";
-            this.btnCoreEnvelopeDesignPublishToTde.UseVisualStyleBackColor = true;
-            this.btnCoreEnvelopeDesignPublishToTde.Click += new System.EventHandler(this.btnCoreEnvelopeDesignPublishToTde_Click);
             // 
             // btnExportCoreDesignWeightToDB
             // 
@@ -1770,54 +1738,54 @@
             // gridCoreEnvelopeDesign
             // 
             this.gridCoreEnvelopeDesign.AllowUserToAddRows = false;
-            this.gridCoreEnvelopeDesign.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridCoreEnvelopeDesign.BackgroundColor = System.Drawing.Color.White;
             this.gridCoreEnvelopeDesign.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridCoreEnvelopeDesign.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridCoreEnvelopeDesign.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.gridCoreEnvelopeDesign.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridCoreEnvelopeDesign.ContextMenuStrip = this.contextMenuStripCoreEnvelopeDesign;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridCoreEnvelopeDesign.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridCoreEnvelopeDesign.DefaultCellStyle = dataGridViewCellStyle26;
             this.gridCoreEnvelopeDesign.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridCoreEnvelopeDesign.Location = new System.Drawing.Point(3, 17);
             this.gridCoreEnvelopeDesign.Name = "gridCoreEnvelopeDesign";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridCoreEnvelopeDesign.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridCoreEnvelopeDesign.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.gridCoreEnvelopeDesign.RowTemplate.Height = 23;
             this.gridCoreEnvelopeDesign.Size = new System.Drawing.Size(797, 74);
             this.gridCoreEnvelopeDesign.TabIndex = 0;
             this.gridCoreEnvelopeDesign.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridCoreEnvelopeDesign_CellEndEdit);
             this.gridCoreEnvelopeDesign.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.gridCoreEnvelopeDesign_DataError);
             // 
-            // btnExportCoreDesignWeightToJC
+            // btnCoreEnvelopeDesignPublishToTde
             // 
-            this.btnExportCoreDesignWeightToJC.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnExportCoreDesignWeightToJC.Enabled = false;
-            this.btnExportCoreDesignWeightToJC.Location = new System.Drawing.Point(423, 106);
-            this.btnExportCoreDesignWeightToJC.Name = "btnExportCoreDesignWeightToJC";
-            this.btnExportCoreDesignWeightToJC.Size = new System.Drawing.Size(195, 22);
-            this.btnExportCoreDesignWeightToJC.TabIndex = 2;
-            this.btnExportCoreDesignWeightToJC.Text = "导出重心包线数据至支撑环境(&E)";
-            this.btnExportCoreDesignWeightToJC.UseVisualStyleBackColor = true;
+            this.btnCoreEnvelopeDesignPublishToTde.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnCoreEnvelopeDesignPublishToTde.Enabled = false;
+            this.btnCoreEnvelopeDesignPublishToTde.Location = new System.Drawing.Point(423, 106);
+            this.btnCoreEnvelopeDesignPublishToTde.Name = "btnCoreEnvelopeDesignPublishToTde";
+            this.btnCoreEnvelopeDesignPublishToTde.Size = new System.Drawing.Size(195, 22);
+            this.btnCoreEnvelopeDesignPublishToTde.TabIndex = 2;
+            this.btnCoreEnvelopeDesignPublishToTde.Text = "导出重心包线数据至支撑环境(&E)";
+            this.btnCoreEnvelopeDesignPublishToTde.UseVisualStyleBackColor = true;
+            this.btnCoreEnvelopeDesignPublishToTde.Click += new System.EventHandler(this.btnCoreEnvelopeDesignPublishToTde_Click);
             // 
             // btnExportCoreDesignWeightToDataFile
             // 
@@ -2094,9 +2062,8 @@
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 194F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 198F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 188F));
-            this.tableLayoutPanel7.Controls.Add(this.btnCoreEnvelopeCutPublishToTde, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.gruCoreEnvelopeCutReuslt, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.btnExportCutWeightToZC, 2, 1);
+            this.tableLayoutPanel7.Controls.Add(this.btnCoreEnvelopeCutPublishToTde, 2, 1);
             this.tableLayoutPanel7.Controls.Add(this.btnExportCutWeightToDB, 3, 1);
             this.tableLayoutPanel7.Controls.Add(this.btnExportCutWeightToDataFile, 1, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2107,17 +2074,6 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.85714F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(809, 155);
             this.tableLayoutPanel7.TabIndex = 0;
-            // 
-            // btnCoreEnvelopeCutPublishToTde
-            // 
-            this.btnCoreEnvelopeCutPublishToTde.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnCoreEnvelopeCutPublishToTde.Location = new System.Drawing.Point(114, 122);
-            this.btnCoreEnvelopeCutPublishToTde.Name = "btnCoreEnvelopeCutPublishToTde";
-            this.btnCoreEnvelopeCutPublishToTde.Size = new System.Drawing.Size(112, 22);
-            this.btnCoreEnvelopeCutPublishToTde.TabIndex = 8;
-            this.btnCoreEnvelopeCutPublishToTde.Text = "发布至TDE/IDE(&P)";
-            this.btnCoreEnvelopeCutPublishToTde.UseVisualStyleBackColor = true;
-            this.btnCoreEnvelopeCutPublishToTde.Click += new System.EventHandler(this.btnCoreEnvelopeCutPublishToTde_Click);
             // 
             // gruCoreEnvelopeCutReuslt
             // 
@@ -2134,54 +2090,54 @@
             // gridViewCoreEnvelopeCutReuslt
             // 
             this.gridViewCoreEnvelopeCutReuslt.AllowUserToAddRows = false;
-            this.gridViewCoreEnvelopeCutReuslt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridViewCoreEnvelopeCutReuslt.BackgroundColor = System.Drawing.Color.White;
             this.gridViewCoreEnvelopeCutReuslt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridViewCoreEnvelopeCutReuslt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridViewCoreEnvelopeCutReuslt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.gridViewCoreEnvelopeCutReuslt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridViewCoreEnvelopeCutReuslt.ContextMenuStrip = this.contextMenuStripCoreEnvelopeCut;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridViewCoreEnvelopeCutReuslt.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridViewCoreEnvelopeCutReuslt.DefaultCellStyle = dataGridViewCellStyle8;
             this.gridViewCoreEnvelopeCutReuslt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridViewCoreEnvelopeCutReuslt.Location = new System.Drawing.Point(3, 17);
             this.gridViewCoreEnvelopeCutReuslt.Name = "gridViewCoreEnvelopeCutReuslt";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridViewCoreEnvelopeCutReuslt.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridViewCoreEnvelopeCutReuslt.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.gridViewCoreEnvelopeCutReuslt.RowTemplate.Height = 23;
             this.gridViewCoreEnvelopeCutReuslt.Size = new System.Drawing.Size(797, 85);
             this.gridViewCoreEnvelopeCutReuslt.TabIndex = 0;
             this.gridViewCoreEnvelopeCutReuslt.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridViewCoreEnvelopeCutReuslt_CellEndEdit);
             this.gridViewCoreEnvelopeCutReuslt.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.gridViewCoreEnvelopeCutReuslt_DataError);
             // 
-            // btnExportCutWeightToZC
+            // btnCoreEnvelopeCutPublishToTde
             // 
-            this.btnExportCutWeightToZC.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnExportCutWeightToZC.Enabled = false;
-            this.btnExportCutWeightToZC.Location = new System.Drawing.Point(426, 122);
-            this.btnExportCutWeightToZC.Name = "btnExportCutWeightToZC";
-            this.btnExportCutWeightToZC.Size = new System.Drawing.Size(192, 22);
-            this.btnExportCutWeightToZC.TabIndex = 2;
-            this.btnExportCutWeightToZC.Text = "导出重心包线数据至支撑环境(&E)";
-            this.btnExportCutWeightToZC.UseVisualStyleBackColor = true;
+            this.btnCoreEnvelopeCutPublishToTde.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnCoreEnvelopeCutPublishToTde.Enabled = false;
+            this.btnCoreEnvelopeCutPublishToTde.Location = new System.Drawing.Point(426, 122);
+            this.btnCoreEnvelopeCutPublishToTde.Name = "btnCoreEnvelopeCutPublishToTde";
+            this.btnCoreEnvelopeCutPublishToTde.Size = new System.Drawing.Size(192, 22);
+            this.btnCoreEnvelopeCutPublishToTde.TabIndex = 2;
+            this.btnCoreEnvelopeCutPublishToTde.Text = "导出重心包线数据至支撑环境(&E)";
+            this.btnCoreEnvelopeCutPublishToTde.UseVisualStyleBackColor = true;
+            this.btnCoreEnvelopeCutPublishToTde.Click += new System.EventHandler(this.btnCoreEnvelopeCutPublishToTde_Click);
             // 
             // btnExportCutWeightToDB
             // 
@@ -2403,18 +2359,18 @@
             // 
             // chartWeightCompare
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chartWeightCompare.ChartAreas.Add(chartArea4);
+            chartArea3.Name = "ChartArea1";
+            this.chartWeightCompare.ChartAreas.Add(chartArea3);
             this.chartWeightCompare.ContextMenuStrip = this.contextMenuStripWeightCompare;
             this.chartWeightCompare.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend4.Name = "Legend1";
-            this.chartWeightCompare.Legends.Add(legend4);
+            legend3.Name = "Legend1";
+            this.chartWeightCompare.Legends.Add(legend3);
             this.chartWeightCompare.Location = new System.Drawing.Point(3, 3);
             this.chartWeightCompare.Name = "chartWeightCompare";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chartWeightCompare.Series.Add(series4);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartWeightCompare.Series.Add(series3);
             this.chartWeightCompare.Size = new System.Drawing.Size(563, 255);
             this.chartWeightCompare.TabIndex = 0;
             this.chartWeightCompare.Text = "chart1";
@@ -2446,18 +2402,18 @@
             // 
             // chartRationalityAssess
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chartRationalityAssess.ChartAreas.Add(chartArea5);
+            chartArea4.Name = "ChartArea1";
+            this.chartRationalityAssess.ChartAreas.Add(chartArea4);
             this.chartRationalityAssess.ContextMenuStrip = this.contextMenuStripRationality;
             this.chartRationalityAssess.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend5.Name = "Legend1";
-            this.chartRationalityAssess.Legends.Add(legend5);
+            legend4.Name = "Legend1";
+            this.chartRationalityAssess.Legends.Add(legend4);
             this.chartRationalityAssess.Location = new System.Drawing.Point(3, 3);
             this.chartRationalityAssess.Name = "chartRationalityAssess";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chartRationalityAssess.Series.Add(series5);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chartRationalityAssess.Series.Add(series4);
             this.chartRationalityAssess.Size = new System.Drawing.Size(563, 255);
             this.chartRationalityAssess.TabIndex = 0;
             this.chartRationalityAssess.Text = "chart1";
@@ -2489,18 +2445,18 @@
             // 
             // chartAdvancedAssess
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chartAdvancedAssess.ChartAreas.Add(chartArea6);
+            chartArea5.Name = "ChartArea1";
+            this.chartAdvancedAssess.ChartAreas.Add(chartArea5);
             this.chartAdvancedAssess.ContextMenuStrip = this.contextMenuAdvanced;
             this.chartAdvancedAssess.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend6.Name = "Legend1";
-            this.chartAdvancedAssess.Legends.Add(legend6);
+            legend5.Name = "Legend1";
+            this.chartAdvancedAssess.Legends.Add(legend5);
             this.chartAdvancedAssess.Location = new System.Drawing.Point(3, 3);
             this.chartAdvancedAssess.Name = "chartAdvancedAssess";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chartAdvancedAssess.Series.Add(series6);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chartAdvancedAssess.Series.Add(series5);
             this.chartAdvancedAssess.Size = new System.Drawing.Size(563, 255);
             this.chartAdvancedAssess.TabIndex = 0;
             this.chartAdvancedAssess.Text = "先进性评估";
@@ -2598,34 +2554,34 @@
             // 
             this.gridWeightEstimateResult.BackgroundColor = System.Drawing.Color.White;
             this.gridWeightEstimateResult.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridWeightEstimateResult.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridWeightEstimateResult.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.gridWeightEstimateResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridWeightEstimateResult.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridWeightEstimateResult.DefaultCellStyle = dataGridViewCellStyle11;
             this.gridWeightEstimateResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridWeightEstimateResult.Location = new System.Drawing.Point(3, 17);
             this.gridWeightEstimateResult.Name = "gridWeightEstimateResult";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridWeightEstimateResult.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridWeightEstimateResult.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.gridWeightEstimateResult.RowTemplate.Height = 23;
             this.gridWeightEstimateResult.Size = new System.Drawing.Size(797, 96);
             this.gridWeightEstimateResult.TabIndex = 0;
@@ -2656,11 +2612,11 @@
             // btnWeightCorePublish
             // 
             this.btnWeightCorePublish.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnWeightCorePublish.Location = new System.Drawing.Point(499, 539);
+            this.btnWeightCorePublish.Location = new System.Drawing.Point(413, 539);
             this.btnWeightCorePublish.Name = "btnWeightCorePublish";
-            this.btnWeightCorePublish.Size = new System.Drawing.Size(112, 23);
+            this.btnWeightCorePublish.Size = new System.Drawing.Size(198, 23);
             this.btnWeightCorePublish.TabIndex = 7;
-            this.btnWeightCorePublish.Text = "发布至TDE/IDE(&P)";
+            this.btnWeightCorePublish.Text = "导出重量评估数据至支撑环境(&E)";
             this.btnWeightCorePublish.UseVisualStyleBackColor = true;
             this.btnWeightCorePublish.Click += new System.EventHandler(this.btnWeightCorePublish_Click);
             // 
@@ -2874,37 +2830,36 @@
             // 
             // gridCoreEstimatedResult
             // 
-            this.gridCoreEstimatedResult.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridCoreEstimatedResult.BackgroundColor = System.Drawing.Color.White;
             this.gridCoreEstimatedResult.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridCoreEstimatedResult.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridCoreEstimatedResult.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
             this.gridCoreEstimatedResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridCoreEstimatedResult.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridCoreEstimatedResult.DefaultCellStyle = dataGridViewCellStyle29;
             this.gridCoreEstimatedResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridCoreEstimatedResult.Location = new System.Drawing.Point(3, 17);
             this.gridCoreEstimatedResult.Name = "gridCoreEstimatedResult";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridCoreEstimatedResult.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridCoreEstimatedResult.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
             this.gridCoreEstimatedResult.RowTemplate.Height = 23;
             this.gridCoreEstimatedResult.Size = new System.Drawing.Size(797, 81);
             this.gridCoreEstimatedResult.TabIndex = 0;
@@ -2935,11 +2890,11 @@
             // btnCoreEstimatedPulish
             // 
             this.btnCoreEstimatedPulish.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnCoreEstimatedPulish.Location = new System.Drawing.Point(500, 541);
+            this.btnCoreEstimatedPulish.Location = new System.Drawing.Point(420, 541);
             this.btnCoreEstimatedPulish.Name = "btnCoreEstimatedPulish";
-            this.btnCoreEstimatedPulish.Size = new System.Drawing.Size(112, 23);
+            this.btnCoreEstimatedPulish.Size = new System.Drawing.Size(192, 23);
             this.btnCoreEstimatedPulish.TabIndex = 9;
-            this.btnCoreEstimatedPulish.Text = "发布至TDE/IDE(&P)";
+            this.btnCoreEstimatedPulish.Text = "导出重心评估数据至支撑环境(&E)";
             this.btnCoreEstimatedPulish.UseVisualStyleBackColor = true;
             this.btnCoreEstimatedPulish.Click += new System.EventHandler(this.btnCoreEstimatedPulish_Click);
             // 
@@ -3171,14 +3126,14 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn10,
@@ -3191,25 +3146,25 @@
             this.dataGridViewTextBoxColumn17,
             this.dataGridViewTextBoxColumn18,
             this.dataGridViewTextBoxColumn19});
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle32;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 17);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(739, 84);
             this.dataGridView1.TabIndex = 0;
@@ -3300,13 +3255,6 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // wDMToolStripMenuItem
-            // 
-            this.wDMToolStripMenuItem.Name = "wDMToolStripMenuItem";
-            this.wDMToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
-            this.wDMToolStripMenuItem.Text = "WDM系统登录设置";
-            this.wDMToolStripMenuItem.Click += new System.EventHandler(this.wDMToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -3599,12 +3547,11 @@
         private System.Windows.Forms.TreeView treeViewCutCoreEnvelope;
         private System.Windows.Forms.ContextMenuStrip contextMenuStripEditProject;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemEditProject;
-        private System.Windows.Forms.Button btnExportWeightToHJ;
         private System.Windows.Forms.Button btnExportWeightToFile;
-        private System.Windows.Forms.Button btnExportCutWeightToZC;
+        private System.Windows.Forms.Button btnCoreEnvelopeCutPublishToTde;
         private System.Windows.Forms.Button btnExportCutWeightToDB;
         private System.Windows.Forms.Button btnExportCutWeightToDataFile;
-        private System.Windows.Forms.Button btnExportAdjustmentWeightToZC;
+        private System.Windows.Forms.Button btnWeightAdjustPublishToTde;
         private System.Windows.Forms.Button btnExportAdjustmentWeightToDB;
         private System.Windows.Forms.Button btnExportAdjustmentWeightToDataFile;
         private System.Windows.Forms.ContextMenuStrip contextMenuStripWeightDesign;
@@ -3625,7 +3572,7 @@
         private System.Windows.Forms.Button btnExportCoreDesignWeightToDataFile;
         private System.Windows.Forms.GroupBox gruCoreEnvelopeDesign;
         private System.Windows.Forms.DataGridView gridCoreEnvelopeDesign;
-        private System.Windows.Forms.Button btnExportCoreDesignWeightToJC;
+        private System.Windows.Forms.Button btnCoreEnvelopeDesignPublishToTde;
         private System.Windows.Forms.Button btnExportCoreDesignWeightToDB;
         private System.Windows.Forms.GroupBox gruCoreEnvelopePic;
         private System.Windows.Forms.TextBox txtCoreEnvelopeDataName;
@@ -3655,9 +3602,6 @@
         private System.Windows.Forms.SplitContainer splitContainer16;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.Button btnWeightDesignPubilishToTde;
-        private System.Windows.Forms.Button btnWeightAdjustPublishToTde;
-        private System.Windows.Forms.Button btnCoreEnvelopeDesignPublishToTde;
-        private System.Windows.Forms.Button btnCoreEnvelopeCutPublishToTde;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartWeightDesign;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartWeightAdjust;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemAbout;

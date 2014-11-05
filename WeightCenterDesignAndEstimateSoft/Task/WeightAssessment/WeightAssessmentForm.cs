@@ -529,7 +529,11 @@ namespace WeightCenterDesignAndEstimateSoft.Task
 
         private void ImportWDMMenuItem_Click(object sender, EventArgs e)
         {
-            new FromWDMCore().ShowDialog(this);
+            if (CommonUtil.getWDMDBFilePath()!= "")
+            {
+                new FromWDMCore().ShowDialog(this);
+            }
+           
         }
     }
 }
