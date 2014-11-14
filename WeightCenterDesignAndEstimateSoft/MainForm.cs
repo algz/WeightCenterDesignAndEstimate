@@ -17,7 +17,7 @@ using ZedGraph;
 using System.Collections;
 using System.IO;
 using Dev.PubLib;
-using SyswareComLibrary;
+//using SyswareComLibrary;
 using System.Windows.Forms.DataVisualization.Charting;
 using Model.assessData;
 using WeightCenterDesignAndEstimateSoft.Task.CoreEnvelopeAssessment;
@@ -5966,40 +5966,11 @@ namespace WeightCenterDesignAndEstimateSoft
         /// <param name="e"></param>
         private void btnWeightDesignPubilishToTde_Click(object sender, EventArgs e)
         {
-            if (PubSyswareCom.IsRuntimeServerStarted())
-            {
-                WeightArithmetic result = GetWeightArithmetic();
-
-                if (result != null)
-                {
-                    //PubSyswareCom.CreateStringParameter("weightData", string.Empty, true, true, false);
-                    //PubSyswareCom.SetParameterGroup("weightData", "重量数据");
-
-                    //string strContent = WeightDataMangeForm.GetMainSystemWeight(result.ExportDataToWeightSort());
-                    //PubSyswareCom.mSetParameter(string.Empty, "weightData", strContent);
-
-                    //创建结构化参数
-                    PubSyswareCom.CreateStructParameter(string.Empty, "weightData", "sortdata", true, true, false);
-                    PubSyswareCom.SetParameterGroup("weightData", "重量数据");
-
-                    WeightSortData sortData = result.ExportDataToWeightSort();
-                    PubSyswareCom.SetParameter(string.Empty, "weightData.name", sortData.sortName);
-
-                    List<WeightData> lstWeightData = sortData.lstWeightData;
-                    for (int i = 0; i < lstWeightData.Count; i++)
-                    {
-                        PubSyswareCom.SetParameter(string.Empty, "weightData.lstWeightData[" + i.ToString() + "].ID", lstWeightData[i].nID);
-                        PubSyswareCom.SetParameter(string.Empty, "weightData.lstWeightData[" + i.ToString() + "].name", lstWeightData[i].weightName);
-                        PubSyswareCom.SetParameter(string.Empty, "weightData.lstWeightData[" + i.ToString() + "].unit", lstWeightData[i].weightUnit);
-                        PubSyswareCom.SetParameter(string.Empty, "weightData.lstWeightData[" + i.ToString() + "].value", lstWeightData[i].weightValue);
-                        PubSyswareCom.SetParameter(string.Empty, "weightData.lstWeightData[" + i.ToString() + "].remark", lstWeightData[i].strRemark);
-                        PubSyswareCom.SetParameter(string.Empty, "weightData.lstWeightData[" + i.ToString() + "].ParentID", lstWeightData[i].nParentID);
-                    }
-
-
-                    XLog.Write("重量数据发布TDE/IDE成功");
-                }
-            }
+            WeightArithmetic result = GetWeightArithmetic();
+            string msg = SyswareDataObjectUtil.DataObjectToXml<WeightArithmetic>(result, "重量设计结果", SyswareDataObjectUtil.saveWeightArithmeticDataObjectToXml);
+            msg = msg == "" ? "发布完成" : msg;
+            MessageBox.Show(msg);
+            XLog.Write(msg);
         }
 
         /// <summary>
@@ -6009,23 +5980,12 @@ namespace WeightCenterDesignAndEstimateSoft
         /// <param name="e"></param>
         private void btnWeightAdjustPublishToTde_Click(object sender, EventArgs e)
         {
-            if (PubSyswareCom.IsRuntimeServerStarted())
-            {
-                WeightAdjustmentResultData adjustResult = GetWeightAdjustmentData();
-
-                if (adjustResult != null && adjustResult.weightAdjustData != null)
-                {
-                    PubSyswareCom.CreateStringParameter("weightData", string.Empty, true, true, false);
-                    PubSyswareCom.SetParameterGroup("weightData", "重量数据");
-
-                    string strContent = WeightDataMangeForm.GetMainSystemWeight(adjustResult.weightAdjustData);
-
-
-                    PubSyswareCom.mSetParameter(string.Empty, "weightData", strContent);
-
-                    XLog.Write("重量数据发布TDE/IDE成功");
-                }
-            }
+            WeightAdjustmentResultData result = GetWeightAdjustmentData();
+            string msg = SyswareDataObjectUtil.DataObjectToXml<WeightAdjustmentResultData>(result, "重量调整结果", SyswareDataObjectUtil.saveWeightAdjustDataObjectToXml);
+            msg = msg == "" ? "发布完成" : msg;
+            MessageBox.Show(msg);
+            XLog.Write(msg);
+            
         }
 
         /// <summary>
@@ -6035,23 +5995,13 @@ namespace WeightCenterDesignAndEstimateSoft
         /// <param name="e"></param>
         private void btnCoreEnvelopeDesignPublishToTde_Click(object sender, EventArgs e)
         {
-            if (PubSyswareCom.IsRuntimeServerStarted())
-            {
-                CoreEnvelopeArithmetic coreEnvelope = GetCoreEnvelopeDesign();
+            CoreEnvelopeArithmetic result = GetCoreEnvelopeDesign();
+            string msg = SyswareDataObjectUtil.DataObjectToXml<CoreEnvelopeArithmetic>(result, "重心包线设计结果", SyswareDataObjectUtil.saveCoreEnvelopeDesignDataObjectToXml);
+            msg = msg == "" ? "发布完成" : msg;
+            MessageBox.Show(msg);
+            XLog.Write(msg);
 
-
-                if (coreEnvelope != null)
-                {
-                    PubSyswareCom.CreateStringParameter("coreEnvelopeData", string.Empty, true, true, false);
-                    PubSyswareCom.SetParameterGroup("coreEnvelopeData", "重心包线数据");
-
-                    string strValue = CoreEnvelopeDesignManageForm.GetCoreEnvelope(gridCoreEnvelopeDesign);
-
-
-                    PubSyswareCom.mSetParameter(string.Empty, "coreEnvelopeData", strValue);
-                    XLog.Write("重心包线数据发布TDE/IDE成功");
-                }
-            }
+            
         }
 
         /// <summary>
@@ -6061,22 +6011,11 @@ namespace WeightCenterDesignAndEstimateSoft
         /// <param name="e"></param>
         private void btnCoreEnvelopeCutPublishToTde_Click(object sender, EventArgs e)
         {
-            if (PubSyswareCom.IsRuntimeServerStarted())
-            {
-                CoreEnvelopeCutResultData coreCut = GetCoreEnvelopeCutResult();
-
-                if (coreCut != null)
-                {
-                    PubSyswareCom.CreateStringParameter("coreEnvelopeData", string.Empty, true, true, false);
-                    PubSyswareCom.SetParameterGroup("coreEnvelopeData", "重心包线数据");
-
-                    string strValue = GetCoreEnvelope(coreCut.lstCutEnvelopeCore);
-
-
-                    PubSyswareCom.mSetParameter(string.Empty, "coreEnvelopeData", strValue);
-                    XLog.Write("重心包线数据发布TDE/IDE成功");
-                }
-            }
+            CoreEnvelopeCutResultData result = GetCoreEnvelopeCutResult();
+            string msg = SyswareDataObjectUtil.DataObjectToXml<CoreEnvelopeCutResultData>(result, "重心包线剪裁结果", SyswareDataObjectUtil.saveCoreEnvelopeCutDataObjectToXml);
+            msg = msg == "" ? "发布完成" : msg;
+            MessageBox.Show(msg);
+            XLog.Write(msg);
         }
 
         #endregion
@@ -6390,21 +6329,57 @@ namespace WeightCenterDesignAndEstimateSoft
         /// <param name="e"></param>
         private void btnWeightCorePublish_Click(object sender, EventArgs e)
         {
-            if (PubSyswareCom.IsRuntimeServerStarted())
-            {
-                WeightAssessResult result = (WeightAssessResult)selNode.Tag;
-                if (result != null)
-                {
-                    PubSyswareCom.CreateStringParameter("weightEstimatedData", string.Empty, true, true, false);
-                    PubSyswareCom.SetParameterGroup("weightEstimatedData", "重量评估数据");
+            WeightAssessResult result = (WeightAssessResult)selNode.Tag;
+            string msg = SyswareDataObjectUtil.DataObjectToXml<WeightAssessResult>(result, "重量评估结果", SyswareDataObjectUtil.saveWeightAssessDataObjectToXml);
+            msg = msg == "" ? "发布完成" : msg;
+            MessageBox.Show(msg);
+            XLog.Write(msg);
 
-                    string strContent = CommonUtil.GetWeightEstimatedDataToString(result);
+            //if (PubSyswareCom.IsRuntimeServerStarted())
+            //{
+            //    //WeightAdjustmentResultData adjustResult = GetWeightAdjustmentData();
 
-                    PubSyswareCom.mSetParameter(string.Empty, "weightEstimatedData", strContent);
+            //    WeightAssessResult result = (WeightAssessResult)selNode.Tag;
+            //    if (result != null)
+            //    {
 
-                    XLog.Write("重量评估数据发布TDE/IDE成功");
-                }
-            }
+            //        object obj = null;
+            //        string path = null;
+            //        PubSyswareCom.GetParameterNames(null, ref obj);
+            //        object[] objs = obj as object[];
+            //        int i = 0;
+            //        for (; i < objs.Count(); i++)
+            //        {
+            //            if (objs[i].ToString() == "重量评估结果")
+            //            {
+            //                path = CommonUtil.saveWeightAssessDataObjectToXml(result, true);
+            //                PubSyswareCom.AddChildDataObject("重量评估结果", path);
+            //                break;
+            //            }
+            //        }
+            //        if (i == objs.Count())
+            //        {
+            //            path = CommonUtil.saveWeightAssessDataObjectToXml(result, false);
+            //            PubSyswareCom.AddDataObject(path);
+            //        }
+            //        if (path == null)
+            //        {
+            //            MessageBox.Show("发布TDE/IDE失败");
+            //            XLog.Write("重量评估发布TDE/IDE失败");
+            //        }
+            //        else
+            //        {
+            //            MessageBox.Show("发布TDE/IDE成功");
+            //            XLog.Write("重量评估发布TDE/IDE成功");
+            //        }
+
+            //    }
+            //}
+            //else
+            //{
+            //    XLog.Write("TDE/IDE没有启动成功");
+            //}
+
         }
 
         private void btnExportCoreEstimated_Click(object sender, EventArgs e)
@@ -6433,27 +6408,17 @@ namespace WeightCenterDesignAndEstimateSoft
         }
 
         /// <summary>
-        /// 重心数据发布TDE/IDE
+        /// 重心包线评估数据发布TDE/IDE
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnCoreEstimatedPulish_Click(object sender, EventArgs e)
         {
-            if (PubSyswareCom.IsRuntimeServerStarted())
-            {
-                CoreAssessResult result = (CoreAssessResult)selNode.Tag;
-                if (result != null)
-                {
-                    PubSyswareCom.CreateStringParameter("coreEstimatedData", string.Empty, true, true, false);
-                    PubSyswareCom.SetParameterGroup("coreEstimatedData", "重心评估数据");
-
-                    string strContent = CommonUtil.GetCoreEstimatedDataToString(result);
-
-                    PubSyswareCom.mSetParameter(string.Empty, "coreEstimatedData", strContent);
-
-                    XLog.Write("重心评估数据发布TDE/IDE成功");
-                }
-            }
+            CoreAssessResult result = (CoreAssessResult)selNode.Tag;
+            string msg = SyswareDataObjectUtil.DataObjectToXml<CoreAssessResult>(result, "重心包线评估结果", SyswareDataObjectUtil.saveCoreEnvelopeAssessDataObjectToXml);
+            msg = msg == "" ? "发布完成" : msg;
+            MessageBox.Show(msg);
+            XLog.Write(msg);
         }
 
         #endregion
@@ -6509,5 +6474,6 @@ namespace WeightCenterDesignAndEstimateSoft
         {
             new WDMSettingForm().ShowDialog(this);
         }
+
     }
 }

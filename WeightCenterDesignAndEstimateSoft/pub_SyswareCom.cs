@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.VisualBasic;
+using XCommon;
+using System.Reflection;
+
 
 namespace Dev.PubLib
 {
@@ -19,14 +22,52 @@ namespace Dev.PubLib
 
         #region 获得syswareObject
         private static object SyswareObj = null;
+
+        static PubSyswareCom()
+        {
+            try
+            {
+                //要获取的类型的 ProgID。 
+                string progID = "Sysware.SyswareSDK.SyswareCom.SyswareComServer";
+
+                //与指定 ProgID 关联的类型，即获取相应的Com对象
+                System.Type comObjectName = System.Type.GetTypeFromProgID(progID);
+
+                if (comObjectName != null)
+                {
+                    //通过类型创建对象实例
+                    SyswareObj = Activator.CreateInstance(comObjectName);
+
+                    ////设置需要设置的参数值
+                    //args[0] = true;
+                    ////设置可视属性，显示Word窗体
+                    //comObjectName.InvokeMember("Visible", BindingFlags.SetProperty, null, comObject, args);
+                    //object t = SyswareObj.GetType().InvokeMember("IsRuntimeServerStarted", BindingFlags.InvokeMethod, null, SyswareObj, new Object[] { });
+
+                }
+            }
+            catch (Exception e)
+            {
+                XLog.Write("Sysware COM组件创建失败." + e.Message);
+            }
+        }
+
         /// <summary>
         /// 获得SyswareObject。
         /// </summary>
-        private static void mGetSyswareObject()
-        {
-            if (SyswareObj == null)
-                SyswareObj = Interaction.GetObject("", "Sysware.SyswareSDK.SyswareCom.SyswareComServer");
-        }
+        //private static void mGetSyswareObject()
+        //{
+        //    try{
+
+        //        if (SyswareObj == null)
+        //            SyswareObj = Interaction.GetObject("", "Sysware.SyswareSDK.SyswareCom.SyswareComServer");
+        //        object t1 = Interaction.CallByName(SyswareObj, "IsRuntimeServerStarted", CallType.Method, new Object[] { });
+        //    }
+        //    catch(Exception e)
+        //    {
+        //        XLog.TextBoxLog.Text = "Sysware COM组件创建失败." + e.Message;
+        //    }
+        //}
         #endregion
 
         #region 获取错误信息
@@ -53,7 +94,7 @@ namespace Dev.PubLib
         {
             try
             {
-                mGetSyswareObject();
+                //mGetSyswareObject();
 
                 if (SyswareObj != null)
                 {
@@ -69,17 +110,19 @@ namespace Dev.PubLib
         {
             try
             {
-                mGetSyswareObject();
+                //mGetSyswareObject();
 
                 // 错误消息
                 String errorMsg = String.Empty;
 
                 if (SyswareObj != null)
                 {
+                    
                     // 设置参数的值（该种方法的限制是无法通过ref获取到errorMsg消息）
-                    Interaction.CallByName(SyswareObj, "IsRuntimeServerStarted", CallType.Method,
-                            new Object[] { });
-                    return true;
+                    //Interaction.CallByName(SyswareObj, "IsRuntimeServerStarted", CallType.Method,
+                    //        new Object[] { });
+                     return (bool)SyswareObj.GetType().InvokeMember("IsRuntimeServerStarted", BindingFlags.InvokeMethod, null, SyswareObj, null);
+                    //return true;
                 }
                 else
                     return false;
@@ -113,7 +156,7 @@ namespace Dev.PubLib
         {
             try
             {
-                mGetSyswareObject();
+               // mGetSyswareObject();
                 if (SyswareObj != null)
                 {
                     Interaction.CallByName(SyswareObj, "CreateIntParameter", CallType.Method,
@@ -145,7 +188,7 @@ namespace Dev.PubLib
         {
             try
             {
-                mGetSyswareObject();
+                //mGetSyswareObject();
                 if (SyswareObj != null)
                 {
                     Interaction.CallByName(SyswareObj, "CreateDoubleParameter", CallType.Method,
@@ -177,7 +220,7 @@ namespace Dev.PubLib
         {
             try
             {
-                mGetSyswareObject();
+                //mGetSyswareObject();
                 if (SyswareObj != null)
                 {
                     Interaction.CallByName(SyswareObj, "CreateStringParameter", CallType.Method,
@@ -209,7 +252,7 @@ namespace Dev.PubLib
         {
             try
             {
-                mGetSyswareObject();
+                //mGetSyswareObject();
                 if (SyswareObj != null)
                 {
                     Interaction.CallByName(SyswareObj, "CreateBooleanParameter", CallType.Method,
@@ -241,7 +284,7 @@ namespace Dev.PubLib
         {
             try
             {
-                mGetSyswareObject();
+                //mGetSyswareObject();
                 if (SyswareObj != null)
                 {
                     Interaction.CallByName(SyswareObj, "CreateIntArrayParameter", CallType.Method,
@@ -273,7 +316,7 @@ namespace Dev.PubLib
         {
             try
             {
-                mGetSyswareObject();
+                //mGetSyswareObject();
                 if (SyswareObj != null)
                 {
                     Interaction.CallByName(SyswareObj, "CreateDoubleArrayParameter ", CallType.Method,
@@ -305,7 +348,7 @@ namespace Dev.PubLib
         {
             try
             {
-                mGetSyswareObject();
+                //mGetSyswareObject();
                 if (SyswareObj != null)
                 {
                     Interaction.CallByName(SyswareObj, "CreateStringArrayParameter", CallType.Method,
@@ -330,7 +373,7 @@ namespace Dev.PubLib
         {
             try
             {
-                mGetSyswareObject();
+                //mGetSyswareObject();
 
                 // 设置上下文路径
                 String context = _Context;
@@ -371,7 +414,7 @@ namespace Dev.PubLib
         {
             try
             {
-                mGetSyswareObject();
+                //mGetSyswareObject();
 
                 // 设置上下文路径
                 String context = _Context;
@@ -412,7 +455,7 @@ namespace Dev.PubLib
         {
             try
             {
-                mGetSyswareObject();
+                //mGetSyswareObject();
 
                 // 设置上下文路径
                 String context = _Context;
@@ -450,7 +493,7 @@ namespace Dev.PubLib
         {
             try
             {
-                mGetSyswareObject();
+                //mGetSyswareObject();
 
                 // 设置上下文路径
                 String context = _Context;
@@ -484,7 +527,7 @@ namespace Dev.PubLib
         {
             try
             {
-                mGetSyswareObject();
+                //mGetSyswareObject();
 
                 if (SyswareObj != null)
                 {
@@ -519,7 +562,7 @@ namespace Dev.PubLib
         {
             try
             {
-                mGetSyswareObject();
+                //mGetSyswareObject();
 
                 // 设置上下文路径
                 String context = _Context;
@@ -529,9 +572,12 @@ namespace Dev.PubLib
 
                 if (SyswareObj != null)
                 {
+                    ret= SyswareObj.GetType().InvokeMember("GetParameterNames", BindingFlags.InvokeMethod, null, SyswareObj, new Object[] { context, errorMsg });
+
+            
                     // 获取参数的值（该种方法的限制是无法通过ref获取到errorMsg消息）
-                    ret = Interaction.CallByName(SyswareObj, "GetParameterNames", CallType.Method,
-                            new Object[] { context, errorMsg });
+                    //ret = Interaction.CallByName(SyswareObj, "GetParameterNames", CallType.Method,
+                    //        new Object[] { context, errorMsg });
                     return true;
                 }
                 else
@@ -551,7 +597,7 @@ namespace Dev.PubLib
         {
             try
             {
-                mGetSyswareObject();
+                //mGetSyswareObject();
 
                 // 设置上下文路径
                 String context = _Context;
@@ -686,7 +732,7 @@ namespace Dev.PubLib
         {
             try
             {
-                mGetSyswareObject();
+                //mGetSyswareObject();
 
                 if (SyswareObj != null)
                 {
@@ -717,7 +763,7 @@ namespace Dev.PubLib
         {
             try
             {
-                mGetSyswareObject();
+                //mGetSyswareObject();
 
                 if (SyswareObj != null)
                 {
@@ -749,7 +795,7 @@ namespace Dev.PubLib
         {
             try
             {
-                mGetSyswareObject();
+                //mGetSyswareObject();
 
                 // 错误消息
                 string errorMsg = String.Empty;
@@ -785,7 +831,7 @@ namespace Dev.PubLib
         {
             try
             {
-                mGetSyswareObject();
+                //mGetSyswareObject();
 
                 // 错误消息
                 string errorMsg = String.Empty;
@@ -814,7 +860,7 @@ namespace Dev.PubLib
         {
             try
             {
-                mGetSyswareObject();
+                //mGetSyswareObject();
 
                 // 错误消息
                 string errorMsg = String.Empty;
@@ -849,7 +895,7 @@ namespace Dev.PubLib
         {
             try
             {
-                mGetSyswareObject();
+                //mGetSyswareObject();
 
                 // 错误消息
                 string errorMsg = String.Empty;
@@ -864,6 +910,108 @@ namespace Dev.PubLib
             catch (System.Exception ex)
             {
                 m_ErrMsg = ex.Message;
+            }
+        }
+
+        #endregion
+
+        #region 结构化参数接口
+
+        /// <summary>
+        /// 添加（或者合并）结构化参数
+        /// </summary>
+        /// <returns></returns>
+        public static bool AddDataObject(string path)
+        {
+            try
+            {
+                if (SyswareObj != null&&path!=null)
+                {
+                    return (bool)SyswareObj.GetType().InvokeMember("AddDataObject", BindingFlags.InvokeMethod, null, SyswareObj, new Object[] { "", path });
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (System.Exception ex)
+            {
+                Console.Write(ex.Message);
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 修改结构化参数属性值 节点层级间用点"."
+        /// </summary>
+        /// <returns></returns>
+        public static bool UpdateDataObjectProperty(string path)
+        {
+            try
+            {
+                if (SyswareObj != null)
+                {
+                    return (bool)SyswareObj.GetType().InvokeMember("UpdateDataObjectProperty", BindingFlags.InvokeMethod, null, SyswareObj, new Object[] { "", path });
+                }
+                else
+                    return false;
+            }
+            catch (System.Exception ex)
+            {
+                Console.Write(ex.Message);
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 删除结构化参数
+        /// </summary>
+        /// <returns></returns>
+        public static bool RemoveDataObject()
+        {
+            try
+            {
+
+                // 错误消息
+                String errorMsg = String.Empty;
+
+                if (SyswareObj != null)
+                {
+                    // 设置参数的值（该种方法的限制是无法通过ref获取到errorMsg消息）
+                    Interaction.CallByName(SyswareObj, "RemoveDataObject", CallType.Method,
+                            new Object[] { });
+                    return true;
+                }
+                else
+                    return false;
+            }
+            catch (System.Exception ex)
+            {
+                m_ErrMsg = ex.Message;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 添加（或者合并）子结构化参数
+        /// </summary>
+        /// <returns></returns>
+        public static bool AddChildDataObject(string subNode,string path)
+        {
+            try
+            {
+                if (SyswareObj != null && path != null)
+                {
+                    object bl=SyswareObj.GetType().InvokeMember("AddChildDataObject", BindingFlags.InvokeMethod, null, SyswareObj, new Object[] { "",subNode, path });
+                    return true;
+                }
+                else
+                    return false;
+            }
+            catch (System.Exception ex)
+            {
+                m_ErrMsg = ex.Message;
+                return false;
             }
         }
 

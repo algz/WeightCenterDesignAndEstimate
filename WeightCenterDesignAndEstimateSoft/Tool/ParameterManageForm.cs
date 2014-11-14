@@ -1070,7 +1070,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
             }
             catch (Exception ex)
             {
-                XLog.Write("导入参数文件错误");
+                XLog.Write("导入参数文件错误."+ex.Message);
                 MessageBox.Show("导入参数文件错误");
             }
         }
@@ -1190,7 +1190,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
                     XLog.Write("导入成功");
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 XLog.Write("导入参数文件错误");
                 MessageBox.Show("导入参数文件错误");
@@ -1287,7 +1287,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
             }
             else
             {
-                MessageBox.Show("没有安装TDE/IDE或者模板没有打开");
+                MessageBox.Show("TDE/IDE 没有启动成功");
             }
         }
 

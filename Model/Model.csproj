@@ -116,6 +116,7 @@
     <Compile Include="NodeFormula.cs" />
     <Compile Include="ParaData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SyswareDataObject.cs" />
     <Compile Include="TypeWeightData..cs" />
     <Compile Include="WeightAdjustmentResultData.cs" />
     <Compile Include="WeightArithmetic.cs" />

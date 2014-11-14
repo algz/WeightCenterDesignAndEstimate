@@ -384,6 +384,7 @@ namespace WeightCenterDesignAndEstimateSoft.Task
                             row.Cells[i].Value = Math.Round(wd.weightValue, 6);
 
                             WeightAssessParameter wa = this.weightAssessResult.weightAssessParamList[j];
+                            wa.weightUnit = wd.weightUnit;
                             if (i == 1)
                             {
                                 wa.datumWeight = Math.Round(wd.weightValue, 6);

@@ -247,7 +247,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
             }
             catch (Exception ex)
             {
-                XCommon.XLog.Write("导入重心包线算法文件错误");
+                XCommon.XLog.Write("导入重心包线算法文件错误."+ex.Message);
             }
         }
 

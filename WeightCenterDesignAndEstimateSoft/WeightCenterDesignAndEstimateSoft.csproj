@@ -58,7 +58,7 @@
     <OutputPath>bin\x86\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <CodeAnalysisLogFile>bin\Debug\WES.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
     <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
     <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
@@ -153,6 +153,7 @@
     <Compile Include="Setting\WDMSettingForm.Designer.cs">
       <DependentUpon>WDMSettingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SyswareDataObjectUtil.cs" />
     <Compile Include="Task\CoreEnvelopeAssessment\CoreEnvelopeAssessConfigForm.cs">
       <SubType>Form</SubType>
     </Compile>

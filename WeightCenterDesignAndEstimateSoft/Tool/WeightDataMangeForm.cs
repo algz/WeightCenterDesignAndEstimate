@@ -35,13 +35,13 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
 
         private TypeWeightData typeWeightData = null;
 
-        private XmlNodeList lstNodeInstance = null;
+        //private XmlNodeList lstNodeInstance = null;
         private XmlNodeList lstNode1 = null;
         private XmlNodeList lstNode2 = null;
         private XmlNodeList lstNode3 = null;
         private XmlNodeList lstModel = null;
 
-        private XmlNodeList lstClassNode = null;
+        //private XmlNodeList lstClassNode = null;
 
         public WeightDataMangeForm()
         {
@@ -1173,7 +1173,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
                     }
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 return false;
             }
@@ -1459,7 +1459,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
                 }
                 #endregion
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("从基础库读取数据失败");
                 return;
@@ -2006,7 +2006,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
             }
             catch (Exception ex)
             {
-                XLog.Write("导入重量数据失败");
+                XLog.Write("导入重量数据失败."+ex.Message);
             }
         }
 

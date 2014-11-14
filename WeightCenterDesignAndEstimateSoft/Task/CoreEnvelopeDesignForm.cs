@@ -717,6 +717,10 @@ namespace WeightCenterDesignAndEstimateSoft.Task
                 }
                 MessageBox.Show("参数写入TDE成功!");
             }
+            else
+            {
+                MessageBox.Show("TDE/IDE 没有启动成功");
+            }
         }
 
         private void CoreEnvelopeDesignForm_KeyDown(object sender, KeyEventArgs e)

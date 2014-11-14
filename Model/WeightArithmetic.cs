@@ -402,19 +402,7 @@ namespace Model
 
         public WeightSortData ExportDataToWeightSort()
         {
-            //List<WeightSortData> lstWsd = WeightSortManageForm.GetListWeightSortData();
-            //
-            WeightSortData
-                //    wsd = lstWsd.Find(lst => MatchWeightSort(lst,true));
-                //if (wsd == null)
-                //{
-                wsd = MakeNewWeightSort(true);
-            //}
-            //else
-            //{ 
-            // //传入数据
-            //}
-
+            WeightSortData wsd = MakeNewWeightSort(true);
             return wsd;
         }
 

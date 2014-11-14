@@ -249,7 +249,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
                     }
                 }
             }
-            catch (Exception ex)
+            catch 
             {
                 XCommon.XLog.Write("导入重量算法文件错误");
             }

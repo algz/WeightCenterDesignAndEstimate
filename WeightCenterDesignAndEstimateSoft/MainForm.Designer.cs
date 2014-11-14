@@ -1505,7 +1505,6 @@
             // btnWeightAdjustPublishToTde
             // 
             this.btnWeightAdjustPublishToTde.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnWeightAdjustPublishToTde.Enabled = false;
             this.btnWeightAdjustPublishToTde.Location = new System.Drawing.Point(477, 125);
             this.btnWeightAdjustPublishToTde.Name = "btnWeightAdjustPublishToTde";
             this.btnWeightAdjustPublishToTde.Size = new System.Drawing.Size(169, 22);
@@ -1778,7 +1777,6 @@
             // btnCoreEnvelopeDesignPublishToTde
             // 
             this.btnCoreEnvelopeDesignPublishToTde.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnCoreEnvelopeDesignPublishToTde.Enabled = false;
             this.btnCoreEnvelopeDesignPublishToTde.Location = new System.Drawing.Point(423, 106);
             this.btnCoreEnvelopeDesignPublishToTde.Name = "btnCoreEnvelopeDesignPublishToTde";
             this.btnCoreEnvelopeDesignPublishToTde.Size = new System.Drawing.Size(195, 22);
@@ -2130,7 +2128,6 @@
             // btnCoreEnvelopeCutPublishToTde
             // 
             this.btnCoreEnvelopeCutPublishToTde.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnCoreEnvelopeCutPublishToTde.Enabled = false;
             this.btnCoreEnvelopeCutPublishToTde.Location = new System.Drawing.Point(426, 122);
             this.btnCoreEnvelopeCutPublishToTde.Name = "btnCoreEnvelopeCutPublishToTde";
             this.btnCoreEnvelopeCutPublishToTde.Size = new System.Drawing.Size(192, 22);

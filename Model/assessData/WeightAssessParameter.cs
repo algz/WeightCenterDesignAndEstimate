@@ -47,6 +47,15 @@ namespace Model
         }
 
         /// <summary>
+        /// 重量单位
+        /// </summary>
+        public string weightUnit
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// 最小值
         /// </summary>
         public double minValue

@@ -847,7 +847,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
                     }
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 return false;
             }
@@ -878,7 +878,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
                 {
                     doc.Load(strPath);
                 }
-                catch (Exception ex)
+                catch
                 {
                     XLog.Write("打开文件\"" + strPath + "\"错误");
                     return sortData;

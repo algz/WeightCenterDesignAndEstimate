@@ -7,6 +7,9 @@ using System.IO;
 
 namespace WeightCenterDesignAndEstimateSoft
 {
+    /// <summary>
+    /// WDM集成模块
+    /// </summary>
     public class WDMIntegrationModule
     {
 

@@ -54,8 +54,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label5 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewParaInput)).BeginInit();
             this.flowLayoutPanelParaImport.SuspendLayout();
             this.flowLayoutPanelParaExport.SuspendLayout();
@@ -375,16 +375,6 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(605, 642);
             this.tableLayoutPanel2.TabIndex = 12;
             // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 7);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 12);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "参数输入：";
-            // 
             // tabControl1
             // 
             this.tableLayoutPanel2.SetColumnSpan(this.tabControl1, 2);
@@ -397,6 +387,16 @@
             this.tabControl1.Size = new System.Drawing.Size(599, 552);
             this.tabControl1.TabIndex = 11;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 7);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 12);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "参数输入：";
             // 
             // CoreEnvelopeDesignForm
             // 

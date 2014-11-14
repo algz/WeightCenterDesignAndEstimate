@@ -722,6 +722,10 @@ namespace WeightCenterDesignAndEstimateSoft
                     }
                 }
             }
+            else
+            {
+                MessageBox.Show("TDE/IDE 没有启动成功");
+            }
 
             return lstPara;
         }
@@ -816,6 +820,10 @@ namespace WeightCenterDesignAndEstimateSoft
                     }
                 }
                 MessageBox.Show("参数写入TDE成功!");
+            }
+            else
+            {
+                MessageBox.Show("TDE/IDE 没有启动成功");
             }
         }
 

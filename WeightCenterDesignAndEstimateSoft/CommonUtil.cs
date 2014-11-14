@@ -19,6 +19,7 @@ using System.Drawing;
 using Microsoft.Win32;
 using System.Configuration;
 using System.Diagnostics;
+using Dev.PubLib;
 
 namespace WeightCenterDesignAndEstimateSoft
 {
@@ -941,6 +942,10 @@ namespace WeightCenterDesignAndEstimateSoft
                         writeXml.WriteString(para.assessWeight.ToString());
                         writeXml.WriteEndElement();
 
+                        writeXml.WriteStartElement("重量单位");
+                        writeXml.WriteString(para.weightUnit);
+                        writeXml.WriteEndElement();
+
                         writeXml.WriteStartElement("最小值");
                         writeXml.WriteString(para.minValue.ToString());
                         writeXml.WriteEndElement();
@@ -1239,6 +1244,9 @@ namespace WeightCenterDesignAndEstimateSoft
             }
             return filePath;
         }
+
+
+        
 
     }
 }
