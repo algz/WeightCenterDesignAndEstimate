@@ -7,13 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Model;
+using WeightCenterDesignAndEstimateSoft.WDM;
+using System.Threading;
 
 namespace WeightCenterDesignAndEstimateSoft.Task.WeightAssessment.AssessmentWeightData
 {
     public partial class FromWDMCore : Form
     {
         private WDMIntegrationModule.Air[] airs;
-        private string wdmFile;
+        private OpaqueCommand cmd = new OpaqueCommand();
+        public delegate void CallBackDelegate(string msg);
+        Thread thread;
         public FromWDMCore()
         {
             InitializeComponent();
@@ -21,25 +25,19 @@ namespace WeightCenterDesignAndEstimateSoft.Task.WeightAssessment.AssessmentWeig
 
         private void FromWDM_Load(object sender, EventArgs e)
         {
-            this.wdmFile = CommonUtil.getWDMDBFilePath();
-            if (wdmFile == "")
-            {
-                this.Close();
-                return;
-            }
-            this.airs = WDMIntegrationModule.getAircs(wdmFile);
-
-            TreeNode parentNode = new TreeNode("WDM机型列表");
-            this.WDMTree.Nodes.Add(parentNode);
-            for (int i = 0; i < airs.Length; i++)
-            {
-                TreeNode childNode = new TreeNode();
-                childNode.Name = airs[i].ID;
-                childNode.Text = airs[i].MC;
-                childNode.Tag = i;
-                parentNode.Nodes.Add(childNode);
-            }
-            this.WDMTree.ExpandAll();
+            //this.wdmFile = WDMIntegrationModule.getWDMDBFilePath();
+            //if (wdmFile == "")
+            //{
+            //    this.Close();
+            //    return;
+            //}
+            //把回调的方法给委托变量
+            
+            //CallBackDelegate cbd = callBack;
+            this.thread = new Thread(loadWDMDB);
+            thread.IsBackground = true;
+            thread.Start();// (new CallBackDelegate(callBack));
+            cmd.ShowOpaqueLayer(this, 123, true);
 
         }
 
@@ -51,14 +49,14 @@ namespace WeightCenterDesignAndEstimateSoft.Task.WeightAssessment.AssessmentWeig
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             TreeNode node = this.WDMTree.SelectedNode;
-            if (node.Level != 1)
+            if (node==null||node.Level != 1)
             {
                 MessageBox.Show("请选择机型");
                 return;
             }
 
             WDMIntegrationModule.Air air = airs[Convert.ToInt32(node.Tag)];
-            WDMIntegrationModule.TOper[] topers = WDMIntegrationModule.GetOpers(node.Name, wdmFile);
+            WDMIntegrationModule.TOper[] topers = WDMIntegrationModule.GetOpers(node.Name);
             //Random r = new Random();
             
             List<WeightData> lstWeightData = new List<WeightData>();
@@ -101,6 +99,72 @@ namespace WeightCenterDesignAndEstimateSoft.Task.WeightAssessment.AssessmentWeig
         private void WDMTree_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             btnConfirm_Click(sender, e);
+        }
+
+        private void loadWDMDB()
+        {
+            this.airs = WDMIntegrationModule.getAircs();//取数据源动作
+            string msg = "";
+            if (this.airs == null)
+            {
+                msg="机型没有读取成功,请检查参数配置.";
+            }
+            //else
+            //{
+            //    TreeNode parentNode = new TreeNode("WDM机型列表");
+            //    this.WDMTree.Nodes.Add(parentNode);
+            //    for (int i = 0; i < airs.Length; i++)
+            //    {
+            //        TreeNode childNode = new TreeNode();
+            //        childNode.Name = airs[i].ID;
+            //        childNode.Text = airs[i].MC;
+            //        childNode.Tag = i;
+            //        parentNode.Nodes.Add(childNode);
+            //    }
+            //    this.WDMTree.ExpandAll();
+            //}
+
+            //执行回调.
+            if (this.InvokeRequired)
+            {
+                CallBackDelegate cbd = new CallBackDelegate(callBack);
+                this.BeginInvoke(cbd, msg); //异步调用回调
+                //this.Invoke(cbd, msg); //同步调用回调
+            }
+            else
+            {
+                this.Close();
+            }
+        }
+
+        private void callBack(string msg)
+        {
+            cmd.HideOpaqueLayer();
+            if (msg != "")
+            {
+                MessageBox.Show(msg);
+                this.Close();
+            }
+            else
+            {
+                TreeNode parentNode = new TreeNode("WDM机型列表");
+                this.WDMTree.Nodes.Add(parentNode);
+                for (int i = 0; i < airs.Length; i++)
+                {
+                    TreeNode childNode = new TreeNode();
+                    childNode.Name = airs[i].ID;
+                    childNode.Text = airs[i].MC;
+                    childNode.Tag = i;
+                    parentNode.Nodes.Add(childNode);
+                }
+                this.WDMTree.ExpandAll();
+            }
+            
+        }
+
+        private void FromWDMCore_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.thread.Abort();
         }
     }
 }

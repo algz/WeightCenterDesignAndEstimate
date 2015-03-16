@@ -20,9 +20,16 @@ using Microsoft.Win32;
 using System.Configuration;
 using System.Diagnostics;
 using Dev.PubLib;
+using NPOI.HSSF.UserModel;
+using NPOI.SS.UserModel;
+using System.Data.OleDb;
+using System.Management;
 
 namespace WeightCenterDesignAndEstimateSoft
 {
+    /// <summary>
+    /// author: algz
+    /// </summary>
     class CommonUtil
     {
         /// <summary>
@@ -1213,38 +1220,254 @@ namespace WeightCenterDesignAndEstimateSoft
             return strBulider.ToString();
         }
 
-        public static void setWDMDBFilePath(string path){
-            string appDomainConfigFile = AppDomain.CurrentDomain.SetupInformation.ConfigurationFile;
-            //string strFileName = "WES.exe";
-            string name=Process.GetCurrentProcess().MainModule.FileName;
-            //AppDomain.CurrentDomain.SetupInformation.ConfigurationFile
-            Configuration config = System.Configuration.ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);//.OpenExeConfiguration(name);//
-            config.AppSettings.Settings["WDMFileName"].Value = path;
-            config.Save(ConfigurationSaveMode.Modified);// 重新载入配置文件的配置节
-            //System.Configuration.ConfigurationManager.RefreshSection("appSettings");
-        }
+        
 
-        public static string getWDMDBFilePath()
+        #region 加载Excel to dataTable
+
+        /// <summary>
+        /// 判断OS位数
+        /// </summary>
+        /// <returns>32或64</returns>
+        public static string Is32bitOr64bitOS()
         {
-            //System.Configuration.ConfigurationManager.RefreshSection("appSettings");
-            //string strFileName = System.AppDomain.CurrentDomain.BaseDirectory + "WES.exe";
-            //AppDomain.CurrentDomain.SetupInformation.ConfigurationFile
-            string dirPath = Environment.CurrentDirectory;// Application.ExecutablePath;
-            Configuration config = System.Configuration.ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);//OpenExeConfiguration(strFileName);
-            string filePath=config.AppSettings.Settings["WDMFileName"].Value;
-            if (filePath==null||filePath.Equals(""))
+            string addressWidth = String.Empty;
+            ConnectionOptions mConnOption = new ConnectionOptions();
+            ManagementScope mMs = new ManagementScope("//localhost", mConnOption);
+            ObjectQuery mQuery = new ObjectQuery("select AddressWidth from Win32_Processor");
+            ManagementObjectSearcher mSearcher = new ManagementObjectSearcher(mMs, mQuery);
+            ManagementObjectCollection mObjectCollection = mSearcher.Get();
+            foreach (ManagementObject mObject in mObjectCollection)
             {
-                string[] files = Directory.GetFiles(dirPath, "*.wdm");
-                filePath = files.Count()!=0?files[0]:"wdm.wdm";
+                addressWidth = mObject["AddressWidth"].ToString();
             }
-            if (!File.Exists(filePath))
-            {
-                MessageBox.Show("WDM文件不存在!");
-                return "";
-            }
-            return filePath;
+            return addressWidth;
         }
 
+        /// <summary>
+        /// 32位系统,加载Excel 
+        /// </summary>
+        /// <param name="filePath">文件路径</param>
+        /// <param name="sheetName">表名</param>
+        /// <returns></returns>
+        public static DataTable LoadDataFromExcel(string filePath, string sheetName)
+        {
+
+            try
+            {
+                string addressWidth = Is32bitOr64bitOS();
+                if (addressWidth == "64")
+                {
+                    //XLog.Write("64."+ DateTime.Now.Second.ToString());
+                    return ImportDataTableFromExcel(filePath, sheetName, 0);
+                    //return ExecleToDataSet(filePath, sheetName, "");
+                }
+                else if (addressWidth == "32")
+                {
+                    string strConn;
+                    strConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + filePath + ";Extended Properties='Excel 8.0;HDR=False;IMEX=1'";
+                    OleDbConnection OleConn = new OleDbConnection(strConn);
+                    OleConn.Open();
+                    String sql = "SELECT * FROM  [" + sheetName + "$]";//可以更改Sheet名称，比如sheet2，等等   
+
+                    OleDbDataAdapter OleDaExcel = new OleDbDataAdapter(sql, OleConn);
+                    DataSet OleDsExcle = new DataSet();
+                    OleDaExcel.Fill(OleDsExcle, sheetName);
+                    OleConn.Close();
+                    return OleDsExcle.Tables[0];
+                }
+                else
+                {
+                    MessageBox.Show("未知系统版本");
+                    return null;
+                }
+
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("数据绑定Excel失败!失败原因：" + err.Message, "提示信息",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return null;
+            }
+        }
+
+
+        /// <summary>
+        /// 64or32 npoi 由Excel导入DataTable
+        /// </summary>
+        /// <param name="filePash">文件路径</param>
+        /// <param name="sheetName">Excel工作表名称</param>
+        /// <param name="headerRowIndex">Excel表头行索引</param>
+        /// <returns>DataTable</returns>
+        public static DataTable ImportDataTableFromExcel(string filePash, string sheetName, int headerRowIndex)
+        {
+            using (FileStream fs = new FileStream(filePash, FileMode.Open, FileAccess.Read)) //打开一个xls文件，如果没有则自行创建，如果存在myxls.xls文件则在创建是不要打开该文件！
+            {
+                HSSFWorkbook workbook = new HSSFWorkbook(fs);
+                ISheet sheet = workbook.GetSheet(sheetName);
+                DataTable table = new DataTable();
+                IRow headerRow = sheet.GetRow(headerRowIndex);
+                int cellCount = headerRow.LastCellNum;
+                for (int i = headerRow.FirstCellNum; i < cellCount; i++)
+                {
+                    DataColumn column = new DataColumn(headerRow.GetCell(i).StringCellValue);
+                    table.Columns.Add(column);
+                }
+                for (int i = (sheet.FirstRowNum + 1); i <= sheet.LastRowNum; i++)
+                {
+                    HSSFRow row = (HSSFRow)sheet.GetRow(i);
+                    DataRow dataRow = table.NewRow();
+                    for (int j = row.FirstCellNum; j < cellCount; j++)
+                    {
+                        dataRow[j] = row.GetCell(j).ToString();
+                    }
+                    table.Rows.Add(dataRow);
+                }
+                fs.Close();
+                workbook = null;
+                sheet = null;
+                return table;
+            }
+
+        }
+
+        /// <summary>
+        /// 64位系统,把Excel里的数据转换为DataTable,应用引用的com组件：Microsoft.Office.Interop.Excel.dll 读取EXCEL文件
+        /// </summary>
+        /// <param name="filenameurl">文件路径</param>
+        /// <param name="sheetIndex">sheet名称的索引</param>
+        /// <param name="splitstr"></param>
+        /// <returns></returns>
+        public static DataTable ExecleToDataSet(string filenameurl, string sheetName, string splitstr)
+        {
+            Microsoft.Office.Interop.Excel.Workbook wb = null;
+            Microsoft.Office.Interop.Excel.Worksheet ws = null;
+            DataTable xlsTable = new DataTable();
+            object missing = System.Reflection.Missing.Value;
+            //lauch excel application
+            XLog.Write("lauch excel application");
+            Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+            try
+            {
+                if (excel != null)
+                {
+                    excel.Visible = false;
+                    excel.UserControl = true;
+                    // 以只读的形式打开EXCEL文件 
+                    wb = excel.Workbooks.Open(filenameurl, missing, true, missing, missing, missing,
+                     missing, missing, missing, true, missing, missing, missing, missing, missing);
+                    //取得第一个工作薄 
+                    ws = (Microsoft.Office.Interop.Excel.Worksheet)wb.Worksheets[sheetName];//.get_Item(sheetIndex);
+                    //取得总记录行数(包括标题列) 
+                    int rowsint = ws.UsedRange.Cells.Rows.Count; //得到行数 
+                    int columnsint = ws.UsedRange.Cells.Columns.Count;//得到列数
+
+                    for (int row = 1; row <= rowsint; row++)
+                    {
+                        if (row == 1)
+                        {
+                            //添加列字段
+                            for (int n = 1; n <= columnsint; n++)
+                            {
+                                string column = (((Microsoft.Office.Interop.Excel.Range)ws.Cells[1, n]).Text.ToString());
+                                xlsTable.Columns.Add(column, typeof(string));
+                            }
+                        }
+                        else
+                        {
+                            //添加行数据
+                            DataRow dr = xlsTable.NewRow();
+                            for (int col = 1; col <= columnsint; col++)
+                            {
+                                dr[col - 1] = ((Microsoft.Office.Interop.Excel.Range)ws.Cells[row, col]).Text.ToString();
+                            }
+                            xlsTable.Rows.Add(dr);
+                        }
+                    }
+                }
+                return xlsTable;
+            }
+            catch (Exception e)
+            {
+
+                XLog.Write(e.Message);
+                return xlsTable;
+            }
+            finally
+            {
+                wb.Close(false, missing, missing);
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(wb);
+                wb = null;
+                excel.Workbooks.Close();
+                excel.Quit();
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(excel);
+                excel = null;
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+            }
+        }
+
+        #endregion
+
+        /// <summary>
+        /// 绑定参数类型数据
+        /// </summary>
+        public static void BindParaTypeData(ComboBox cmbParameterType)
+        {
+            cmbParameterType.Items.Clear();
+            //初始化单位值
+            if (cmbParameterType.Name == "cmbUnit")
+            {
+                //此段代码暂由initUnits()方法代替，不影响其它未知功能和稳定性，暂不取消。
+                /***********************/
+                List<DictionaryEntry> items = new List<DictionaryEntry>();//添加项的集合
+                //DataSet ds=LoadDataFromExcel(@"c:\TDE单位.xls", "单位");
+                string strFileName = System.AppDomain.CurrentDomain.BaseDirectory + "TDE单位.xls";
+                DataTable dt =LoadDataFromExcel(strFileName, "单位");// ds.Tables[0];
+                foreach (DataRow dr in dt.Rows)
+                {
+                    Console.WriteLine(dr["单位中文名"]);
+                    Console.WriteLine(dr["单位英文名"]);
+                    string ename = dr["单位英文名"].ToString();
+                    String cname = dr["单位中文名"].ToString();
+                    cmbParameterType.Items.Add(cname);
+                    //String meterChName = MulLanguageMng.GetStringByResource("m"); //Meter为单位"米"的英文名
+                    //items.Add(new DictionaryEntry(cname, ename));
+                }
+
+                /*******************************/
+                //XmlDocument myXmlDoc = new XmlDocument();
+                //myXmlDoc.Load("c:\\SystemDimension.xml");
+                ////获得第一个姓名匹配的节点（SelectSingleNode）：此xml文件的根节点
+                //XmlNodeList rootNodes = myXmlDoc.SelectNodes("DimemsionsAndUnits/Units/Unit");
+                //foreach (XmlNode node in rootNodes)
+                //{
+                //    XmlNode n = node.SelectSingleNode("Item[@name='UnitName']");
+                //    string ename = n.Attributes["value"].Value;
+                //    String cname = MulLanguageMng.GetStringByResource(n.Attributes["value"].Value)+"ch"; //Meter为单位"米"的英文名
+                //    //String meterChName = MulLanguageMng.GetStringByResource("Decimeter"); //Meter为单位"米"的英文名
+                //    items.Add(new DictionaryEntry(cname, ename));
+                //}
+
+                //cmbParameterType.DisplayMember = "key";
+                //cmbParameterType.ValueMember = "value";
+                //cmbParameterType.DataSource = items;
+            }
+            else
+            {
+                cmbParameterType.Items.Add("指标参数");
+                cmbParameterType.Items.Add("构型和总体参数");
+                cmbParameterType.Items.Add("旋翼参数");
+                cmbParameterType.Items.Add("机身翼面参数");
+                cmbParameterType.Items.Add("着陆装置参数");
+                cmbParameterType.Items.Add("动力系统参数");
+                cmbParameterType.Items.Add("传动系统参数");
+                cmbParameterType.Items.Add("操纵系统参数");
+                cmbParameterType.Items.Add("人工参数");
+                cmbParameterType.Items.Add("其他类型参数");
+            }
+
+        }
 
         
 

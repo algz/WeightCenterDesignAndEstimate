@@ -110,7 +110,7 @@ namespace Model
                     lstWeightData.Add(weightData);
                 }
             }
-            catch (Exception ex)
+            catch 
             {
                 return null;
             }

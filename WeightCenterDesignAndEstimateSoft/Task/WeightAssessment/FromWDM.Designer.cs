@@ -142,12 +142,14 @@
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FromWDMCore";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "评估重量数据  WDM系统数据";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FromWDMCore_FormClosed);
             this.Load += new System.EventHandler(this.FromWDM_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

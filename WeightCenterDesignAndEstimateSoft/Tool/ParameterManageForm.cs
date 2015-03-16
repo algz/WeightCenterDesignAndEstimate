@@ -12,6 +12,7 @@ using System.IO;
 using System.Xml;
 using ZaeroModelSystem;
 using Dev.PubLib;
+using System.Collections;
 
 namespace WeightCenterDesignAndEstimateSoft.Tool
 {
@@ -23,6 +24,8 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
 
         private List<ParaData> lstParaData = null;
         private List<ParaData> lstAllParaData = null;
+        private Dictionary<string, string> dicUnits = new Dictionary<string, string>();
+
 
         private string strType = string.Empty;
         private TreeNode selNode = null;
@@ -32,13 +35,16 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
         public ParameterManageForm()
         {
             InitializeComponent();
+        }
 
-            CommonFunction.BindParaTypeData(cmbParameterType);
-            CommonFunction.BindParaTypeData(cmbFilterSel);
+
+        private void ParameterManageForm_Load(object sender, EventArgs e)
+        {
+            initUnits(); //绑定单位值
+            CommonUtil.BindParaTypeData(cmbParameterType);
+            CommonUtil.BindParaTypeData(cmbFilterSel);
             cmbFilterSel.Items.Add("无");
-
             SetingPageButton("inti");
-
             string strFilePath = strParaPath + "\\" + "ParameterCollection.PMC";
             lstAllParaData = GetParaData(strFilePath);
             BindTreeParaData(lstAllParaData);
@@ -47,6 +53,26 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
         #endregion
 
         #region 自定义方法
+
+        private void initUnits()
+        {
+            List<DictionaryEntry> items = new List<DictionaryEntry>();//添加项的集合
+
+            string strFileName = System.AppDomain.CurrentDomain.BaseDirectory + "TDE单位.xls";
+            //DataSet ds = CommonFunction.LoadDataFromExcel(strFileName, "单位");
+
+            DataTable dt = CommonUtil.LoadDataFromExcel(strFileName, "单位");
+            foreach (DataRow dr in dt.Rows)
+            {
+                string ename = dr["单位符号"].ToString();
+                String cname = dr["单位中文名"].ToString();
+                dicUnits.Add(cname, ename);
+                cmbUnit.Items.Add(cname);
+                //XLog.Write(ename +":"+ cname);
+                //String meterChName = MulLanguageMng.GetStringByResource("m"); //Meter为单位"米"的英文名
+                //items.Add(new DictionaryEntry(cname, ename));
+            }
+        }
 
         private void BindTreeParaData(List<ParaData> lstPara)
         {
@@ -105,7 +131,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
             if (strType == "inti")
             {
                 txtParameterName.Enabled = false;
-                txtUnit.Enabled = false;
+                cmbUnit.Enabled = false;
                 cmbParameterType.Enabled = false;
                 txtParameterRemark.Enabled = false;
 
@@ -115,7 +141,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
             if (strType == "new")
             {
                 txtParameterName.Enabled = true;
-                txtUnit.Enabled = true;
+                cmbUnit.Enabled = true;
                 cmbParameterType.Enabled = true;
                 txtParameterRemark.Enabled = true;
 
@@ -136,7 +162,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
                 cmbFilterSel.Enabled = false;
 
                 txtParameterName.Text = string.Empty;
-                txtUnit.Text = string.Empty;
+                cmbUnit.Text = string.Empty;
                 cmbParameterType.SelectedIndex = -1;
                 txtParameterRemark.Text = string.Empty;
             }
@@ -144,7 +170,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
             {
                 txtParameterName.Enabled = true;
 
-                txtUnit.Enabled = true;
+                cmbUnit.Enabled = true;
                 cmbParameterType.Enabled = true;
                 txtParameterRemark.Enabled = true;
 
@@ -167,7 +193,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
             if (strType == "confirm" || strType == "cancle" || strType == "delete" || strType == "select")
             {
                 txtParameterName.Enabled = false;
-                txtUnit.Enabled = false;
+                cmbUnit.Enabled = false;
                 cmbParameterType.Enabled = false;
                 txtParameterRemark.Enabled = false;
 
@@ -189,7 +215,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
                 if (strType == "delete" || strType == "select")
                 {
                     txtParameterName.Text = string.Empty;
-                    txtUnit.Text = string.Empty;
+                    cmbUnit.Text = string.Empty;
                     cmbParameterType.SelectedIndex = -1;
                     txtParameterRemark.Text = string.Empty;
                 }
@@ -226,7 +252,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
             ParaData paraData = new ParaData();
 
             paraData.paraName = txtParameterName.Text.Trim();
-            paraData.paraUnit = txtUnit.Text;
+            paraData.paraUnit = cmbUnit.Text;
             paraData.paraType = int.Parse(cmbParameterType.SelectedIndex.ToString());
             paraData.strRemark = txtParameterRemark.Text;
 
@@ -263,14 +289,14 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
             }
 
             //单位
-            if (txtUnit.Text == string.Empty)
+            if (cmbUnit.Text == string.Empty)
             {
                 strErroInfo = "请输入参数单位";
                 return strErroInfo;
             }
             else
             {
-                if (Verification.IsCheckString(txtUnit.Text))
+                if (Verification.IsCheckString(cmbUnit.Text))
                 {
                     strErroInfo = "请检查参数单位输入非法字符";
                     return strErroInfo;
@@ -306,7 +332,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
                 if (strArray != null && strArray.Length == 4)
                 {
                     txtParameterName.Text = strArray[0];
-                    txtUnit.Text = strArray[1];
+                    cmbUnit.Text = strArray[1];
                     cmbParameterType.SelectedIndex = int.Parse(strArray[2]);
                     txtParameterRemark.Text = strArray[3];
                 }
@@ -555,6 +581,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
         /// </summary>
         private void SynchronizationWeightPara()
         {
+            string msg = "";
             List<ParaData> lstPara = new List<ParaData>();
             if (lstAllParaData != null && lstAllParaData.Count > 0)
             {
@@ -562,7 +589,16 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
                 {
                     ParaData data = new ParaData();
                     data.paraName = para.paraName;
-                    data.paraUnit = para.paraUnit;
+                    try
+                    {
+                        data.paraUnit = dicUnits[para.paraUnit];
+                    }
+                    catch
+                    {
+                        //data.paraUnit = para.paraUnit;
+                        msg += data.paraName + "单位值'" + para.paraUnit + "'不在IDE已有单位范围中；\n";
+                    }
+
                     data.paraType = para.paraType;
                     data.paraValue = para.paraValue;
                     data.strRemark = para.strRemark;
@@ -578,12 +614,11 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
             {
                 foreach (ParaData para in lstPara)
                 {
+
                     if (MainForm.IsExitPara(para.paraName, lstTdePara) == false)
                     {
                         PubSyswareCom.CreateDoubleParameter(para.paraName, para.paraValue, true, true, false);
 
-                        MainForm.SetParameterUnit(para.paraName, para.paraUnit);
-                       
                         //设置分组
                         if (para.paraType == 0)
                         {
@@ -630,6 +665,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
                             PubSyswareCom.SetParameterGroup(para.paraName, "临时参数");
                         }
                     }
+                    MainForm.SetParameterUnit(para.paraName, para.paraUnit);
                 }
 
             }
@@ -661,6 +697,11 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
                 PubSyswareCom.DeleteParameter(string.Empty, str);
             }
 
+            if (msg != "")
+            {
+                XLog.Write(msg);
+                //MessageBox.Show(msg);
+            }
             //----------------------------------------------------------------------------------------------//
             XLog.Write("同步参数表成功");
         }
@@ -1070,7 +1111,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
             }
             catch (Exception ex)
             {
-                XLog.Write("导入参数文件错误."+ex.Message);
+                XLog.Write("导入参数文件错误." + ex.Message);
                 MessageBox.Show("导入参数文件错误");
             }
         }
@@ -1260,7 +1301,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
                 string[] strArray = selNode.ToolTipText.Split('|');
                 if (strArray.Length > 3)
                 {
-                    txtUnit.Text = strArray[1];
+                    cmbUnit.Text = strArray[1];
                     cmbParameterType.SelectedIndex = int.Parse(strArray[2]);
                     txtParameterRemark.Text = strArray[3];
 
@@ -1302,7 +1343,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
                 string[] strArray = e.Node.ToolTipText.Split('|');
                 if (strArray.Length > 3)
                 {
-                    txtUnit.Text = strArray[1];
+                    cmbUnit.Text = strArray[1];
                     cmbParameterType.SelectedIndex = int.Parse(strArray[2]);
                     txtParameterRemark.Text = strArray[3];
 
@@ -1311,10 +1352,11 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
             else
             {
                 txtParameterName.Text = string.Empty;
-                txtUnit.Text = string.Empty;
+                cmbUnit.Text = string.Empty;
                 cmbParameterType.SelectedIndex = -1;
                 txtParameterRemark.Text = string.Empty;
             }
         }
+
     }
 }

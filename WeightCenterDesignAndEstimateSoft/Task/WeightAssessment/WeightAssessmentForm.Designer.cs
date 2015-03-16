@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WeightAssessmentForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.基准重量ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FromCurrentWeightDataMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -327,6 +328,7 @@
             this.ClientSize = new System.Drawing.Size(389, 429);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

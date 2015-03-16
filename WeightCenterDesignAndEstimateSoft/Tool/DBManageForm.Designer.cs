@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DBManageForm));
             this.gruManageData = new System.Windows.Forms.GroupBox();
             this.radCoreEnvelopeDesignDagta = new System.Windows.Forms.RadioButton();
             this.radBtnWeightDesignData = new System.Windows.Forms.RadioButton();
@@ -110,6 +111,8 @@
             this.Controls.Add(this.btnCancle);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.gruManageData);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DBManageForm";

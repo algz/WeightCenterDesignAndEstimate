@@ -168,7 +168,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
                 MessageBox.Show("删除文件出现错误！");
                 return;
             }
-            
+
         }
 
         private void btnImport_Click(object sender, EventArgs e)
@@ -247,7 +247,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
             }
             catch (Exception ex)
             {
-                XCommon.XLog.Write("导入重心包线算法文件错误."+ex.Message);
+                XCommon.XLog.Write("导入重心包线算法文件错误." + ex.Message);
             }
         }
 
@@ -272,18 +272,20 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
                 return;
             }
 
+
             //从本地导出
             if (selNode.Tag == null)
             {
                 if (selNode.Name != dlg.FileName)
                 {
+                    string strSourcefile = System.AppDomain.CurrentDomain.BaseDirectory + selNode.Name;
                     try
                     {
                         if (File.Exists(dlg.FileName))
                         {
                             if (MessageBox.Show("文件\"" + dlg.FileName + "\"已存在，是否覆盖？", "文件已存在", MessageBoxButtons.YesNo) == DialogResult.Yes)
                             {
-                                System.IO.File.Copy(selNode.Name, dlg.FileName, true);
+                                System.IO.File.Copy(strSourcefile, dlg.FileName, true);
                             }
                             else
                             {
@@ -292,12 +294,12 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
                         }
                         else
                         {
-                            System.IO.File.Copy(selNode.Name, dlg.FileName, true);
+                            System.IO.File.Copy(strSourcefile, dlg.FileName, true);
                         }
                     }
-                    catch
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("导出文件失败！");
+                        MessageBox.Show(ex.Message);
                         return;
                     }
                 }

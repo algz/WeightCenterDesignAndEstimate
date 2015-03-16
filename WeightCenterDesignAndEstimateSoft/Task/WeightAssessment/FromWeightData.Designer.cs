@@ -94,6 +94,7 @@
             this.Controls.Add(this.grpBoxHeader);
             this.Controls.Add(this.btnCancle);
             this.Controls.Add(this.btnConfirm);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FromWeightData";

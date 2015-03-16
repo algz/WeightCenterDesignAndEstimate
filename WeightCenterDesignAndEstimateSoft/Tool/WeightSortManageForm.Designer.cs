@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WeightSortManageForm));
             this.gruWeightSortList = new System.Windows.Forms.GroupBox();
             this.treeViewWeightSort = new System.Windows.Forms.TreeView();
             this.btnJYNew = new System.Windows.Forms.Button();
@@ -41,8 +42,8 @@
             // 
             // gruWeightSortList
             // 
-            this.gruWeightSortList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.gruWeightSortList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gruWeightSortList.Controls.Add(this.treeViewWeightSort);
             this.gruWeightSortList.Location = new System.Drawing.Point(3, 1);
             this.gruWeightSortList.Name = "gruWeightSortList";
@@ -59,8 +60,8 @@
             this.treeViewWeightSort.Name = "treeViewWeightSort";
             this.treeViewWeightSort.Size = new System.Drawing.Size(420, 352);
             this.treeViewWeightSort.TabIndex = 0;
-            this.treeViewWeightSort.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.treeViewWeightSort_MouseDoubleClick);
             this.treeViewWeightSort.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewWeightSort_AfterSelect);
+            this.treeViewWeightSort.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.treeViewWeightSort_MouseDoubleClick);
             // 
             // btnJYNew
             // 
@@ -144,6 +145,7 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnJYNew);
             this.Controls.Add(this.btnEdit);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

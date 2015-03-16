@@ -389,13 +389,14 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
             {
                 if (selNode.Name != dlg.FileName)
                 {
+                    string strSourcefile = System.AppDomain.CurrentDomain.BaseDirectory + selNode.Name;
                     try
                     {
                         if (File.Exists(dlg.FileName))
                         {
                             if (MessageBox.Show("文件\"" + dlg.FileName + "\"已存在，是否覆盖？", "文件已存在", MessageBoxButtons.YesNo) == DialogResult.Yes)
                             {
-                                System.IO.File.Copy(selNode.Name, dlg.FileName, true);
+                                System.IO.File.Copy(strSourcefile, dlg.FileName, true);
                             }
                             else
                             {
@@ -404,12 +405,12 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
                         }
                         else
                         {
-                            System.IO.File.Copy(selNode.Name, dlg.FileName, true);
+                            System.IO.File.Copy(strSourcefile, dlg.FileName, true);
                         }
                     }
-                    catch
+                    catch(Exception ex)
                     {
-                        MessageBox.Show("导出文件失败！");
+                        MessageBox.Show(ex.Message);
                         return;
                     }
                 }

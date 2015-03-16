@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CoreEnvelopeAssessForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.基准重心包线数据ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FromCurrentCoreDesignMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,14 +54,14 @@
             this.yCoordinates = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.assessCoreGridView = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtResultName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtResultName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -190,7 +191,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 86.04269F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.95731F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 96F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 97F));
             this.tableLayoutPanel2.Controls.Add(this.btnCoreAssessConfig, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnConfirm, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnCancle, 2, 0);
@@ -214,7 +215,7 @@
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(533, 3);
+            this.btnConfirm.Location = new System.Drawing.Point(532, 3);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(75, 23);
             this.btnConfirm.TabIndex = 1;
@@ -224,7 +225,7 @@
             // 
             // btnCancle
             // 
-            this.btnCancle.Location = new System.Drawing.Point(618, 3);
+            this.btnCancle.Location = new System.Drawing.Point(617, 3);
             this.btnCancle.Name = "btnCancle";
             this.btnCancle.Size = new System.Drawing.Size(75, 23);
             this.btnCancle.TabIndex = 2;
@@ -282,16 +283,19 @@
             // 
             this.Column1.HeaderText = "节点名称";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // xCoordinates
             // 
             this.xCoordinates.HeaderText = "横坐标";
             this.xCoordinates.Name = "xCoordinates";
+            this.xCoordinates.ReadOnly = true;
             // 
             // yCoordinates
             // 
             this.yCoordinates.HeaderText = "纵坐标";
             this.yCoordinates.Name = "yCoordinates";
+            this.yCoordinates.ReadOnly = true;
             // 
             // groupBox2
             // 
@@ -322,6 +326,30 @@
             this.assessCoreGridView.RowTemplate.Height = 23;
             this.assessCoreGridView.Size = new System.Drawing.Size(398, 321);
             this.assessCoreGridView.TabIndex = 0;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "节点名称";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "横坐标";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "纵坐标";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "是否评估";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // tableLayoutPanel1
             // 
@@ -366,26 +394,6 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "评估数据名称:";
             // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "节点名称";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "横坐标";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "纵坐标";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "是否评估";
-            this.Column5.Name = "Column5";
-            // 
             // CoreEnvelopeAssessForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -393,6 +401,7 @@
             this.ClientSize = new System.Drawing.Size(718, 440);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

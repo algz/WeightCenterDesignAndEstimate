@@ -17,6 +17,7 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -29,7 +30,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -81,9 +81,37 @@
     <CodeAnalysisRuleSetDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
     <CodeAnalysisRuleDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
   </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>16.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NPOI.2.1.3\lib\net20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="NPOI, Version=2.1.3.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NPOI.2.1.3\lib\net20\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\packages\NPOI.2.1.3\lib\net20\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\packages\NPOI.2.1.3\lib\net20\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\packages\NPOI.2.1.3\lib\net20\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core">
@@ -93,6 +121,8 @@
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -106,6 +136,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Sysware.WinformsUI.ToolStripExProject, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="SyswareComLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Ref\SyswareComLibrary.dll</HintPath>
@@ -120,7 +151,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommonUtil.cs" />
+    <Compile Include="WDMUtil\CommonUtil.cs" />
     <Compile Include="CoreDesignProject.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +295,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WDMUtil\LoadMask\MyOpaqueLayer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WDMUtil\LoadMask\OpaqueCommand.cs" />
     <EmbeddedResource Include="CoreDesignProject.resx">
       <DependentUpon>CoreDesignProject.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -444,6 +479,7 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -567,7 +603,7 @@
     <Compile Include="Tool\WeightSortManageForm.Designer.cs">
       <DependentUpon>WeightSortManageForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="WDMIntegrationModule.cs" />
+    <Compile Include="WDMUtil\WDMIntegrationModule.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
@@ -599,6 +635,108 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-file.png" />
+    <None Include="Resources\save_as.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documents.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tasks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\design.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\design2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adjust.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weightCore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_tools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\task_manager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\task.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_alt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iplot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\category.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blackboard_sum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iplot _core.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preferences-desktop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_gear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_server.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\design_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resize_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weight_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="16.ico" />
+    <None Include="Resources\import1.png" />
+    <None Include="Resources\import.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

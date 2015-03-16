@@ -4,7 +4,6 @@ using System.Windows.Forms;
 
 namespace XCommon
 {
-
 	/// <summary>
 	/// »’÷æ¿‡
 	/// </summary>

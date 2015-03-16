@@ -29,77 +29,48 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.文件FToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemNew = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemOpen = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemSave = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemAsSave = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemClose = new System.Windows.Forms.ToolStripMenuItem();
-            this.fToolStripMenuItemTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemWeightDesign = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemWeightAdjustment = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripMenuItemWeightAssessment = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItemCoreEnvelopeDesign = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemCoreEnvelopeCut = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripMenuItemCore = new System.Windows.Forms.ToolStripMenuItem();
-            this.工具TToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemComputeCorrectionFactor = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItemWeightSortManage = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemWeightAtithmeticManage = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemCoreEnvelopeAtithmeticManage = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemParameterManage = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItemDBManage = new System.Windows.Forms.ToolStripMenuItem();
-            this.设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripMenuItemDBServerSetting = new System.Windows.Forms.ToolStripMenuItem();
-            this.BasicDBSetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.wDMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.gruTree = new System.Windows.Forms.GroupBox();
@@ -309,7 +280,35 @@
             this.contextMenuStripDeleteResult = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItemDeleteWeightDesignData = new System.Windows.Forms.ToolStripMenuItem();
             this.button2 = new System.Windows.Forms.Button();
-            this.menuStrip1.SuspendLayout();
+            this.menuStripEx1 = new Sysware.WinformsUI.ToolStripExProject.MenuStripEx();
+            this.weiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemNew = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemOpen = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemSave = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemAsSave = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemClose = new System.Windows.Forms.ToolStripMenuItem();
+            this.fToolStripMenuItemTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemWeightDesign = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemWeightAdjustment = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemWeightAssessment = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItemCoreEnvelopeDesign = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemCoreEnvelopeCut = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemCore = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemComputeCorrectionFactor = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItemWeightSortManage = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemWeightAtithmeticManage = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemCoreEnvelopeAtithmeticManage = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemParameterManage = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItemDBManage = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemSet = new System.Windows.Forms.ToolStripMenuItem();
+            this.BasicDBSetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.wDMToolStripMenuItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -468,248 +467,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStripEditProject.SuspendLayout();
             this.contextMenuStripDeleteResult.SuspendLayout();
+            this.menuStripEx1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.文件FToolStripMenuItem,
-            this.fToolStripMenuItemTool,
-            this.工具TToolStripMenuItem,
-            this.设置ToolStripMenuItem,
-            this.toolStripMenuItemHelp});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1008, 25);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // 文件FToolStripMenuItem
-            // 
-            this.文件FToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemNew,
-            this.toolStripMenuItemOpen,
-            this.toolStripMenuItemSave,
-            this.toolStripMenuItemAsSave,
-            this.toolStripMenuItemClose});
-            this.文件FToolStripMenuItem.Name = "文件FToolStripMenuItem";
-            this.文件FToolStripMenuItem.Size = new System.Drawing.Size(58, 21);
-            this.文件FToolStripMenuItem.Text = "文件(&F)";
-            // 
-            // toolStripMenuItemNew
-            // 
-            this.toolStripMenuItemNew.Name = "toolStripMenuItemNew";
-            this.toolStripMenuItemNew.Size = new System.Drawing.Size(128, 22);
-            this.toolStripMenuItemNew.Text = "新建(&N)";
-            this.toolStripMenuItemNew.Click += new System.EventHandler(this.toolStripMenuItemNew_Click);
-            // 
-            // toolStripMenuItemOpen
-            // 
-            this.toolStripMenuItemOpen.Name = "toolStripMenuItemOpen";
-            this.toolStripMenuItemOpen.Size = new System.Drawing.Size(128, 22);
-            this.toolStripMenuItemOpen.Text = "打开(&O)";
-            this.toolStripMenuItemOpen.Click += new System.EventHandler(this.toolStripMenuItemOpen_Click);
-            // 
-            // toolStripMenuItemSave
-            // 
-            this.toolStripMenuItemSave.Name = "toolStripMenuItemSave";
-            this.toolStripMenuItemSave.Size = new System.Drawing.Size(128, 22);
-            this.toolStripMenuItemSave.Text = "保存(&S)";
-            this.toolStripMenuItemSave.Click += new System.EventHandler(this.toolStripMenuItemSave_Click);
-            // 
-            // toolStripMenuItemAsSave
-            // 
-            this.toolStripMenuItemAsSave.Name = "toolStripMenuItemAsSave";
-            this.toolStripMenuItemAsSave.Size = new System.Drawing.Size(128, 22);
-            this.toolStripMenuItemAsSave.Text = "另存为(&A)";
-            this.toolStripMenuItemAsSave.Click += new System.EventHandler(this.toolStripMenuItemAsSave_Click);
-            // 
-            // toolStripMenuItemClose
-            // 
-            this.toolStripMenuItemClose.Name = "toolStripMenuItemClose";
-            this.toolStripMenuItemClose.Size = new System.Drawing.Size(128, 22);
-            this.toolStripMenuItemClose.Text = "关闭(&C)";
-            this.toolStripMenuItemClose.Click += new System.EventHandler(this.toolStripMenuItemClose_Click);
-            // 
-            // fToolStripMenuItemTool
-            // 
-            this.fToolStripMenuItemTool.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemWeightDesign,
-            this.toolStripMenuItemWeightAdjustment,
-            this.ToolStripMenuItemWeightAssessment,
-            this.toolStripSeparator2,
-            this.toolStripMenuItemCoreEnvelopeDesign,
-            this.toolStripMenuItemCoreEnvelopeCut,
-            this.ToolStripMenuItemCore});
-            this.fToolStripMenuItemTool.Name = "fToolStripMenuItemTool";
-            this.fToolStripMenuItemTool.Size = new System.Drawing.Size(64, 21);
-            this.fToolStripMenuItemTool.Text = "任务(&M)";
-            // 
-            // toolStripMenuItemWeightDesign
-            // 
-            this.toolStripMenuItemWeightDesign.Name = "toolStripMenuItemWeightDesign";
-            this.toolStripMenuItemWeightDesign.Size = new System.Drawing.Size(164, 22);
-            this.toolStripMenuItemWeightDesign.Text = "重量设计(&D)";
-            this.toolStripMenuItemWeightDesign.Click += new System.EventHandler(this.toolStripMenuItemWeightDesign_Click);
-            // 
-            // toolStripMenuItemWeightAdjustment
-            // 
-            this.toolStripMenuItemWeightAdjustment.Name = "toolStripMenuItemWeightAdjustment";
-            this.toolStripMenuItemWeightAdjustment.Size = new System.Drawing.Size(164, 22);
-            this.toolStripMenuItemWeightAdjustment.Text = "重量调整(&A)";
-            this.toolStripMenuItemWeightAdjustment.Click += new System.EventHandler(this.toolStripMenuItemWeightAdjustment_Click);
-            // 
-            // ToolStripMenuItemWeightAssessment
-            // 
-            this.ToolStripMenuItemWeightAssessment.Name = "ToolStripMenuItemWeightAssessment";
-            this.ToolStripMenuItemWeightAssessment.Size = new System.Drawing.Size(164, 22);
-            this.ToolStripMenuItemWeightAssessment.Text = "重量评估(&M)";
-            this.ToolStripMenuItemWeightAssessment.Click += new System.EventHandler(this.ToolStripMenuItemWeightAssessment_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(161, 6);
-            // 
-            // toolStripMenuItemCoreEnvelopeDesign
-            // 
-            this.toolStripMenuItemCoreEnvelopeDesign.Name = "toolStripMenuItemCoreEnvelopeDesign";
-            this.toolStripMenuItemCoreEnvelopeDesign.Size = new System.Drawing.Size(164, 22);
-            this.toolStripMenuItemCoreEnvelopeDesign.Text = "重心包线设计(&E)";
-            this.toolStripMenuItemCoreEnvelopeDesign.Click += new System.EventHandler(this.toolStripMenuItemCoreEnvelopeDesign_Click);
-            // 
-            // toolStripMenuItemCoreEnvelopeCut
-            // 
-            this.toolStripMenuItemCoreEnvelopeCut.Name = "toolStripMenuItemCoreEnvelopeCut";
-            this.toolStripMenuItemCoreEnvelopeCut.Size = new System.Drawing.Size(164, 22);
-            this.toolStripMenuItemCoreEnvelopeCut.Text = "重心包线剪裁(&C)";
-            this.toolStripMenuItemCoreEnvelopeCut.Click += new System.EventHandler(this.toolStripMenuItemCoreEnvelopeCut_Click);
-            // 
-            // ToolStripMenuItemCore
-            // 
-            this.ToolStripMenuItemCore.Name = "ToolStripMenuItemCore";
-            this.ToolStripMenuItemCore.Size = new System.Drawing.Size(164, 22);
-            this.ToolStripMenuItemCore.Text = "重心评估(&I)";
-            this.ToolStripMenuItemCore.Click += new System.EventHandler(this.ToolStripMenuItemCore_Click);
-            // 
-            // 工具TToolStripMenuItem
-            // 
-            this.工具TToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemComputeCorrectionFactor,
-            this.toolStripSeparator3,
-            this.toolStripMenuItemWeightSortManage,
-            this.toolStripMenuItemWeightAtithmeticManage,
-            this.toolStripMenuItemCoreEnvelopeAtithmeticManage,
-            this.toolStripMenuItemParameterManage,
-            this.toolStripSeparator4,
-            this.toolStripMenuItemDBManage});
-            this.工具TToolStripMenuItem.Name = "工具TToolStripMenuItem";
-            this.工具TToolStripMenuItem.Size = new System.Drawing.Size(59, 21);
-            this.工具TToolStripMenuItem.Text = "工具(&T)";
-            // 
-            // toolStripMenuItemComputeCorrectionFactor
-            // 
-            this.toolStripMenuItemComputeCorrectionFactor.Name = "toolStripMenuItemComputeCorrectionFactor";
-            this.toolStripMenuItemComputeCorrectionFactor.Size = new System.Drawing.Size(187, 22);
-            this.toolStripMenuItemComputeCorrectionFactor.Text = "修正因子求解(&R)";
-            this.toolStripMenuItemComputeCorrectionFactor.Click += new System.EventHandler(this.toolStripMenuItemComputeCorrectionFactor_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(184, 6);
-            // 
-            // toolStripMenuItemWeightSortManage
-            // 
-            this.toolStripMenuItemWeightSortManage.Name = "toolStripMenuItemWeightSortManage";
-            this.toolStripMenuItemWeightSortManage.Size = new System.Drawing.Size(187, 22);
-            this.toolStripMenuItemWeightSortManage.Text = "重量分类管理(&S)";
-            this.toolStripMenuItemWeightSortManage.Click += new System.EventHandler(this.toolStripMenuItemWeightSortManage_Click);
-            // 
-            // toolStripMenuItemWeightAtithmeticManage
-            // 
-            this.toolStripMenuItemWeightAtithmeticManage.Name = "toolStripMenuItemWeightAtithmeticManage";
-            this.toolStripMenuItemWeightAtithmeticManage.Size = new System.Drawing.Size(187, 22);
-            this.toolStripMenuItemWeightAtithmeticManage.Text = "重量算法管理(&D)";
-            this.toolStripMenuItemWeightAtithmeticManage.Click += new System.EventHandler(this.toolStripMenuItemWeightAtithmeticManage_Click);
-            // 
-            // toolStripMenuItemCoreEnvelopeAtithmeticManage
-            // 
-            this.toolStripMenuItemCoreEnvelopeAtithmeticManage.Name = "toolStripMenuItemCoreEnvelopeAtithmeticManage";
-            this.toolStripMenuItemCoreEnvelopeAtithmeticManage.Size = new System.Drawing.Size(187, 22);
-            this.toolStripMenuItemCoreEnvelopeAtithmeticManage.Text = "重心包线算法管理(&E)";
-            this.toolStripMenuItemCoreEnvelopeAtithmeticManage.Click += new System.EventHandler(this.toolStripMenuItemCoreEnvelopeAtithmeticManage_Click);
-            // 
-            // toolStripMenuItemParameterManage
-            // 
-            this.toolStripMenuItemParameterManage.Name = "toolStripMenuItemParameterManage";
-            this.toolStripMenuItemParameterManage.Size = new System.Drawing.Size(187, 22);
-            this.toolStripMenuItemParameterManage.Text = "参数管理(&P)";
-            this.toolStripMenuItemParameterManage.Click += new System.EventHandler(this.toolStripMenuItemParameterManage_Click);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(184, 6);
-            // 
-            // toolStripMenuItemDBManage
-            // 
-            this.toolStripMenuItemDBManage.Name = "toolStripMenuItemDBManage";
-            this.toolStripMenuItemDBManage.Size = new System.Drawing.Size(187, 22);
-            this.toolStripMenuItemDBManage.Text = "数据库管理(&B)";
-            this.toolStripMenuItemDBManage.Click += new System.EventHandler(this.toolStripMenuItemDBManage_Click);
-            // 
-            // 设置ToolStripMenuItem
-            // 
-            this.设置ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripMenuItemDBServerSetting,
-            this.BasicDBSetToolStripMenuItem,
-            this.wDMToolStripMenuItem});
-            this.设置ToolStripMenuItem.Name = "设置ToolStripMenuItem";
-            this.设置ToolStripMenuItem.Size = new System.Drawing.Size(59, 21);
-            this.设置ToolStripMenuItem.Text = "设置(&S)";
-            // 
-            // ToolStripMenuItemDBServerSetting
-            // 
-            this.ToolStripMenuItemDBServerSetting.Enabled = false;
-            this.ToolStripMenuItemDBServerSetting.Name = "ToolStripMenuItemDBServerSetting";
-            this.ToolStripMenuItemDBServerSetting.Size = new System.Drawing.Size(224, 22);
-            this.ToolStripMenuItemDBServerSetting.Text = "数据库服务器登录设置(&L)";
-            this.ToolStripMenuItemDBServerSetting.Click += new System.EventHandler(this.ToolStripMenuItemDBServerSetting_Click);
-            // 
-            // BasicDBSetToolStripMenuItem
-            // 
-            this.BasicDBSetToolStripMenuItem.Name = "BasicDBSetToolStripMenuItem";
-            this.BasicDBSetToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
-            this.BasicDBSetToolStripMenuItem.Text = "基础数据库读取数据设置(&B)";
-            this.BasicDBSetToolStripMenuItem.Click += new System.EventHandler(this.BasicDBSetToolStripMenuItem_Click);
-            // 
-            // wDMToolStripMenuItem
-            // 
-            this.wDMToolStripMenuItem.Name = "wDMToolStripMenuItem";
-            this.wDMToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
-            this.wDMToolStripMenuItem.Text = "WDM系统登录设置";
-            this.wDMToolStripMenuItem.Click += new System.EventHandler(this.wDMToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItemHelp
-            // 
-            this.toolStripMenuItemHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemAbout});
-            this.toolStripMenuItemHelp.Name = "toolStripMenuItemHelp";
-            this.toolStripMenuItemHelp.Size = new System.Drawing.Size(61, 21);
-            this.toolStripMenuItemHelp.Text = "帮助(&H)";
-            // 
-            // toolStripMenuItemAbout
-            // 
-            this.toolStripMenuItemAbout.Name = "toolStripMenuItemAbout";
-            this.toolStripMenuItemAbout.Size = new System.Drawing.Size(116, 22);
-            this.toolStripMenuItemAbout.Text = "关于(&A)";
-            this.toolStripMenuItemAbout.Click += new System.EventHandler(this.toolStripMenuItemAbout_Click);
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this.splitContainer1.Location = new System.Drawing.Point(0, 25);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -821,7 +585,7 @@
             // 
             this.splitContainer3.Panel2.Controls.Add(this.tableLayoutPanel1);
             this.splitContainer3.Size = new System.Drawing.Size(809, 568);
-            this.splitContainer3.SplitterDistance = 436;
+            this.splitContainer3.SplitterDistance = 433;
             this.splitContainer3.TabIndex = 2;
             // 
             // splitContainer4
@@ -838,8 +602,8 @@
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.splitContainer5);
-            this.splitContainer4.Size = new System.Drawing.Size(809, 436);
-            this.splitContainer4.SplitterDistance = 43;
+            this.splitContainer4.Size = new System.Drawing.Size(809, 433);
+            this.splitContainer4.SplitterDistance = 41;
             this.splitContainer4.TabIndex = 0;
             // 
             // tableLayoutPanel5
@@ -858,14 +622,14 @@
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(809, 43);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(809, 41);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // labSortName
             // 
             this.labSortName.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labSortName.AutoSize = true;
-            this.labSortName.Location = new System.Drawing.Point(312, 15);
+            this.labSortName.Location = new System.Drawing.Point(312, 14);
             this.labSortName.Name = "labSortName";
             this.labSortName.Size = new System.Drawing.Size(83, 12);
             this.labSortName.TabIndex = 2;
@@ -875,7 +639,7 @@
             // 
             this.labDBName.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labDBName.AutoSize = true;
-            this.labDBName.Location = new System.Drawing.Point(4, 15);
+            this.labDBName.Location = new System.Drawing.Point(4, 14);
             this.labDBName.Name = "labDBName";
             this.labDBName.Size = new System.Drawing.Size(107, 12);
             this.labDBName.TabIndex = 0;
@@ -884,7 +648,7 @@
             // txtWeightDesingnDBName
             // 
             this.txtWeightDesingnDBName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtWeightDesingnDBName.Location = new System.Drawing.Point(117, 11);
+            this.txtWeightDesingnDBName.Location = new System.Drawing.Point(117, 10);
             this.txtWeightDesingnDBName.Name = "txtWeightDesingnDBName";
             this.txtWeightDesingnDBName.ReadOnly = true;
             this.txtWeightDesingnDBName.Size = new System.Drawing.Size(166, 21);
@@ -893,7 +657,7 @@
             // txtSortName
             // 
             this.txtSortName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtSortName.Location = new System.Drawing.Point(401, 11);
+            this.txtSortName.Location = new System.Drawing.Point(401, 10);
             this.txtSortName.Name = "txtSortName";
             this.txtSortName.ReadOnly = true;
             this.txtSortName.Size = new System.Drawing.Size(162, 21);
@@ -913,7 +677,7 @@
             // splitContainer5.Panel2
             // 
             this.splitContainer5.Panel2.Controls.Add(this.gruResult);
-            this.splitContainer5.Size = new System.Drawing.Size(809, 389);
+            this.splitContainer5.Size = new System.Drawing.Size(809, 388);
             this.splitContainer5.SplitterDistance = 283;
             this.splitContainer5.TabIndex = 0;
             // 
@@ -923,7 +687,7 @@
             this.gruDesignSort.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gruDesignSort.Location = new System.Drawing.Point(0, 0);
             this.gruDesignSort.Name = "gruDesignSort";
-            this.gruDesignSort.Size = new System.Drawing.Size(283, 389);
+            this.gruDesignSort.Size = new System.Drawing.Size(283, 388);
             this.gruDesignSort.TabIndex = 0;
             this.gruDesignSort.TabStop = false;
             this.gruDesignSort.Text = "重量分类";
@@ -934,7 +698,7 @@
             this.treeViewSort.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeViewSort.Location = new System.Drawing.Point(3, 17);
             this.treeViewSort.Name = "treeViewSort";
-            this.treeViewSort.Size = new System.Drawing.Size(277, 369);
+            this.treeViewSort.Size = new System.Drawing.Size(277, 368);
             this.treeViewSort.TabIndex = 0;
             // 
             // contextMenuStripWeightDesign
@@ -965,31 +729,31 @@
             this.gruResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gruResult.Location = new System.Drawing.Point(0, 0);
             this.gruResult.Name = "gruResult";
-            this.gruResult.Size = new System.Drawing.Size(522, 389);
+            this.gruResult.Size = new System.Drawing.Size(522, 388);
             this.gruResult.TabIndex = 1;
             this.gruResult.TabStop = false;
             this.gruResult.Text = "重量设计结果";
             // 
             // chartWeightDesign
             // 
-            chartArea7.Name = "ChartArea1";
-            this.chartWeightDesign.ChartAreas.Add(chartArea7);
+            chartArea1.Name = "ChartArea1";
+            this.chartWeightDesign.ChartAreas.Add(chartArea1);
             this.chartWeightDesign.ContextMenuStrip = this.contextMenuStripSaveImge;
             this.chartWeightDesign.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend7.IsTextAutoFit = false;
-            legend7.Name = "Legend1";
-            this.chartWeightDesign.Legends.Add(legend7);
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            this.chartWeightDesign.Legends.Add(legend1);
             this.chartWeightDesign.Location = new System.Drawing.Point(3, 17);
             this.chartWeightDesign.Name = "chartWeightDesign";
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            this.chartWeightDesign.Series.Add(series7);
-            this.chartWeightDesign.Size = new System.Drawing.Size(516, 369);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartWeightDesign.Series.Add(series1);
+            this.chartWeightDesign.Size = new System.Drawing.Size(516, 368);
             this.chartWeightDesign.TabIndex = 0;
             this.chartWeightDesign.Text = "chart1";
-            title3.Name = "Title1";
-            this.chartWeightDesign.Titles.Add(title3);
+            title1.Name = "Title1";
+            this.chartWeightDesign.Titles.Add(title1);
             this.chartWeightDesign.MouseDown += new System.Windows.Forms.MouseEventHandler(this.chartWeightDesign_MouseDown);
             this.chartWeightDesign.MouseMove += new System.Windows.Forms.MouseEventHandler(this.chartWeightDesign_MouseMove);
             // 
@@ -1024,7 +788,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 85F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(809, 128);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(809, 131);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // gruResultData
@@ -1044,35 +808,35 @@
             this.gridDesignResult.AllowUserToAddRows = false;
             this.gridDesignResult.BackgroundColor = System.Drawing.Color.White;
             this.gridDesignResult.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridDesignResult.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridDesignResult.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridDesignResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridDesignResult.ContextMenuStrip = this.contextMenuStripWeightDesign;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridDesignResult.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridDesignResult.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridDesignResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridDesignResult.Location = new System.Drawing.Point(3, 17);
             this.gridDesignResult.Name = "gridDesignResult";
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridDesignResult.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridDesignResult.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridDesignResult.RowTemplate.Height = 23;
             this.gridDesignResult.Size = new System.Drawing.Size(797, 59);
             this.gridDesignResult.TabIndex = 0;
@@ -1082,7 +846,7 @@
             // btnExportWeightToDB
             // 
             this.btnExportWeightToDB.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnExportWeightToDB.Location = new System.Drawing.Point(651, 95);
+            this.btnExportWeightToDB.Location = new System.Drawing.Point(651, 97);
             this.btnExportWeightToDB.Name = "btnExportWeightToDB";
             this.btnExportWeightToDB.Size = new System.Drawing.Size(155, 22);
             this.btnExportWeightToDB.TabIndex = 1;
@@ -1093,7 +857,7 @@
             // btnExportWeightToFile
             // 
             this.btnExportWeightToFile.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnExportWeightToFile.Location = new System.Drawing.Point(313, 95);
+            this.btnExportWeightToFile.Location = new System.Drawing.Point(313, 97);
             this.btnExportWeightToFile.Name = "btnExportWeightToFile";
             this.btnExportWeightToFile.Size = new System.Drawing.Size(148, 22);
             this.btnExportWeightToFile.TabIndex = 4;
@@ -1104,7 +868,7 @@
             // btnWeightDesignPubilishToTde
             // 
             this.btnWeightDesignPubilishToTde.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnWeightDesignPubilishToTde.Location = new System.Drawing.Point(470, 95);
+            this.btnWeightDesignPubilishToTde.Location = new System.Drawing.Point(470, 97);
             this.btnWeightDesignPubilishToTde.Name = "btnWeightDesignPubilishToTde";
             this.btnWeightDesignPubilishToTde.Size = new System.Drawing.Size(175, 22);
             this.btnWeightDesignPubilishToTde.TabIndex = 5;
@@ -1329,23 +1093,23 @@
             // 
             // chartWeightAdjust
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartWeightAdjust.ChartAreas.Add(chartArea1);
+            chartArea2.Name = "ChartArea1";
+            this.chartWeightAdjust.ChartAreas.Add(chartArea2);
             this.chartWeightAdjust.ContextMenuStrip = this.contextMenuStripAdjustImage;
             this.chartWeightAdjust.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chartWeightAdjust.Legends.Add(legend1);
+            legend2.Name = "Legend1";
+            this.chartWeightAdjust.Legends.Add(legend2);
             this.chartWeightAdjust.Location = new System.Drawing.Point(3, 3);
             this.chartWeightAdjust.Name = "chartWeightAdjust";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartWeightAdjust.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartWeightAdjust.Series.Add(series2);
             this.chartWeightAdjust.Size = new System.Drawing.Size(533, 311);
             this.chartWeightAdjust.TabIndex = 0;
             this.chartWeightAdjust.Text = "chart1";
-            title1.Name = "Title1";
-            this.chartWeightAdjust.Titles.Add(title1);
+            title2.Name = "Title1";
+            this.chartWeightAdjust.Titles.Add(title2);
             this.chartWeightAdjust.MouseDown += new System.Windows.Forms.MouseEventHandler(this.chartWeightAdjust_MouseDown);
             this.chartWeightAdjust.MouseMove += new System.Windows.Forms.MouseEventHandler(this.chartWeightAdjust_MouseMove);
             // 
@@ -1376,23 +1140,23 @@
             // 
             // chartAdjustment
             // 
-            chartArea2.AxisX.Interval = 1D;
-            chartArea2.AxisX.IntervalOffset = 1D;
-            chartArea2.Name = "ChartArea1";
-            this.chartAdjustment.ChartAreas.Add(chartArea2);
+            chartArea3.AxisX.Interval = 1D;
+            chartArea3.AxisX.IntervalOffset = 1D;
+            chartArea3.Name = "ChartArea1";
+            this.chartAdjustment.ChartAreas.Add(chartArea3);
             this.chartAdjustment.ContextMenuStrip = this.contextMenuStripAdjustCompareImage;
             this.chartAdjustment.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.chartAdjustment.Legends.Add(legend2);
+            legend3.Name = "Legend1";
+            this.chartAdjustment.Legends.Add(legend3);
             this.chartAdjustment.Location = new System.Drawing.Point(3, 3);
             this.chartAdjustment.Name = "chartAdjustment";
-            series2.ChartArea = "ChartArea1";
-            series2.CustomProperties = "PixelPointWidth=30, LabelStyle=Left";
-            series2.IsValueShownAsLabel = true;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
-            this.chartAdjustment.Series.Add(series2);
+            series3.ChartArea = "ChartArea1";
+            series3.CustomProperties = "PixelPointWidth=30, LabelStyle=Left";
+            series3.IsValueShownAsLabel = true;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            this.chartAdjustment.Series.Add(series3);
             this.chartAdjustment.Size = new System.Drawing.Size(533, 311);
             this.chartAdjustment.TabIndex = 0;
             this.chartAdjustment.Text = "chart1";
@@ -1457,34 +1221,34 @@
             this.gridViewAdjustment.AllowUserToAddRows = false;
             this.gridViewAdjustment.BackgroundColor = System.Drawing.Color.White;
             this.gridViewAdjustment.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridViewAdjustment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridViewAdjustment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gridViewAdjustment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridViewAdjustment.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridViewAdjustment.DefaultCellStyle = dataGridViewCellStyle5;
             this.gridViewAdjustment.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridViewAdjustment.Location = new System.Drawing.Point(3, 17);
             this.gridViewAdjustment.Name = "gridViewAdjustment";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridViewAdjustment.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridViewAdjustment.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.gridViewAdjustment.RowTemplate.Height = 23;
             this.gridViewAdjustment.Size = new System.Drawing.Size(797, 93);
             this.gridViewAdjustment.TabIndex = 0;
@@ -1739,35 +1503,35 @@
             this.gridCoreEnvelopeDesign.AllowUserToAddRows = false;
             this.gridCoreEnvelopeDesign.BackgroundColor = System.Drawing.Color.White;
             this.gridCoreEnvelopeDesign.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridCoreEnvelopeDesign.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridCoreEnvelopeDesign.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.gridCoreEnvelopeDesign.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridCoreEnvelopeDesign.ContextMenuStrip = this.contextMenuStripCoreEnvelopeDesign;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridCoreEnvelopeDesign.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridCoreEnvelopeDesign.DefaultCellStyle = dataGridViewCellStyle8;
             this.gridCoreEnvelopeDesign.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridCoreEnvelopeDesign.Location = new System.Drawing.Point(3, 17);
             this.gridCoreEnvelopeDesign.Name = "gridCoreEnvelopeDesign";
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridCoreEnvelopeDesign.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridCoreEnvelopeDesign.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.gridCoreEnvelopeDesign.RowTemplate.Height = 23;
             this.gridCoreEnvelopeDesign.Size = new System.Drawing.Size(797, 74);
             this.gridCoreEnvelopeDesign.TabIndex = 0;
@@ -2090,35 +1854,35 @@
             this.gridViewCoreEnvelopeCutReuslt.AllowUserToAddRows = false;
             this.gridViewCoreEnvelopeCutReuslt.BackgroundColor = System.Drawing.Color.White;
             this.gridViewCoreEnvelopeCutReuslt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridViewCoreEnvelopeCutReuslt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridViewCoreEnvelopeCutReuslt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.gridViewCoreEnvelopeCutReuslt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridViewCoreEnvelopeCutReuslt.ContextMenuStrip = this.contextMenuStripCoreEnvelopeCut;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridViewCoreEnvelopeCutReuslt.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridViewCoreEnvelopeCutReuslt.DefaultCellStyle = dataGridViewCellStyle11;
             this.gridViewCoreEnvelopeCutReuslt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridViewCoreEnvelopeCutReuslt.Location = new System.Drawing.Point(3, 17);
             this.gridViewCoreEnvelopeCutReuslt.Name = "gridViewCoreEnvelopeCutReuslt";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridViewCoreEnvelopeCutReuslt.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridViewCoreEnvelopeCutReuslt.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.gridViewCoreEnvelopeCutReuslt.RowTemplate.Height = 23;
             this.gridViewCoreEnvelopeCutReuslt.Size = new System.Drawing.Size(797, 85);
             this.gridViewCoreEnvelopeCutReuslt.TabIndex = 0;
@@ -2356,18 +2120,18 @@
             // 
             // chartWeightCompare
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chartWeightCompare.ChartAreas.Add(chartArea3);
+            chartArea4.Name = "ChartArea1";
+            this.chartWeightCompare.ChartAreas.Add(chartArea4);
             this.chartWeightCompare.ContextMenuStrip = this.contextMenuStripWeightCompare;
             this.chartWeightCompare.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.chartWeightCompare.Legends.Add(legend3);
+            legend4.Name = "Legend1";
+            this.chartWeightCompare.Legends.Add(legend4);
             this.chartWeightCompare.Location = new System.Drawing.Point(3, 3);
             this.chartWeightCompare.Name = "chartWeightCompare";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chartWeightCompare.Series.Add(series3);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chartWeightCompare.Series.Add(series4);
             this.chartWeightCompare.Size = new System.Drawing.Size(563, 255);
             this.chartWeightCompare.TabIndex = 0;
             this.chartWeightCompare.Text = "chart1";
@@ -2399,18 +2163,18 @@
             // 
             // chartRationalityAssess
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chartRationalityAssess.ChartAreas.Add(chartArea4);
+            chartArea5.Name = "ChartArea1";
+            this.chartRationalityAssess.ChartAreas.Add(chartArea5);
             this.chartRationalityAssess.ContextMenuStrip = this.contextMenuStripRationality;
             this.chartRationalityAssess.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend4.Name = "Legend1";
-            this.chartRationalityAssess.Legends.Add(legend4);
+            legend5.Name = "Legend1";
+            this.chartRationalityAssess.Legends.Add(legend5);
             this.chartRationalityAssess.Location = new System.Drawing.Point(3, 3);
             this.chartRationalityAssess.Name = "chartRationalityAssess";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chartRationalityAssess.Series.Add(series4);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chartRationalityAssess.Series.Add(series5);
             this.chartRationalityAssess.Size = new System.Drawing.Size(563, 255);
             this.chartRationalityAssess.TabIndex = 0;
             this.chartRationalityAssess.Text = "chart1";
@@ -2442,18 +2206,18 @@
             // 
             // chartAdvancedAssess
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chartAdvancedAssess.ChartAreas.Add(chartArea5);
+            chartArea6.Name = "ChartArea1";
+            this.chartAdvancedAssess.ChartAreas.Add(chartArea6);
             this.chartAdvancedAssess.ContextMenuStrip = this.contextMenuAdvanced;
             this.chartAdvancedAssess.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend5.Name = "Legend1";
-            this.chartAdvancedAssess.Legends.Add(legend5);
+            legend6.Name = "Legend1";
+            this.chartAdvancedAssess.Legends.Add(legend6);
             this.chartAdvancedAssess.Location = new System.Drawing.Point(3, 3);
             this.chartAdvancedAssess.Name = "chartAdvancedAssess";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chartAdvancedAssess.Series.Add(series5);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chartAdvancedAssess.Series.Add(series6);
             this.chartAdvancedAssess.Size = new System.Drawing.Size(563, 255);
             this.chartAdvancedAssess.TabIndex = 0;
             this.chartAdvancedAssess.Text = "先进性评估";
@@ -2551,34 +2315,34 @@
             // 
             this.gridWeightEstimateResult.BackgroundColor = System.Drawing.Color.White;
             this.gridWeightEstimateResult.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridWeightEstimateResult.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridWeightEstimateResult.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.gridWeightEstimateResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridWeightEstimateResult.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridWeightEstimateResult.DefaultCellStyle = dataGridViewCellStyle14;
             this.gridWeightEstimateResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridWeightEstimateResult.Location = new System.Drawing.Point(3, 17);
             this.gridWeightEstimateResult.Name = "gridWeightEstimateResult";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridWeightEstimateResult.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridWeightEstimateResult.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.gridWeightEstimateResult.RowTemplate.Height = 23;
             this.gridWeightEstimateResult.Size = new System.Drawing.Size(797, 96);
             this.gridWeightEstimateResult.TabIndex = 0;
@@ -2829,34 +2593,34 @@
             // 
             this.gridCoreEstimatedResult.BackgroundColor = System.Drawing.Color.White;
             this.gridCoreEstimatedResult.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridCoreEstimatedResult.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridCoreEstimatedResult.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.gridCoreEstimatedResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridCoreEstimatedResult.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridCoreEstimatedResult.DefaultCellStyle = dataGridViewCellStyle17;
             this.gridCoreEstimatedResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridCoreEstimatedResult.Location = new System.Drawing.Point(3, 17);
             this.gridCoreEstimatedResult.Name = "gridCoreEstimatedResult";
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridCoreEstimatedResult.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridCoreEstimatedResult.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.gridCoreEstimatedResult.RowTemplate.Height = 23;
             this.gridCoreEstimatedResult.Size = new System.Drawing.Size(797, 81);
             this.gridCoreEstimatedResult.TabIndex = 0;
@@ -3123,14 +2887,14 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn10,
@@ -3143,25 +2907,25 @@
             this.dataGridViewTextBoxColumn17,
             this.dataGridViewTextBoxColumn18,
             this.dataGridViewTextBoxColumn19});
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle20;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 17);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(739, 84);
             this.dataGridView1.TabIndex = 0;
@@ -3253,20 +3017,272 @@
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // menuStripEx1
+            // 
+            this.menuStripEx1.ClickThrough = true;
+            this.menuStripEx1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.weiToolStripMenuItem,
+            this.fToolStripMenuItemTool,
+            this.toolStripMenuItemTool,
+            this.toolStripMenuItemSet,
+            this.toolStripMenuItemHelp});
+            this.menuStripEx1.Location = new System.Drawing.Point(0, 0);
+            this.menuStripEx1.Name = "menuStripEx1";
+            this.menuStripEx1.Size = new System.Drawing.Size(1008, 25);
+            this.menuStripEx1.SuppressHighlighting = true;
+            this.menuStripEx1.TabIndex = 14;
+            this.menuStripEx1.Text = "menuStripEx1";
+            // 
+            // weiToolStripMenuItem
+            // 
+            this.weiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemNew,
+            this.toolStripMenuItemOpen,
+            this.toolStripMenuItemSave,
+            this.toolStripMenuItemAsSave,
+            this.toolStripMenuItemClose});
+            this.weiToolStripMenuItem.Image = global::WeightCenterDesignAndEstimateSoft.Properties.Resources.documents;
+            this.weiToolStripMenuItem.Name = "weiToolStripMenuItem";
+            this.weiToolStripMenuItem.Size = new System.Drawing.Size(74, 21);
+            this.weiToolStripMenuItem.Text = "文件(&F)";
+            // 
+            // toolStripMenuItemNew
+            // 
+            this.toolStripMenuItemNew.Image = global::WeightCenterDesignAndEstimateSoft.Properties.Resources.folder_new;
+            this.toolStripMenuItemNew.Name = "toolStripMenuItemNew";
+            this.toolStripMenuItemNew.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItemNew.Text = "新建(&N)";
+            this.toolStripMenuItemNew.Click += new System.EventHandler(this.toolStripMenuItemNew_Click);
+            // 
+            // toolStripMenuItemOpen
+            // 
+            this.toolStripMenuItemOpen.Image = global::WeightCenterDesignAndEstimateSoft.Properties.Resources.openFile;
+            this.toolStripMenuItemOpen.Name = "toolStripMenuItemOpen";
+            this.toolStripMenuItemOpen.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItemOpen.Text = "打开(&O)";
+            this.toolStripMenuItemOpen.Click += new System.EventHandler(this.toolStripMenuItemOpen_Click);
+            // 
+            // toolStripMenuItemSave
+            // 
+            this.toolStripMenuItemSave.Image = global::WeightCenterDesignAndEstimateSoft.Properties.Resources.saveFile;
+            this.toolStripMenuItemSave.Name = "toolStripMenuItemSave";
+            this.toolStripMenuItemSave.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItemSave.Text = "保存(&S)";
+            this.toolStripMenuItemSave.Click += new System.EventHandler(this.toolStripMenuItemSave_Click);
+            // 
+            // toolStripMenuItemAsSave
+            // 
+            this.toolStripMenuItemAsSave.Image = global::WeightCenterDesignAndEstimateSoft.Properties.Resources.saveAs;
+            this.toolStripMenuItemAsSave.Name = "toolStripMenuItemAsSave";
+            this.toolStripMenuItemAsSave.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItemAsSave.Text = "另存为(&A)";
+            this.toolStripMenuItemAsSave.Click += new System.EventHandler(this.toolStripMenuItemAsSave_Click);
+            // 
+            // toolStripMenuItemClose
+            // 
+            this.toolStripMenuItemClose.Image = global::WeightCenterDesignAndEstimateSoft.Properties.Resources.logout;
+            this.toolStripMenuItemClose.Name = "toolStripMenuItemClose";
+            this.toolStripMenuItemClose.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItemClose.Text = "关闭(&C)";
+            this.toolStripMenuItemClose.Click += new System.EventHandler(this.toolStripMenuItemClose_Click);
+            // 
+            // fToolStripMenuItemTool
+            // 
+            this.fToolStripMenuItemTool.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemWeightDesign,
+            this.toolStripMenuItemWeightAdjustment,
+            this.ToolStripMenuItemWeightAssessment,
+            this.toolStripSeparator3,
+            this.toolStripMenuItemCoreEnvelopeDesign,
+            this.toolStripMenuItemCoreEnvelopeCut,
+            this.ToolStripMenuItemCore});
+            this.fToolStripMenuItemTool.Image = global::WeightCenterDesignAndEstimateSoft.Properties.Resources.task;
+            this.fToolStripMenuItemTool.Name = "fToolStripMenuItemTool";
+            this.fToolStripMenuItemTool.Size = new System.Drawing.Size(80, 21);
+            this.fToolStripMenuItemTool.Text = "任务(&M)";
+            // 
+            // toolStripMenuItemWeightDesign
+            // 
+            this.toolStripMenuItemWeightDesign.Image = global::WeightCenterDesignAndEstimateSoft.Properties.Resources.design;
+            this.toolStripMenuItemWeightDesign.Name = "toolStripMenuItemWeightDesign";
+            this.toolStripMenuItemWeightDesign.Size = new System.Drawing.Size(164, 22);
+            this.toolStripMenuItemWeightDesign.Text = "重量设计(&D)";
+            this.toolStripMenuItemWeightDesign.Click += new System.EventHandler(this.toolStripMenuItemWeightDesign_Click);
+            // 
+            // toolStripMenuItemWeightAdjustment
+            // 
+            this.toolStripMenuItemWeightAdjustment.Image = global::WeightCenterDesignAndEstimateSoft.Properties.Resources.resize;
+            this.toolStripMenuItemWeightAdjustment.Name = "toolStripMenuItemWeightAdjustment";
+            this.toolStripMenuItemWeightAdjustment.Size = new System.Drawing.Size(164, 22);
+            this.toolStripMenuItemWeightAdjustment.Text = "重量调整(&A)";
+            this.toolStripMenuItemWeightAdjustment.Click += new System.EventHandler(this.toolStripMenuItemWeightAdjustment_Click);
+            // 
+            // ToolStripMenuItemWeightAssessment
+            // 
+            this.ToolStripMenuItemWeightAssessment.Image = global::WeightCenterDesignAndEstimateSoft.Properties.Resources.weight;
+            this.ToolStripMenuItemWeightAssessment.Name = "ToolStripMenuItemWeightAssessment";
+            this.ToolStripMenuItemWeightAssessment.Size = new System.Drawing.Size(164, 22);
+            this.ToolStripMenuItemWeightAssessment.Text = "重量评估(&M)";
+            this.ToolStripMenuItemWeightAssessment.Click += new System.EventHandler(this.ToolStripMenuItemWeightAssessment_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(161, 6);
+            // 
+            // toolStripMenuItemCoreEnvelopeDesign
+            // 
+            this.toolStripMenuItemCoreEnvelopeDesign.Image = global::WeightCenterDesignAndEstimateSoft.Properties.Resources.design2;
+            this.toolStripMenuItemCoreEnvelopeDesign.Name = "toolStripMenuItemCoreEnvelopeDesign";
+            this.toolStripMenuItemCoreEnvelopeDesign.Size = new System.Drawing.Size(164, 22);
+            this.toolStripMenuItemCoreEnvelopeDesign.Text = "重心包线设计(&E)";
+            this.toolStripMenuItemCoreEnvelopeDesign.Click += new System.EventHandler(this.toolStripMenuItemCoreEnvelopeDesign_Click);
+            // 
+            // toolStripMenuItemCoreEnvelopeCut
+            // 
+            this.toolStripMenuItemCoreEnvelopeCut.Image = global::WeightCenterDesignAndEstimateSoft.Properties.Resources.cut;
+            this.toolStripMenuItemCoreEnvelopeCut.Name = "toolStripMenuItemCoreEnvelopeCut";
+            this.toolStripMenuItemCoreEnvelopeCut.Size = new System.Drawing.Size(164, 22);
+            this.toolStripMenuItemCoreEnvelopeCut.Text = "重心包线剪裁(&C)";
+            this.toolStripMenuItemCoreEnvelopeCut.Click += new System.EventHandler(this.toolStripMenuItemCoreEnvelopeCut_Click);
+            // 
+            // ToolStripMenuItemCore
+            // 
+            this.ToolStripMenuItemCore.Image = global::WeightCenterDesignAndEstimateSoft.Properties.Resources.weightCore;
+            this.ToolStripMenuItemCore.Name = "ToolStripMenuItemCore";
+            this.ToolStripMenuItemCore.Size = new System.Drawing.Size(164, 22);
+            this.ToolStripMenuItemCore.Text = "重心评估(&I)";
+            this.ToolStripMenuItemCore.Click += new System.EventHandler(this.ToolStripMenuItemCore_Click);
+            // 
+            // toolStripMenuItemTool
+            // 
+            this.toolStripMenuItemTool.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemComputeCorrectionFactor,
+            this.toolStripSeparator1,
+            this.toolStripMenuItemWeightSortManage,
+            this.toolStripMenuItemWeightAtithmeticManage,
+            this.toolStripMenuItemCoreEnvelopeAtithmeticManage,
+            this.toolStripMenuItemParameterManage,
+            this.toolStripSeparator5,
+            this.toolStripMenuItemDBManage});
+            this.toolStripMenuItemTool.Image = global::WeightCenterDesignAndEstimateSoft.Properties.Resources.icon_tools;
+            this.toolStripMenuItemTool.Name = "toolStripMenuItemTool";
+            this.toolStripMenuItemTool.Size = new System.Drawing.Size(75, 21);
+            this.toolStripMenuItemTool.Text = "工具(&T)";
+            // 
+            // toolStripMenuItemComputeCorrectionFactor
+            // 
+            this.toolStripMenuItemComputeCorrectionFactor.Image = global::WeightCenterDesignAndEstimateSoft.Properties.Resources.iplot;
+            this.toolStripMenuItemComputeCorrectionFactor.Name = "toolStripMenuItemComputeCorrectionFactor";
+            this.toolStripMenuItemComputeCorrectionFactor.Size = new System.Drawing.Size(187, 22);
+            this.toolStripMenuItemComputeCorrectionFactor.Text = "修正因子求解(&R)";
+            this.toolStripMenuItemComputeCorrectionFactor.Click += new System.EventHandler(this.toolStripMenuItemComputeCorrectionFactor_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(184, 6);
+            // 
+            // toolStripMenuItemWeightSortManage
+            // 
+            this.toolStripMenuItemWeightSortManage.Image = global::WeightCenterDesignAndEstimateSoft.Properties.Resources.category;
+            this.toolStripMenuItemWeightSortManage.Name = "toolStripMenuItemWeightSortManage";
+            this.toolStripMenuItemWeightSortManage.Size = new System.Drawing.Size(187, 22);
+            this.toolStripMenuItemWeightSortManage.Text = "重量分类管理(&S)";
+            this.toolStripMenuItemWeightSortManage.Click += new System.EventHandler(this.toolStripMenuItemWeightSortManage_Click);
+            // 
+            // toolStripMenuItemWeightAtithmeticManage
+            // 
+            this.toolStripMenuItemWeightAtithmeticManage.Image = global::WeightCenterDesignAndEstimateSoft.Properties.Resources.blackboard_sum;
+            this.toolStripMenuItemWeightAtithmeticManage.Name = "toolStripMenuItemWeightAtithmeticManage";
+            this.toolStripMenuItemWeightAtithmeticManage.Size = new System.Drawing.Size(187, 22);
+            this.toolStripMenuItemWeightAtithmeticManage.Text = "重量算法管理(&D)";
+            this.toolStripMenuItemWeightAtithmeticManage.Click += new System.EventHandler(this.toolStripMenuItemWeightAtithmeticManage_Click);
+            // 
+            // toolStripMenuItemCoreEnvelopeAtithmeticManage
+            // 
+            this.toolStripMenuItemCoreEnvelopeAtithmeticManage.Image = global::WeightCenterDesignAndEstimateSoft.Properties.Resources.iplot__core;
+            this.toolStripMenuItemCoreEnvelopeAtithmeticManage.Name = "toolStripMenuItemCoreEnvelopeAtithmeticManage";
+            this.toolStripMenuItemCoreEnvelopeAtithmeticManage.Size = new System.Drawing.Size(187, 22);
+            this.toolStripMenuItemCoreEnvelopeAtithmeticManage.Text = "重心包线算法管理(&E)";
+            this.toolStripMenuItemCoreEnvelopeAtithmeticManage.Click += new System.EventHandler(this.toolStripMenuItemCoreEnvelopeAtithmeticManage_Click);
+            // 
+            // toolStripMenuItemParameterManage
+            // 
+            this.toolStripMenuItemParameterManage.Image = global::WeightCenterDesignAndEstimateSoft.Properties.Resources.preferences_desktop;
+            this.toolStripMenuItemParameterManage.Name = "toolStripMenuItemParameterManage";
+            this.toolStripMenuItemParameterManage.Size = new System.Drawing.Size(187, 22);
+            this.toolStripMenuItemParameterManage.Text = "参数管理(&P)";
+            this.toolStripMenuItemParameterManage.Click += new System.EventHandler(this.toolStripMenuItemParameterManage_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(184, 6);
+            // 
+            // toolStripMenuItemDBManage
+            // 
+            this.toolStripMenuItemDBManage.Image = global::WeightCenterDesignAndEstimateSoft.Properties.Resources.database;
+            this.toolStripMenuItemDBManage.Name = "toolStripMenuItemDBManage";
+            this.toolStripMenuItemDBManage.Size = new System.Drawing.Size(187, 22);
+            this.toolStripMenuItemDBManage.Text = "数据库管理(&B)";
+            this.toolStripMenuItemDBManage.Click += new System.EventHandler(this.toolStripMenuItemDBManage_Click);
+            // 
+            // toolStripMenuItemSet
+            // 
+            this.toolStripMenuItemSet.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BasicDBSetToolStripMenuItem,
+            this.wDMToolStripMenuItemToolStripMenuItem});
+            this.toolStripMenuItemSet.Image = global::WeightCenterDesignAndEstimateSoft.Properties.Resources.cog;
+            this.toolStripMenuItemSet.Name = "toolStripMenuItemSet";
+            this.toolStripMenuItemSet.Size = new System.Drawing.Size(75, 21);
+            this.toolStripMenuItemSet.Text = "设置(&S)";
+            // 
+            // BasicDBSetToolStripMenuItem
+            // 
+            this.BasicDBSetToolStripMenuItem.Image = global::WeightCenterDesignAndEstimateSoft.Properties.Resources.database_gear;
+            this.BasicDBSetToolStripMenuItem.Name = "BasicDBSetToolStripMenuItem";
+            this.BasicDBSetToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.BasicDBSetToolStripMenuItem.Text = "基础数据库读取数据设置(&B)";
+            this.BasicDBSetToolStripMenuItem.Click += new System.EventHandler(this.BasicDBSetToolStripMenuItem_Click);
+            // 
+            // wDMToolStripMenuItemToolStripMenuItem
+            // 
+            this.wDMToolStripMenuItemToolStripMenuItem.Image = global::WeightCenterDesignAndEstimateSoft.Properties.Resources.database_server;
+            this.wDMToolStripMenuItemToolStripMenuItem.Name = "wDMToolStripMenuItemToolStripMenuItem";
+            this.wDMToolStripMenuItemToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.wDMToolStripMenuItemToolStripMenuItem.Text = "WDM系统集成设置(W)";
+            this.wDMToolStripMenuItemToolStripMenuItem.Click += new System.EventHandler(this.wDMToolStripMenuItemToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItemHelp
+            // 
+            this.toolStripMenuItemHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemAbout});
+            this.toolStripMenuItemHelp.Image = global::WeightCenterDesignAndEstimateSoft.Properties.Resources.book_alt;
+            this.toolStripMenuItemHelp.Name = "toolStripMenuItemHelp";
+            this.toolStripMenuItemHelp.Size = new System.Drawing.Size(77, 21);
+            this.toolStripMenuItemHelp.Text = "帮助(&H)";
+            // 
+            // toolStripMenuItemAbout
+            // 
+            this.toolStripMenuItemAbout.Name = "toolStripMenuItemAbout";
+            this.toolStripMenuItemAbout.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItemAbout.Text = "关于(A)";
+            this.toolStripMenuItemAbout.Click += new System.EventHandler(this.toolStripMenuItemAbout_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 730);
             this.Controls.Add(this.splitContainer1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.menuStripEx1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "直升机重量重心设计与评估软件";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.ResumeLayout(false);
@@ -3434,6 +3450,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.contextMenuStripEditProject.ResumeLayout(false);
             this.contextMenuStripDeleteResult.ResumeLayout(false);
+            this.menuStripEx1.ResumeLayout(false);
+            this.menuStripEx1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3442,17 +3460,6 @@
       
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 文件FToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemNew;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemOpen;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSave;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemAsSave;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemClose;
-        private System.Windows.Forms.ToolStripMenuItem fToolStripMenuItemTool;
-        private System.Windows.Forms.ToolStripMenuItem 工具TToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 设置ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemHelp;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.GroupBox gruLog;
         private System.Windows.Forms.TextBox txtLog;
@@ -3460,22 +3467,6 @@
         private System.Windows.Forms.GroupBox gruTree;
         private System.Windows.Forms.GroupBox gruWorkArea;
         private System.Windows.Forms.TreeView treeViewData;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemWeightDesign;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemWeightAdjustment;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemWeightAssessment;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemCoreEnvelopeDesign;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemCoreEnvelopeCut;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemCore;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemComputeCorrectionFactor;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemWeightSortManage;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemWeightAtithmeticManage;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemCoreEnvelopeAtithmeticManage;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemParameterManage;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemDBServerSetting;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemDBManage;
         private System.Windows.Forms.TabControl tabControlWork;
         private System.Windows.Forms.TabPage tabPageWeightDesign;
         private System.Windows.Forms.Label labSortName;
@@ -3601,7 +3592,6 @@
         private System.Windows.Forms.Button btnWeightDesignPubilishToTde;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartWeightDesign;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartWeightAdjust;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemAbout;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartAdjustment;
         private System.Windows.Forms.ContextMenuStrip contextMenuStripSaveImge;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSaveImgeToFile;
@@ -3616,7 +3606,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStripCoreEnvelopeCompareImage;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemCoreEnvelopeCompareImage;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemDisplayData;
-        private System.Windows.Forms.ToolStripMenuItem BasicDBSetToolStripMenuItem;
         private ZedGraph.ZedGraphControl zedGraphControlCore;
         private ZedGraph.ZedGraphControl zedGraphControlCutCoreEnvelope;
         private ZedGraph.ZedGraphControl zedGraphControlCoreCompare;
@@ -3680,7 +3669,35 @@
         private System.Windows.Forms.Button btnExprotWeighEstimatedData;
         private System.Windows.Forms.Button btnExportCoreEstimated;
         private System.Windows.Forms.Button btnCoreEstimatedPulish;
-        private System.Windows.Forms.ToolStripMenuItem wDMToolStripMenuItem;
+        private Sysware.WinformsUI.ToolStripExProject.MenuStripEx menuStripEx1;
+        private System.Windows.Forms.ToolStripMenuItem weiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemNew;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemOpen;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSave;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemAsSave;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemClose;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemTool;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemComputeCorrectionFactor;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemWeightSortManage;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemWeightAtithmeticManage;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemCoreEnvelopeAtithmeticManage;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemParameterManage;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemDBManage;
+        private System.Windows.Forms.ToolStripMenuItem fToolStripMenuItemTool;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemWeightDesign;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemWeightAdjustment;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemWeightAssessment;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemCoreEnvelopeDesign;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemCoreEnvelopeCut;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemCore;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSet;
+        private System.Windows.Forms.ToolStripMenuItem BasicDBSetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem wDMToolStripMenuItemToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemHelp;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemAbout;
 
     }
 }

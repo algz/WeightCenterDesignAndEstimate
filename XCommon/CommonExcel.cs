@@ -28,7 +28,7 @@ namespace XCommon
             //}
             if (sheetNames != null && sheetNames != "")
             {
-                Excel.Application m_Excel = new Excel.Application();//创建一个Excel对象(同时启动EXCEL.EXE进程) 
+                Excel.Application m_Excel = new Excel.ApplicationClass();//创建一个Excel对象(同时启动EXCEL.EXE进程) 
                 m_Excel.SheetsInNewWorkbook = 1;//工作表的个数 
 
                 Excel._Workbook m_Book = (Excel._Workbook)(m_Excel.Workbooks.Add(Missing.Value));//添加新工作簿

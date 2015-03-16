@@ -14,7 +14,7 @@ namespace WeightCenterDesignAndEstimateSoft.Task.CoreEnvelopeAssessment
     public partial class FromWDMCore : Form
     {
         private WDMIntegrationModule.Air[] airs;
-        private string wdmFile;
+        //private string wdmFile;
         public FromWDMCore()
         {
             InitializeComponent();
@@ -22,12 +22,18 @@ namespace WeightCenterDesignAndEstimateSoft.Task.CoreEnvelopeAssessment
 
         private void FromWDM_Load(object sender, EventArgs e)
         {
-            this.wdmFile = CommonUtil.getWDMDBFilePath();
-            if (wdmFile == "")
+            //this.wdmFile = WDMIntegrationModule.getWDMDBFilePath();
+            //if (wdmFile == "")
+            //{
+            //    return;
+            //}
+            this.airs = WDMIntegrationModule.getAircs();
+            if (this.airs == null)
             {
+                MessageBox.Show("机型没有读取成功,请检查参数配置.");
+                this.Close();
                 return;
             }
-            this.airs = WDMIntegrationModule.getAircs(wdmFile);
 
             TreeNode parentNode = new TreeNode("WDM机型列表");
             this.WDMTree.Nodes.Add(parentNode);
@@ -59,7 +65,7 @@ namespace WeightCenterDesignAndEstimateSoft.Task.CoreEnvelopeAssessment
             }
 
             WDMIntegrationModule.Air air = airs[Convert.ToInt32(node.Tag)];
-            WDMIntegrationModule.TStmc[] tstmcs = WDMIntegrationModule.GetStmcs(node.Name, wdmFile);
+            WDMIntegrationModule.TStmc[] tstmcs = WDMIntegrationModule.GetStmcs(node.Name);
             Random r = new Random();
 
             

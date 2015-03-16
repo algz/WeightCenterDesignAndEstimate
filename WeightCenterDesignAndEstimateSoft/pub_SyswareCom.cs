@@ -383,7 +383,7 @@ namespace Dev.PubLib
 
                 // 错误消息
                 String errorMsg = String.Empty;
-
+                
                 if (SyswareObj != null)
                 {
                     // 获取参数的值（该种方法的限制是无法通过ref获取到errorMsg消息）

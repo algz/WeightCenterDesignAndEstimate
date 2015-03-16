@@ -1182,6 +1182,139 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
 
         #region 从基础库获取
 
+        /// <summary>
+        /// 从XML文件中读取数据并转换成List<TypeWeightData>类型
+        /// </summary>
+        /// <param name="strFileName"></param>
+        /// <returns></returns>
+        private List<TypeWeightData> GetListTypeWeightDataExt(string strFileName)
+        {
+            List<TypeWeightData> lstWeightData = new List<TypeWeightData>();
+
+            if (!File.Exists(strFileName))
+            {
+                return lstWeightData;
+            }
+
+            XmlDocument doc = new XmlDocument();
+            doc.Load(strFileName);//加载XML
+
+            //机型列表
+            XmlNodeList modelList=doc.SelectNodes("edccategory/inclass/node1");
+
+            
+            //XmlNodeList lstNodeDB = doc.GetElementsByTagName("inclass");
+
+            //string dbId = string.Empty;
+            //if (lstNodeDB != null && lstNodeDB.Count > 0)
+            //{
+            //    dbId = lstNodeDB[0].Attributes["id"].Value;
+            //    lstNode1 = doc.GetElementsByTagName("node1"); //机型
+            //    lstNode2 = doc.GetElementsByTagName("node2"); //参数类:第一个,基本数据;第二个,重量分类
+            //    lstNode3 = doc.GetElementsByTagName("node3"); //重量分类-重量分类参数
+            //    lstModel = doc.GetElementsByTagName("model"); //基本数据-参数名-值
+            //}
+            int count = bllTypeWeight.GetMaxId() + 1;
+            //机型循环
+            foreach (XmlNode modelNode in modelList)
+            {
+                TypeWeightData data = new TypeWeightData();
+                data.Id = count++;
+
+                XmlNodeList node2List = modelNode.SelectNodes("node2");
+
+                
+                //重量分类
+                WeightSortData sortData = new WeightSortData();
+                sortData.lstWeightData = new List<WeightData>();
+
+                //基础信息
+                data.Helicopter_Name = modelNode.Attributes["name"].Value;//直升机名称
+                if(node2List[0]!=null)
+                {
+                    XmlNode childNode = node2List[0].SelectSingleNode("model");
+                    if (childNode.Attributes["zsjlx"].Value != null)//直升机类型
+                    {
+                        data.Helicopter_Type = childNode.Attributes["zsjlx"].Value;
+                    }
+                    if (childNode.Attributes["zsjgj"].Value !=null)//直升机国籍
+                    {
+                        data.Helicoter_Country = childNode.Attributes["zsjgj"].Value;
+                    }
+                    if (childNode.Attributes["zsjkjzl"].Value !=null)//直升机空机重量
+                    {
+                        data.EmptyWeight = childNode.Attributes["zsjkjzl"].Value == null ? 0 : Convert.ToDouble(childNode.Attributes["zsjkjzl"].Value);
+                    }
+                    if (childNode.Attributes["zdqfzl"].Value!=null)//最大起飞重量
+                    {
+                        data.MaxTaking_Weight = childNode.Attributes["zdqfzl"].Value == null ? 0 : Convert.ToDouble(childNode.Attributes["zdqfzl"].Value);
+                    }
+                    if (childNode.Attributes["zsjsjqfzl"].Value != null)// "设计起飞重量"
+                    {
+                        data.DesignTaking_Weight = childNode.Attributes["zsjsjqfzl"].Value == null ? 0 : Convert.ToDouble(childNode.Attributes["zsjsjqfzl"].Value);
+                    }
+                    if (childNode.Attributes["updated"].Value != null)//"最后修改时间"
+                    {
+                        data.Last_ModifyTime = childNode.Attributes["updated"].Value;
+                    }
+                    if (childNode.Attributes["zlflmc"].Value != null )//"重量分类名称"
+                    {
+                        sortData.sortName = childNode.Attributes["zlflmc"].Value;
+                    }
+                }
+
+                //层次结构
+                //" zlid="0" zlmc="空机重量" zldw="千克" zlsz="3138.502" zlfjd="-1"
+                XmlNode levelData=node2List[1];
+                XmlNode topNode = levelData.SelectNodes("model")[0];//顶层结构结点
+                XmlNodeList node3List = levelData.SelectNodes("node3");
+
+                WeightData weightData = new WeightData();
+                weightData.nID = int.Parse(topNode.Attributes["zlid"].Value);// "xlID"
+                weightData.nParentID = int.Parse(topNode.Attributes["zlfjd"].Value); //"zlparentId"
+                weightData.weightName = topNode.Attributes["zlmc"].Value; //"zlName"
+                //weightData.weightUnit = topNode.Attributes["zldw"].Value;
+                weightData.weightValue = topNode.Attributes["zlsz"].Value == null ? 0 : Convert.ToDouble(topNode.Attributes["zlsz"].Value);//zlsz
+                //weightData.strRemark = topNode.Attributes["remarks"].Value;//zldesc
+                List<WeightData> wdList= new List<WeightData>();
+                wdList.Add(weightData);
+                generateStruct(node3List,wdList);
+                sortData.lstWeightData = wdList;
+                sortData.lstWeightData = sortData.lstWeightData.OrderBy(s => s.nID).ToList();
+                data.MainSystem_Name = GetMainSystemWeight(sortData);
+
+               
+                lstWeightData.Add(data);
+            }
+
+            return lstWeightData;
+        }
+
+        private void generateStruct(XmlNodeList nodeList, List<WeightData> wdList)
+        {
+            foreach (XmlNode node in nodeList)
+            {
+                XmlNode modelNode = node.SelectSingleNode("model");//顶层结构结点
+                WeightData weightData = new WeightData();
+                weightData.nID = int.Parse(modelNode.Attributes["zlid"].Value);// "xlID"
+                weightData.nParentID = int.Parse(modelNode.Attributes["zlfjd"].Value); //"zlparentId"
+                weightData.weightName = modelNode.Attributes["zlmc"].Value; //"zlName"
+                //weightData.weightUnit = topNode.Attributes["zldw"].Value;
+                weightData.weightValue = modelNode.Attributes["zlsz"].Value == null ? 0 : Convert.ToDouble(modelNode.Attributes["zlsz"].Value);//zlsz
+                //weightData.strRemark = topNode.Attributes["remarks"].Value;//zldesc
+
+                wdList.Add(weightData);
+
+                XmlNodeList temList = node.SelectNodes("*[contains(name(),'node')]");
+                if (temList.Count != 0)
+                {
+                    generateStruct(temList, wdList);
+                }
+
+            }
+        }
+
+
         private List<TypeWeightData> GetListTypeWeightData(string strFileName)
         {
             List<TypeWeightData> lstWeightData = new List<TypeWeightData>();
@@ -1200,18 +1333,19 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
             if (lstNodeDB != null && lstNodeDB.Count > 0)
             {
                 dbId = lstNodeDB[0].Attributes["id"].Value;
-                lstNode1 = doc.GetElementsByTagName("node1");
-                lstNode2 = doc.GetElementsByTagName("node2");
-                lstNode3 = doc.GetElementsByTagName("node3");
-                lstModel = doc.GetElementsByTagName("model");
+                lstNode1 = doc.GetElementsByTagName("node1"); //机型
+                lstNode2 = doc.GetElementsByTagName("node2"); //参数类:第一个,基本数据;第二个,重量分类
+                lstNode3 = doc.GetElementsByTagName("node3"); //重量分类-重量分类参数
+                lstModel = doc.GetElementsByTagName("model"); //基本数据-参数名-值
             }
-
+            int count = 0;
+            //机型循环
             foreach (XmlNode typeNode in lstNode1)
             {
                 TypeWeightData data = new TypeWeightData();
 
                 string strID = string.Empty;
-                int count = 0;
+                
                 //型号ID
                 if (typeNode.Attributes["pid"].Value == dbId)
                 {
@@ -1223,32 +1357,35 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
                     foreach (XmlNode node in lstNode2)
                     {
                         //基本信息
-                        if (node.Attributes["pid"].Value == strID && node.Attributes["name"].Value == "基本信息")
+                        if (node.Attributes["pid"].Value == strID && node.Attributes["name"].Value == "基本信息" )
                         {
+                            //机型名称
+                            data.Helicopter_Name = typeNode.Attributes["name"].Value;
                             string strBasicId = node.Attributes["id"].Value;
+
                             foreach (XmlNode childNode in lstModel)
                             {
-                                if (childNode.Attributes["pid"].Value == strBasicId && childNode.Attributes["name"].Value == "直升机类型")
+                                if (childNode.Attributes["pid"].Value == strBasicId && childNode.Attributes["name"].Value == "类型")
                                 {
                                     data.Helicopter_Type = childNode.Attributes["value"].Value;
                                 }
-                                if (childNode.Attributes["pid"].Value == strBasicId && childNode.Attributes["name"].Value == "直升机国籍")
+                                if (childNode.Attributes["pid"].Value == strBasicId && childNode.Attributes["name"].Value == "国籍")
                                 {
                                     data.Helicoter_Country = childNode.Attributes["value"].Value;
                                 }
-                                if (childNode.Attributes["pid"].Value == strBasicId && childNode.Attributes["name"].Value == "直升机空机重量")
+                                if (childNode.Attributes["pid"].Value == strBasicId && childNode.Attributes["name"].Value == "空机重量")
                                 {
                                     data.EmptyWeight = childNode.Attributes["value"].Value == null ? 0 : Convert.ToDouble(childNode.Attributes["value"].Value);
                                 }
-                                if (childNode.Attributes["pid"].Value == strBasicId && childNode.Attributes["name"].Value == "直升机名称")
-                                {
-                                    data.Helicopter_Name = childNode.Attributes["value"].Value;
-                                }
-                                if (childNode.Attributes["pid"].Value == strBasicId && childNode.Attributes["name"].Value == "直升机最大起飞重量")
+                                //if (childNode.Attributes["pid"].Value == strBasicId && childNode.Attributes["name"].Value == "直升机名称")
+                                //{
+                                //    data.Helicopter_Name = childNode.Attributes["value"].Value;
+                                //}
+                                if (childNode.Attributes["pid"].Value == strBasicId && childNode.Attributes["name"].Value == "最大起飞重量")
                                 {
                                     data.MaxTaking_Weight = childNode.Attributes["value"].Value == null ? 0 : Convert.ToDouble(childNode.Attributes["value"].Value);
                                 }
-                                if (childNode.Attributes["pid"].Value == strBasicId && childNode.Attributes["name"].Value == "直升机设计起飞重量")
+                                if (childNode.Attributes["pid"].Value == strBasicId && childNode.Attributes["name"].Value == "设计起飞重量")
                                 {
                                     data.DesignTaking_Weight = childNode.Attributes["value"].Value == null ? 0 : Convert.ToDouble(childNode.Attributes["value"].Value);
                                 }
@@ -1280,11 +1417,11 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
                                         if (childNode.Attributes["pid"].Value == node3.Attributes["id"].Value)
                                         {
                                             WeightData weightData = new WeightData();
-                                            weightData.nID = int.Parse(childNode.Attributes["xlID"].Value);
-                                            weightData.nParentID = int.Parse(childNode.Attributes["zlparentId"].Value);
-                                            weightData.weightName = childNode.Attributes["zlName"].Value;
-                                            weightData.weightValue = childNode.Attributes["zlsz"].Value == null ? 0 : Convert.ToDouble(childNode.Attributes["zlsz"].Value);
-                                            weightData.strRemark = childNode.Attributes["zldesc"].Value;
+                                            weightData.nID = int.Parse(childNode.Attributes["ID"].Value);// "xlID"
+                                            weightData.nParentID = int.Parse(childNode.Attributes["PARENTID"].Value); //"zlparentId"
+                                            weightData.weightName = childNode.Attributes["name"].Value; //"zlName"
+                                            weightData.weightValue = childNode.Attributes["value"].Value == null ? 0 : Convert.ToDouble(childNode.Attributes["value"].Value);//zlsz
+                                            weightData.strRemark = childNode.Attributes["remarks"].Value;//zldesc
 
                                             sortData.lstWeightData.Add(weightData);
                                             break;
@@ -1295,14 +1432,14 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
                             foreach (XmlNode childNode in lstModel)
                             {
                                 //空机重量
-                                if (childNode.Attributes["pid"].Value == node.Attributes["id"].Value && childNode.Attributes["xlID"].Value == "0")
+                                if (childNode.Attributes["pid"].Value == node.Attributes["id"].Value && childNode.Attributes["xlID"].Value == "0")//xlID
                                 {
                                     WeightData weightData = new WeightData();
-                                    weightData.nID = int.Parse(childNode.Attributes["xlID"].Value);
-                                    weightData.nParentID = int.Parse(childNode.Attributes["zlparentId"].Value);
-                                    weightData.weightName = childNode.Attributes["zlName"].Value;
-                                    weightData.weightValue = childNode.Attributes["zlsz"].Value == null ? 0 : Convert.ToDouble(childNode.Attributes["zlsz"].Value);
-                                    weightData.strRemark = childNode.Attributes["zldesc"].Value;
+                                    weightData.nID = int.Parse(childNode.Attributes["ID"].Value);//xlID
+                                    weightData.nParentID = int.Parse(childNode.Attributes["PARENTID"].Value);//zlparentId
+                                    weightData.weightName = childNode.Attributes["name"].Value;//zlName
+                                    weightData.weightValue = childNode.Attributes["value"].Value == null ? 0 : Convert.ToDouble(childNode.Attributes["value"].Value);//zlsz
+                                    weightData.strRemark = childNode.Attributes["remarks"].Value;//zldesc
 
                                     sortData.lstWeightData.Add(weightData);
                                     break;
@@ -1335,7 +1472,8 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
                     return;
                 }
                 PubSyswareCom.AutoExecuteTemplate(strTemplatePath);
-                PubSyswareCom.mGetParameter(strTemplatePath, "weightdata", ref obj);
+                obj = PubSyswareCom.GetParameter("", "webservicedataout");
+                //PubSyswareCom.mGetParameter(strTemplatePath, "webservicedataout", ref obj);//weightdata
                 PubSyswareCom.CloseTemplate(strTemplatePath);
 
                 //读取参数
@@ -1345,7 +1483,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
                     lstContent.Add(obj.ToString());
                 }
 
-                XLog.Write("从基础数据库同步数据进行中");
+                XLog.Write("从基础数据库同步本地数据进行中");
                
                 string strFolder = System.IO.Directory.GetCurrentDirectory() + "\\BasicData";
                 if (!Directory.Exists(strFolder))
@@ -1362,7 +1500,7 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
                 {
                     this.Enabled = false;
 
-                    List<TypeWeightData> lstWeightData = GetListTypeWeightData(strFilePath);
+                    List<TypeWeightData> lstWeightData = GetListTypeWeightDataExt(strFilePath);
                     //DB-Data
                     List<TypeWeightData> lstDBWeightData = bllTypeWeight.GetListModel();
 

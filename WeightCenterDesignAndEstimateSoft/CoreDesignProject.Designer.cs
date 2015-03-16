@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CoreDesignProject));
             this.labProjectName = new System.Windows.Forms.Label();
             this.txtProjectName = new System.Windows.Forms.TextBox();
             this.txtCreator = new System.Windows.Forms.TextBox();
@@ -125,11 +126,12 @@
             this.Controls.Add(this.labCreator);
             this.Controls.Add(this.txtProjectName);
             this.Controls.Add(this.labProjectName);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CoreDesignProject";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " 新建工程对话框";
+            this.Text = "新建工程对话框";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ParameterManageForm));
             this.gruParameterList = new System.Windows.Forms.GroupBox();
             this.treeViewParameterList = new System.Windows.Forms.TreeView();
             this.gruParameterInfo = new System.Windows.Forms.GroupBox();
@@ -39,7 +40,7 @@
             this.labParameterType = new System.Windows.Forms.Label();
             this.txtParameterName = new System.Windows.Forms.TextBox();
             this.labParameterName = new System.Windows.Forms.Label();
-            this.txtUnit = new System.Windows.Forms.TextBox();
+            this.cmbUnit = new System.Windows.Forms.ComboBox();
             this.labUnit = new System.Windows.Forms.Label();
             this.gruManageOprer = new System.Windows.Forms.GroupBox();
             this.btnJYNew = new System.Windows.Forms.Button();
@@ -97,7 +98,7 @@
             this.gruParameterInfo.Controls.Add(this.labParameterType);
             this.gruParameterInfo.Controls.Add(this.txtParameterName);
             this.gruParameterInfo.Controls.Add(this.labParameterName);
-            this.gruParameterInfo.Controls.Add(this.txtUnit);
+            this.gruParameterInfo.Controls.Add(this.cmbUnit);
             this.gruParameterInfo.Controls.Add(this.labUnit);
             this.gruParameterInfo.Location = new System.Drawing.Point(297, 12);
             this.gruParameterInfo.Name = "gruParameterInfo";
@@ -178,12 +179,12 @@
             this.labParameterName.TabIndex = 2;
             this.labParameterName.Text = "参数名称：";
             // 
-            // txtUnit
+            // cmbUnit
             // 
-            this.txtUnit.Location = new System.Drawing.Point(106, 60);
-            this.txtUnit.Name = "txtUnit";
-            this.txtUnit.Size = new System.Drawing.Size(200, 21);
-            this.txtUnit.TabIndex = 1;
+            this.cmbUnit.Location = new System.Drawing.Point(106, 60);
+            this.cmbUnit.Name = "cmbUnit";
+            this.cmbUnit.Size = new System.Drawing.Size(200, 20);
+            this.cmbUnit.TabIndex = 1;
             // 
             // labUnit
             // 
@@ -383,13 +384,15 @@
             this.Controls.Add(this.gruManageOprer);
             this.Controls.Add(this.gruParameterInfo);
             this.Controls.Add(this.gruParameterList);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ParameterManageForm";
-            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "参数管理对话框";
+            this.Load += new System.EventHandler(this.ParameterManageForm_Load);
             this.gruParameterList.ResumeLayout(false);
             this.gruParameterInfo.ResumeLayout(false);
             this.gruParameterInfo.PerformLayout();
@@ -406,7 +409,7 @@
         private System.Windows.Forms.TreeView treeViewParameterList;
         private System.Windows.Forms.GroupBox gruParameterInfo;
         private System.Windows.Forms.Label labUnit;
-        private System.Windows.Forms.TextBox txtUnit;
+        private System.Windows.Forms.ComboBox cmbUnit;
         private System.Windows.Forms.TextBox txtParameterName;
         private System.Windows.Forms.Label labParameterName;
         private System.Windows.Forms.Label labParameterType;

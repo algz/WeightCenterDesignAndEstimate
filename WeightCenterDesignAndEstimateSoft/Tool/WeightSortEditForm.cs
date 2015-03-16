@@ -215,6 +215,8 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
 
             strOperType = "new";
             SettingControls();
+
+            txtNodeName.Focus();
         }
 
         /// <summary>
@@ -437,6 +439,8 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
 
             strOperType = "edit";
             SettingControls();
+
+            txtNodeName.Focus();
         }
 
         private void btnSaveNode_Click(object sender, EventArgs e)
@@ -467,6 +471,18 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
 
             if (strOperType == "new")
             {
+                if (selNode != null)
+                { 
+                    foreach(TreeNode tempnode in selNode.Nodes)
+                    {
+                        if (tempnode.Text == txtNodeName.Text)
+                        {
+                            MessageBox.Show("节点重名！请重新输入节点名称！");
+                            return;
+                        }
+                    }
+                }
+
                 TreeNode childNode = new TreeNode();
                 childNode.Name = strChildName;
                 childNode.Text = strChildName;
@@ -500,8 +516,32 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
                 }
             }
             //编辑
-            if (strOperType == "edit")
+            else if (strOperType == "edit")
             {
+                if (selNode != null)
+                {
+                    TreeNode tempnode = selNode;
+                    while (tempnode.PrevNode != null)
+                    {
+                        tempnode = tempnode.PrevNode;
+                        if (tempnode.Text == txtNodeName.Text)
+                        {
+                            MessageBox.Show("节点重名！请重新输入节点名称！");
+                            return;
+                        }
+                    }
+                    tempnode = selNode;
+                    while (tempnode.NextNode != null)
+                    {
+                        tempnode = tempnode.NextNode;
+                        if (tempnode.Text == txtNodeName.Text)
+                        {
+                            MessageBox.Show("节点重名！请重新输入节点名称！");
+                            return;
+                        }
+                    }
+                }
+
                 selNode.Name = txtNodeName.Text;
                 selNode.Text = txtNodeName.Text;
                 selNode.ToolTipText = txtRemark.Text;
@@ -532,6 +572,9 @@ namespace WeightCenterDesignAndEstimateSoft.Tool
 
         private void treeViewWeightStructure_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
+            strOperType = "cancle";
+            IntiSettingButton();
+
             selNode = e.Node;
 
             txtNodeName.Text = selNode.Text;

@@ -145,6 +145,7 @@
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.gruArithmeticList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "WeightArithmeticManageForm";

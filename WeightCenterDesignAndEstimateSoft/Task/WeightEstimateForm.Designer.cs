@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WeightEstimateForm));
             this.btnCancel = new System.Windows.Forms.Button();
             this.cmbWeightMethod = new System.Windows.Forms.ComboBox();
             this.cmbWeightClass = new System.Windows.Forms.ComboBox();
@@ -421,6 +422,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(949, 642);
             this.Controls.Add(this.splitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WeightEstimateForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "重量设计";

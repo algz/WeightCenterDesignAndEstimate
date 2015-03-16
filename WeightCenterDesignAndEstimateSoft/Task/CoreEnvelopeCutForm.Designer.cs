@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CoreEnvelopeCutForm));
             this.zedGraphControlCoreEnvelope = new ZedGraph.ZedGraphControl();
             this.menuStripMain = new System.Windows.Forms.MenuStrip();
             this.原始重心包线数据ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -328,10 +329,10 @@
             this.ClientSize = new System.Drawing.Size(794, 657);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStripMain);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStripMain;
             this.MinimizeBox = false;
             this.Name = "CoreEnvelopeCutForm";
-            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "重心包线剪裁";

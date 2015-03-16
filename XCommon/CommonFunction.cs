@@ -6,6 +6,10 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using System.Collections;
 using System.Drawing;
+using System.Xml;
+using System.Data;
+using System.Data.OleDb;
+
 
 
 namespace XCommon
@@ -319,25 +323,7 @@ namespace XCommon
 
         #endregion
 
-        /// <summary>
-        /// 绑定参数类型数据
-        /// </summary>
-        public static void BindParaTypeData(ComboBox cmbParameterType)
-        {
-            cmbParameterType.Items.Clear();
-
-            cmbParameterType.Items.Add("指标参数");
-            cmbParameterType.Items.Add("构型和总体参数");
-            cmbParameterType.Items.Add("旋翼参数");
-            cmbParameterType.Items.Add("机身翼面参数");
-            cmbParameterType.Items.Add("着陆装置参数");
-            cmbParameterType.Items.Add("动力系统参数");
-            cmbParameterType.Items.Add("传动系统参数");
-            cmbParameterType.Items.Add("操纵系统参数");
-            cmbParameterType.Items.Add("人工参数");
-            cmbParameterType.Items.Add("其他类型参数");
-        }
-
+ 
         public static bool IsFileOpened(string file)
         {
             bool result = false;
@@ -346,7 +332,7 @@ namespace XCommon
                 FileStream fs = File.OpenWrite(file);
                 fs.Close();
             }
-            catch (Exception e)
+            catch 
             {
                 result = true;
             }

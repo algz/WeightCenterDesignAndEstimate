@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComputeCorrectionFactorFrm));
             this.menuStripDialog = new System.Windows.Forms.MenuStrip();
             this.ToolStripMenuItemWeightData1 = new System.Windows.Forms.ToolStripMenuItem();
             this.memu1FromCurrentWeighDesignImport = new System.Windows.Forms.ToolStripMenuItem();
@@ -410,13 +411,13 @@
             this.zedGraphControlPic.Dock = System.Windows.Forms.DockStyle.Fill;
             this.zedGraphControlPic.Location = new System.Drawing.Point(3, 17);
             this.zedGraphControlPic.Name = "zedGraphControlPic";
-            this.zedGraphControlPic.ScrollGrace = 0;
-            this.zedGraphControlPic.ScrollMaxX = 0;
-            this.zedGraphControlPic.ScrollMaxY = 0;
-            this.zedGraphControlPic.ScrollMaxY2 = 0;
-            this.zedGraphControlPic.ScrollMinX = 0;
-            this.zedGraphControlPic.ScrollMinY = 0;
-            this.zedGraphControlPic.ScrollMinY2 = 0;
+            this.zedGraphControlPic.ScrollGrace = 0D;
+            this.zedGraphControlPic.ScrollMaxX = 0D;
+            this.zedGraphControlPic.ScrollMaxY = 0D;
+            this.zedGraphControlPic.ScrollMaxY2 = 0D;
+            this.zedGraphControlPic.ScrollMinX = 0D;
+            this.zedGraphControlPic.ScrollMinY = 0D;
+            this.zedGraphControlPic.ScrollMinY2 = 0D;
             this.zedGraphControlPic.Size = new System.Drawing.Size(420, 358);
             this.zedGraphControlPic.TabIndex = 0;
             // 
@@ -471,6 +472,7 @@
             this.ClientSize = new System.Drawing.Size(988, 479);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStripDialog);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStripDialog;
             this.Name = "ComputeCorrectionFactorFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

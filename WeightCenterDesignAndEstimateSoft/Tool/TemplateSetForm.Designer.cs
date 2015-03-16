@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TemplateSetForm));
             this.labPath = new System.Windows.Forms.Label();
             this.txtPath = new System.Windows.Forms.TextBox();
             this.btnCancle = new System.Windows.Forms.Button();
@@ -93,6 +94,7 @@
             this.Controls.Add(this.txtPath);
             this.Controls.Add(this.btnCancle);
             this.Controls.Add(this.btnConfirm);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TemplateSetForm";

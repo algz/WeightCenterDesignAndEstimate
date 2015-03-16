@@ -693,6 +693,7 @@ namespace WeightCenterDesignAndEstimateSoft
             {
                 //获取参数的值
                 object obj = null;
+                
                 PubSyswareCom.GetParameterNames(string.Empty, ref obj);
 
                 //转换为字符串数组
@@ -713,7 +714,16 @@ namespace WeightCenterDesignAndEstimateSoft
                             {
                                 ParaData data = new ParaData();
                                 data.paraName = objName[i].ToString();
-                                data.paraValue = Convert.ToDouble(objValue.ToString());
+                                try
+                                {
+                                    data.paraValue = Convert.ToDouble(objValue.ToString());
+                                }
+                                catch(Exception e)
+                                {
+                                    data.paraValue = 0;
+                                    XLog.Write(e.Message);
+                                }
+                                
 
                                 lstPara.Add(data);
                             }

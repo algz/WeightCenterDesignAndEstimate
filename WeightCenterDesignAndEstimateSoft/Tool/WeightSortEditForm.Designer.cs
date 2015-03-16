@@ -79,7 +79,7 @@
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDelete.Location = new System.Drawing.Point(8, 389);
+            this.btnDelete.Location = new System.Drawing.Point(8, 387);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(115, 23);
             this.btnDelete.TabIndex = 2;
@@ -90,7 +90,7 @@
             // btnAddNode
             // 
             this.btnAddNode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAddNode.Location = new System.Drawing.Point(6, 360);
+            this.btnAddNode.Location = new System.Drawing.Point(8, 360);
             this.btnAddNode.Name = "btnAddNode";
             this.btnAddNode.Size = new System.Drawing.Size(115, 23);
             this.btnAddNode.TabIndex = 2;
@@ -115,7 +115,7 @@
             // btnDown
             // 
             this.btnDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDown.Location = new System.Drawing.Point(8, 415);
+            this.btnDown.Location = new System.Drawing.Point(8, 414);
             this.btnDown.Name = "btnDown";
             this.btnDown.Size = new System.Drawing.Size(115, 23);
             this.btnDown.TabIndex = 1;
@@ -126,7 +126,7 @@
             // btnUp
             // 
             this.btnUp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnUp.Location = new System.Drawing.Point(137, 389);
+            this.btnUp.Location = new System.Drawing.Point(137, 387);
             this.btnUp.Name = "btnUp";
             this.btnUp.Size = new System.Drawing.Size(115, 23);
             this.btnUp.TabIndex = 0;

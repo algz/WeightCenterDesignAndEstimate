@@ -17,7 +17,6 @@ using ZedGraph;
 using System.Collections;
 using System.IO;
 using Dev.PubLib;
-//using SyswareComLibrary;
 using System.Windows.Forms.DataVisualization.Charting;
 using Model.assessData;
 using WeightCenterDesignAndEstimateSoft.Task.CoreEnvelopeAssessment;
@@ -690,7 +689,7 @@ namespace WeightCenterDesignAndEstimateSoft
                 lstContent.Add(str);
                 str = CommonFunction.mStrModifyToString8(2) + "<创建人>" + designProjectData.projectCreator + "</创建人>";
                 lstContent.Add(str);
-                str = CommonFunction.mStrModifyToString8(2) + "<备注>" + designProjectData.projectCreator + "</备注>";
+                str = CommonFunction.mStrModifyToString8(2) + "<备注>" + designProjectData.strRemark + "</备注>";
                 lstContent.Add(str);
 
                 //重量设计结果
@@ -909,7 +908,26 @@ namespace WeightCenterDesignAndEstimateSoft
                 tabControlWork.TabPages.Clear();
 
                 selNode = null;
+                strProjectFile = string.Empty;
             }
+            else if (strType == "open")
+            {
+                tabControlWork.TabPages.Clear();
+
+                selNode = null;
+            }
+            else if (strType == "edit")
+            {
+                if (strProjectFile == string.Empty)
+                {
+                }
+                else if (strProjectFile != string.Empty)
+                {
+                    int nIndex = strProjectFile.LastIndexOf("\\");
+                    strProjectFile = strProjectFile.Substring(0, nIndex + 1) + designProjectData.projectName + ".prj";
+                }
+            }
+
             fToolStripMenuItemTool.Enabled = true;
         }
 
@@ -4546,8 +4564,6 @@ namespace WeightCenterDesignAndEstimateSoft
                 XLog.Write("保存图片\"" + strFileName + "\"成功");
             }
         }
-
-
         /// <summary>
         /// 设置单位
         /// </summary>
@@ -4813,7 +4829,6 @@ namespace WeightCenterDesignAndEstimateSoft
                         if (saveFileDialog.ShowDialog() == DialogResult.OK)
                         {
                             strFileName = saveFileDialog.FileName + ".prj";
-                            strProjectFile = strFileName;
 
                             DialogResult resultFile = MessageBox.Show("已存在文件\"" + strFileName + "\"" + "是否替换它?", "保存提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
@@ -4852,7 +4867,7 @@ namespace WeightCenterDesignAndEstimateSoft
                     BindProjectTreeData(projectData);
                     XLog.Write("打开文件\"" + fileDialog.FileName + "\"成功");
 
-                    InitializePage("new");
+                    InitializePage("open");
                 }
             }
             catch (Exception ex)
@@ -4871,15 +4886,51 @@ namespace WeightCenterDesignAndEstimateSoft
         {
             try
             {
-                string strFileName = string.Empty;
                 if (treeViewData.Nodes.Count == 0)
                 {
                     XLog.Write("无数据保存");
                     return;
                 }
 
-                SaveFile(this.strProjectFile);
-                XLog.Write("保存文件\"" + strProjectFile + "\"成功");
+                string strFileName = string.Empty;
+                if (this.strProjectFile == string.Empty)
+                {
+                    SaveFileDialog fileDialog = new SaveFileDialog();
+
+                    fileDialog.Filter = "prj文件(*.prj)|(*prj)";
+                    fileDialog.RestoreDirectory = true;
+                    fileDialog.FilterIndex = 1;
+                    fileDialog.FileName = treeViewData.Nodes[0].Text;
+                    fileDialog.Title = "保存";
+
+                    if (fileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        strFileName = fileDialog.FileName + ".prj";
+
+                        if (File.Exists(strFileName))
+                        {
+                            DialogResult result = MessageBox.Show("已存在文件\"" + strFileName + "\"" + "是否替换它?", "保存提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                            if (result == DialogResult.Yes)
+                            {
+                                this.strProjectFile = strFileName;
+                                SaveFile(strFileName);
+                            }
+                        }
+                        else
+                        {
+                            this.strProjectFile = strFileName;
+                            SaveFile(strFileName);
+                        }
+                        XLog.Write("保存文件\"" + strFileName + "\"成功");
+                    }
+                }
+                else
+                {
+                    SaveFile(this.strProjectFile);
+                    XLog.Write("保存文件\"" + strProjectFile + "\"成功");
+                }
+
             }
             catch (Exception ex)
             {
@@ -4948,52 +4999,7 @@ namespace WeightCenterDesignAndEstimateSoft
         /// <param name="e"></param>
         private void toolStripMenuItemClose_Click(object sender, EventArgs e)
         {
-            if (treeViewData.Nodes.Count > 0)
-            {
-                //有工程提示保存
-                DialogResult result = MessageBox.Show("是否保存当前设计工程？", "保存提示", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
-
-                if (result == DialogResult.Yes)
-                {
-                    SaveFileDialog fileDialog = new SaveFileDialog();
-
-                    fileDialog.Filter = "prj文件(*.prj)|(*prj)";
-                    fileDialog.RestoreDirectory = true;
-                    fileDialog.FilterIndex = 1;
-                    fileDialog.FileName = treeViewData.Nodes[0].Text;
-
-                    string strFileName = string.Empty;
-                    if (fileDialog.ShowDialog() == DialogResult.OK)
-                    {
-                        strFileName = fileDialog.FileName + ".prj";
-
-                        if (File.Exists(strFileName))
-                        {
-                            DialogResult resultSave = MessageBox.Show("已存在文件\"" + strFileName + "\"" + "是否替换它?", "保存提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
-                            if (resultSave == DialogResult.Yes)
-                            {
-                                SaveFile(strFileName);
-                                XLog.Write("保存文件\"" + strFileName + "\"成功");
-                            }
-                        }
-                        else
-                        {
-                            SaveFile(strFileName);
-                            XLog.Write("保存文件\"" + strFileName + "\"成功");
-                        }
-                    }
-                    this.Close();
-                }
-                if (result == DialogResult.No)
-                {
-                    this.Close();
-                }
-            }
-            else
-            {
-                this.Close();
-            }
+            this.Close();
         }
 
         #endregion
@@ -5985,7 +5991,7 @@ namespace WeightCenterDesignAndEstimateSoft
             msg = msg == "" ? "发布完成" : msg;
             MessageBox.Show(msg);
             XLog.Write(msg);
-            
+
         }
 
         /// <summary>
@@ -6001,7 +6007,7 @@ namespace WeightCenterDesignAndEstimateSoft
             MessageBox.Show(msg);
             XLog.Write(msg);
 
-            
+
         }
 
         /// <summary>
@@ -6470,10 +6476,63 @@ namespace WeightCenterDesignAndEstimateSoft
             SavePictureToFile(chartAdvancedAssess);
         }
 
-        private void wDMToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (treeViewData.Nodes.Count > 0)
+            {
+                //有工程提示保存
+                DialogResult result = MessageBox.Show("是否保存当前设计工程？", "保存提示", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+
+                if (result == DialogResult.Yes)
+                {
+                    SaveFileDialog fileDialog = new SaveFileDialog();
+
+                    fileDialog.Filter = "prj文件(*.prj)|(*prj)";
+                    fileDialog.RestoreDirectory = true;
+                    fileDialog.FilterIndex = 1;
+                    fileDialog.FileName = treeViewData.Nodes[0].Text;
+
+                    string strFileName = string.Empty;
+                    if (fileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        strFileName = fileDialog.FileName + ".prj";
+
+                        if (File.Exists(strFileName))
+                        {
+                            DialogResult resultSave = MessageBox.Show("已存在文件\"" + strFileName + "\"" + "是否替换它?", "保存提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                            if (resultSave == DialogResult.Yes)
+                            {
+                                SaveFile(strFileName);
+                                XLog.Write("保存文件\"" + strFileName + "\"成功");
+                            }
+                        }
+                        else
+                        {
+                            SaveFile(strFileName);
+                            XLog.Write("保存文件\"" + strFileName + "\"成功");
+                        }
+                    }
+                    e.Cancel = false;
+                }
+                if (result == DialogResult.No)
+                {
+                    e.Cancel = false;
+                }
+                if (result == DialogResult.Cancel)
+                {
+                    e.Cancel = true;
+                }
+            }
+            else
+            {
+                e.Cancel = false;
+            }
+        }
+
+        private void wDMToolStripMenuItemToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new WDMSettingForm().ShowDialog(this);
         }
-
     }
 }

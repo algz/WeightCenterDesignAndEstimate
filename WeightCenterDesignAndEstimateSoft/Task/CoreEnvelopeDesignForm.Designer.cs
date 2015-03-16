@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("重心包线节点");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("重心包线节点");
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CoreEnvelopeDesignForm));
             this.dgvParaName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvParaEmpty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvParaRemark = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -297,10 +298,10 @@
             this.treeViewClass.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeViewClass.Location = new System.Drawing.Point(122, 81);
             this.treeViewClass.Name = "treeViewClass";
-            treeNode1.Name = "Root";
-            treeNode1.Text = "重心包线节点";
+            treeNode2.Name = "Root";
+            treeNode2.Text = "重心包线节点";
             this.treeViewClass.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1});
+            treeNode2});
             this.treeViewClass.Size = new System.Drawing.Size(215, 558);
             this.treeViewClass.TabIndex = 0;
             // 
@@ -404,6 +405,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(949, 642);
             this.Controls.Add(this.splitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "CoreEnvelopeDesignForm";
